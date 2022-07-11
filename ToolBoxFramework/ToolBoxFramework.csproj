@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0908AC65-0105-485C-A19B-11CF08B4C530}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ToolBoxFramework</RootNamespace>
+    <AssemblyName>ToolBoxFramework</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\MEGASync\BibliotecasUteis\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <DocumentationFile>D:\MEGASync\BibliotecasUteis\ToolBoxFramework.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="BibliotecaPublica">
+      <HintPath>..\..\..\MEGASync\BibliotecaPublica\BibliotecaPublica.dll</HintPath>
+    </Reference>
+    <Reference Include="CamadaNotificadora, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\MEGASync\BibliotecaPublica\CamadaNotificadora.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentValidation">
+      <HintPath>..\..\..\MEGASync\BibliotecaPublica\FluentValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="MaterialSkin">
+      <HintPath>..\..\..\MEGASync\BibliotecaPublica\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.Compatibility.Data" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Componentes\Bases\CaixaTextoBase.cs">
+      <SubType>Caixa de Texto</SubType>
+    </Compile>
+    <Compile Include="Componentes\CaixaMarcacao\CaixaMarcacao.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Componentes\CaixaSelecao\CaixaSelecao.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Componentes\Dados\Base\BindingSourceBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Componentes\Dados\Base\GradeDados.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Componentes\Dados\NavegadorDados.cs">
+      <SubType>Dados</SubType>
+    </Compile>
+    <Compile Include="Componentes\Propriedade\CaixaNumeroPropriedade.cs">
+      <SubType>Caixa de Texto</SubType>
+    </Compile>
+    <Compile Include="Componentes\Propriedade\CaixaTextoPropriedade.cs">
+      <SubType>Propriedades</SubType>
+    </Compile>
+    <Compile Include="Componentes\Rotulo\Rotulo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formularios\Bases\DialogoBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Bases\DialogoBase.Designer.cs">
+      <DependentUpon>DialogoBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Bases\FormularioBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Bases\FormularioBase.Designer.cs">
+      <DependentUpon>FormularioBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Bases\JanelaBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Bases\JanelaBase.Designer.cs">
+      <DependentUpon>JanelaBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\Botoes\Botao.cs">
+      <SubType>Botões</SubType>
+    </Compile>
+    <Compile Include="Componentes\CaixaTexto\CaixaMonetaria.cs">
+      <SubType>Caixa de Texto</SubType>
+    </Compile>
+    <Compile Include="Componentes\CaixaTexto\CaixaMonetariaV2.cs">
+      <SubType>Caixa de texto</SubType>
+    </Compile>
+    <Compile Include="Componentes\CaixaTexto\CaixaNumero.cs">
+      <SubType>Caixa de Texto</SubType>
+    </Compile>
+    <Compile Include="Componentes\CaixaTexto\CaixaTexto.cs">
+      <SubType>Caixa de Texto</SubType>
+    </Compile>
+    <Compile Include="Componentes\CaixaTexto\CaixaTextoMascara.cs">
+      <SubType>Caixa de Texto</SubType>
+    </Compile>
+    <Compile Include="Componentes\Dados\Controlador.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Componentes\Dados\Controlador.Designer.cs">
+      <DependentUpon>Controlador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Componentes\Dados\FonteDados.cs">
+      <SubType>Dados</SubType>
+    </Compile>
+    <Compile Include="Componentes\Dados\FonteLigacao.cs">
+      <SubType>Dados</SubType>
+    </Compile>
+    <Compile Include="Componentes\Dados\NavegadorRegistros.cs">
+      <SubType>Dados</SubType>
+    </Compile>
+    <Compile Include="Componentes\Mensagem.cs" />
+    <Compile Include="Componentes\ToolStripComponentes\ToolStripBotao.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Componentes\ToolStripComponentes\ToolStripCaixaNumero.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ConfiguracoesCaixaFerramenta.cs" />
+    <Compile Include="Formularios\BancoDados\frmConfiguracaoBancoDados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\BancoDados\frmConfiguracaoBancoDados.Designer.cs">
+      <DependentUpon>frmConfiguracaoBancoDados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmJanelaErro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmJanelaErro.Designer.cs">
+      <DependentUpon>frmJanelaErro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\frmPesquisaRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmPesquisaRegistro.Designer.cs">
+      <DependentUpon>frmPesquisaRegistro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\IBotao.cs" />
+    <Compile Include="Interfaces\ICaixaMonetaria.cs" />
+    <Compile Include="Interfaces\ICaixaNumero.cs" />
+    <Compile Include="Interfaces\ICaixaTexto.cs" />
+    <Compile Include="Interfaces\IComponente.cs" />
+    <Compile Include="Interfaces\IFonte.cs" />
+    <Compile Include="Interfaces\IFormulario.cs" />
+    <Compile Include="Interfaces\ILimpeza.cs" />
+    <Compile Include="Interfaces\INotificacaoFormulario.cs" />
+    <Compile Include="Interfaces\IPropriedade.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Formularios\Bases\DialogoBase.resx">
+      <DependentUpon>DialogoBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Bases\FormularioBase.resx">
+      <DependentUpon>FormularioBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\BancoDados\frmConfiguracaoBancoDados.resx">
+      <DependentUpon>frmConfiguracaoBancoDados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmPesquisaRegistro.resx">
+      <DependentUpon>frmPesquisaRegistro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\Novo_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Deletar_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Editar_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Seta direita.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Seta esquerda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Buscar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Salvar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancelar_20x20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-browse-folder-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BancoDados.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BibliotecaPublica.CamadaNotificadora\BibliotecaPublica.CamadaNotificadora.csproj">
+      <Project>{f0218c29-2e00-4d73-b0fe-8ccd02d342ba}</Project>
+      <Name>BibliotecaPublica.CamadaNotificadora</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
