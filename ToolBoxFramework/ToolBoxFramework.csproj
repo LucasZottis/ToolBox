@@ -211,40 +211,45 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="Resources\Novo_24px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Deletar_24px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Editar_24px.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Seta direita.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Seta esquerda.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Buscar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Salvar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Cancelar_20x20.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-browse-folder-24.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\BancoDados.ico" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BibliotecaPublica.CamadaNotificadora\BibliotecaPublica.CamadaNotificadora.csproj">
       <Project>{f0218c29-2e00-4d73-b0fe-8ccd02d342ba}</Project>
       <Name>BibliotecaPublica.CamadaNotificadora</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-adicionar-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-apagar-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-editar-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-cancelar-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pesquisar-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-salvar-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-fim-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-início-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-seta-para-a-direita-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-seta-para-esquerda-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-opções-de-banco-de-dados-24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

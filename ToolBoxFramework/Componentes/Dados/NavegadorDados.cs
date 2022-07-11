@@ -9,6 +9,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
+using ToolBoxFramework.Properties;
 
 namespace BibliotecaPublica.CaixaFerramenta.Componentes.Dados
 {
@@ -1661,42 +1662,42 @@ namespace BibliotecaPublica.CaixaFerramenta.Componentes.Dados
             //
             // Setar as imagens
             //
-            Bitmap moveFirstImage = new Bitmap( typeof( BindingNavigator ), "BindingNavigator.MoveFirst.bmp" );
-            Bitmap movePreviousImage = new Bitmap( typeof( BindingNavigator ), "BindingNavigator.MovePrevious.bmp" );
-            Bitmap moveNextImage = new Bitmap( typeof( BindingNavigator ), "BindingNavigator.MoveNext.bmp" );
-            Bitmap moveLastImage = new Bitmap( typeof( BindingNavigator ), "BindingNavigator.MoveLast.bmp" );
+            Bitmap movarParaPrimeiroItemImagem = Resources.Inicio;
+            Bitmap voltarItemImagem = Resources.Anterior;
+            Bitmap AvançarItemImagem = Resources.Proximo;
+            Bitmap MoverParaUltimoItemImagem = Resources.Fim;
 
-            Bitmap addNewImage = Properties.Resources.Novo_24px;
-            Bitmap editarItem = Properties.Resources.Editar_24px;
-            Bitmap deleteImage = Properties.Resources.Deletar_24px;
+            Bitmap adicionarNovoItemImagem = Resources.Adicionar;
+            Bitmap editarItemImagem = Resources.Editar;
+            Bitmap excluirItemImagem = Resources.Excluir;
 
-            Bitmap pesquisarItem = Properties.Resources.Buscar;
+            Bitmap pesquisarItem = Resources.Pesquisar;
 
-            Bitmap gravar = Properties.Resources.Salvar;
-            Bitmap cancelar = Properties.Resources.Cancelar_20x20;
+            Bitmap gravar = Resources.Salvar;
+            Bitmap cancelar = Resources.Cancelar;
 
-            moveFirstImage.MakeTransparent( Color.Magenta );
-            movePreviousImage.MakeTransparent( Color.Magenta );
-            moveNextImage.MakeTransparent( Color.Magenta );
-            moveLastImage.MakeTransparent( Color.Magenta );
+            movarParaPrimeiroItemImagem.MakeTransparent( Color.Magenta );
+            voltarItemImagem.MakeTransparent( Color.Magenta );
+            AvançarItemImagem.MakeTransparent( Color.Magenta );
+            MoverParaUltimoItemImagem.MakeTransparent( Color.Magenta );
 
-            addNewImage.MakeTransparent( Color.Magenta );
-            editarItem.MakeTransparent( Color.Magenta );
-            deleteImage.MakeTransparent( Color.Magenta );
+            adicionarNovoItemImagem.MakeTransparent( Color.Magenta );
+            editarItemImagem.MakeTransparent( Color.Magenta );
+            excluirItemImagem.MakeTransparent( Color.Magenta );
 
             pesquisarItem.MakeTransparent( Color.Magenta );
 
             gravar.MakeTransparent( Color.Magenta );
             cancelar.MakeTransparent( Color.Magenta );
 
-            MoverParaPrimeiroItem.Image = moveFirstImage;
-            MoverParaItemAnterior.Image = movePreviousImage;
-            MoverParaProximoItem.Image = moveNextImage;
-            MoverParaUltimoItem.Image = moveLastImage;
+            MoverParaPrimeiroItem.Image = movarParaPrimeiroItemImagem;
+            MoverParaItemAnterior.Image = voltarItemImagem;
+            MoverParaProximoItem.Image = AvançarItemImagem;
+            MoverParaUltimoItem.Image = MoverParaUltimoItemImagem;
 
-            IncluirNovoItem.Image = addNewImage;
-            EditarItem.Image = editarItem;
-            ExcluirItem.Image = deleteImage;
+            IncluirNovoItem.Image = adicionarNovoItemImagem;
+            EditarItem.Image = editarItemImagem;
+            ExcluirItem.Image = excluirItemImagem;
 
             PesquisarItem.Image = pesquisarItem;
 

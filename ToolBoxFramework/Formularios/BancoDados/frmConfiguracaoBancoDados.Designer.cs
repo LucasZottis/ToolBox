@@ -337,7 +337,7 @@ namespace BibliotecaPublica.CaixaFerramenta.Formularios.BancoDados
             this.btnBuscaArquivo.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(69)))), ((int)(((byte)(91)))));
             this.btnBuscaArquivo.FlatAppearance.BorderSize = 3;
             this.btnBuscaArquivo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscaArquivo.Image = global::BibliotecaPublica.CaixaFerramenta.Properties.Resources.icons8_browse_folder_24;
+            this.btnBuscaArquivo.Image = global::ToolBoxFramework.Properties.Resources.ConfiguracaoBancoDados;
             this.btnBuscaArquivo.Location = new System.Drawing.Point(601, 94);
             this.btnBuscaArquivo.Name = "btnBuscaArquivo";
             this.btnBuscaArquivo.Size = new System.Drawing.Size(39, 32);
