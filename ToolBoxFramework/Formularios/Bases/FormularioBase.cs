@@ -1,22 +1,20 @@
 ﻿using BibliotecaPublica;
-using BibliotecaPublica.CaixaFerramenta;
-using BibliotecaPublica.CaixaFerramenta.Componentes;
-using BibliotecaPublica.CaixaFerramenta.Interfaces;
 using BibliotecaPublica.CamadaNotificadora;
 using BibliotecaPublica.CamadaNotificadora.Enums;
 using BibliotecaPublica.CamadaNotificadora.Interfaces;
 using BibliotecaPublica.Classes.Verificadores;
 using BibliotecaPublica.Enums;
 using BibliotecaPublica.Estruturas;
-using BibliotecaPublica.Interfaces;
 using FluentValidation.Results;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
+using ToolBox.ToolBoxFramework.Componentes;
+using ToolBox.ToolBoxFramework.Interfaces;
 
-namespace CaixaFerramenta.Formularios.Bases
+namespace ToolBox.ToolBoxFramework.Formularios.Bases
 {
     [Serializable()]
     [DefaultEvent( "CarregarFormulario" )]

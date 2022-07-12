@@ -2,7 +2,7 @@
 using System.Text;
 using System.Windows.Forms;
 
-namespace BibliotecaPublica.CaixaFerramenta.Componentes
+namespace ToolBox.ToolBoxFramework.Componentes
 {
     public static class Mensagem
     {

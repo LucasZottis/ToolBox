@@ -1,17 +1,17 @@
 ﻿using BibliotecaPublica.Estruturas;
-using BibliotecaPublica.Interfaces;
 using System;
 using System.ComponentModel;
-using System.Text;
 using System.Windows.Forms;
+using ToolBox.ToolBoxFramework.Interfaces;
 
-namespace BibliotecaPublica.CaixaFerramenta.Componentes.CaixaMarcacao
+namespace ToolBox.ToolBoxFramework.Componentes.CaixaMarcacao.Base
 {
-    public class CaixaMarcacao : CheckBox, IComponente
+    [ToolboxItem( false )]
+    public class CaixaMarcacaoBase : CheckBox, IComponente
     {
         #region Atributos
 
-        
+
 
         #endregion Atributos
 
@@ -60,9 +60,9 @@ namespace BibliotecaPublica.CaixaFerramenta.Componentes.CaixaMarcacao
 
         #region Construtores
 
-        public CaixaMarcacao(IContainer container)
+        public CaixaMarcacaoBase( IContainer container )
         {
-            if (container != null)
+            if ( container != null )
             {
                 container.Add( this );
             }

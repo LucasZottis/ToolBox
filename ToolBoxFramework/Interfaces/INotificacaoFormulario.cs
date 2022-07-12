@@ -1,6 +1,6 @@
 ﻿using BibliotecaPublica.CamadaNotificadora;
 
-namespace BibliotecaPublica.CaixaFerramenta.Interfaces
+namespace ToolBox.ToolBoxFramework.Interfaces
 {
     public interface INotificacaoFormulario
     {

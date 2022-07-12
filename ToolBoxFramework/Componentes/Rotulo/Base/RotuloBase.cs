@@ -1,11 +1,10 @@
-﻿using System;
-using System.ComponentModel;
-using System.Text;
+﻿using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace BibliotecaPublica.CaixaFerramenta.Componentes.Rotulo
+namespace ToolBox.ToolBoxFramework.Componentes.Rotulo
 {
-    public class Rotulo : Label
+    [ToolboxItem( false ), DesignerCategory( "Comuns" )]
+    public class RotuloBase : Label
     {
         #region Atributos
 
@@ -21,7 +20,7 @@ namespace BibliotecaPublica.CaixaFerramenta.Componentes.Rotulo
 
         #region Construtores
 
-        public Rotulo( IContainer container ) : base()
+        public RotuloBase( IContainer container ) : base()
         {
             container.Add( this );
         }

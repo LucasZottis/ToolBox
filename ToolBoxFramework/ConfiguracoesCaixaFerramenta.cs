@@ -1,8 +1,7 @@
-﻿using BibliotecaPublica.CaixaFerramenta.Interfaces;
-using CaixaFerramenta.Formularios.Bases;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using ToolBox.ToolBoxFramework.Interfaces;
 
-namespace BibliotecaPublica.CaixaFerramenta
+namespace ToolBox.ToolBoxFramework
 {
     public static class ConfiguracoesCaixaFerramenta
     {

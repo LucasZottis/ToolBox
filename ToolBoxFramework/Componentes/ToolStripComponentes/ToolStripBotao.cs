@@ -1,13 +1,13 @@
 ﻿using BibliotecaPublica.Enums;
-using BibliotecaPublica.Interfaces;
 using System;
 using System.ComponentModel;
 using System.Windows.Forms;
 using System.Windows.Forms.Design;
+using ToolBox.ToolBoxFramework.Interfaces;
 
-namespace CaixaFerramenta.Componentes.ToolStripComponentes
+namespace ToolBoxFramework.Componentes.ToolStripComponentes
 {
-    [ToolStripItemDesignerAvailability(ToolStripItemDesignerAvailability.ToolStrip), ToolboxItem(false)]
+    [ToolStripItemDesignerAvailability( ToolStripItemDesignerAvailability.ToolStrip ), ToolboxItem( false ), DesignerCategory( "Menus" )]
     public class ToolStripBotao : ToolStripButton, IBotao
     {
         #region Atributos
@@ -16,7 +16,7 @@ namespace CaixaFerramenta.Componentes.ToolStripComponentes
 
         #endregion Atributos
 
-        [Browsable(true), Category("Diversos")]
+        [Browsable( true ), Category( "Diversos" )]
         public Resposta Resposta
         {
             private get
@@ -30,10 +30,10 @@ namespace CaixaFerramenta.Componentes.ToolStripComponentes
             }
         }
 
-        [Browsable(false)]
+        [Browsable( false )]
         public Keys TeclaAtalho { get; set; }
 
-        [Browsable(false)]
+        [Browsable( false )]
         public new event EventHandler Click
         {
             add
@@ -49,7 +49,7 @@ namespace CaixaFerramenta.Componentes.ToolStripComponentes
 
         public Resposta ExecutarCliqueBotao()
         {
-            if (Enabled)
+            if ( Enabled )
             {
                 PerformClick();
 
@@ -61,7 +61,7 @@ namespace CaixaFerramenta.Componentes.ToolStripComponentes
 
         public void Focar()
         {
-            
+
         }
     }
 }

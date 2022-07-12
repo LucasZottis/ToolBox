@@ -1,4 +1,4 @@
-﻿namespace BibliotecaPublica.CaixaFerramenta.Interfaces
+﻿namespace ToolBox.ToolBoxFramework.Interfaces
 {
     /// <summary>
     /// Interface de implementação de limpeza de componente.

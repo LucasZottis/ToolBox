@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{0908AC65-0105-485C-A19B-11CF08B4C530}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <RootNamespace>ToolBoxFramework</RootNamespace>
+    <RootNamespace>ToolBox.ToolBoxFramework</RootNamespace>
     <AssemblyName>ToolBoxFramework</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -63,32 +63,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Componentes\Bases\CaixaTextoBase.cs">
+    <Compile Include="Componentes\CaixaTexto\Bases\CaixaTextoBase.cs">
       <SubType>Caixa de Texto</SubType>
     </Compile>
-    <Compile Include="Componentes\CaixaMarcacao\CaixaMarcacao.cs">
+    <Compile Include="Componentes\CaixaMarcacao\Base\CaixaMarcacaoBase.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Componentes\CaixaSelecao\CaixaSelecao.cs">
+    <Compile Include="Componentes\CaixaSelecao\Base\CaixaSelecao.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Componentes\Dados\Base\BindingSourceBase.cs">
-      <SubType>Component</SubType>
+      <SubType>Dados</SubType>
     </Compile>
     <Compile Include="Componentes\Dados\Base\GradeDados.cs">
-      <SubType>Component</SubType>
+      <SubType>Dados</SubType>
+    </Compile>
+    <Compile Include="Componentes\Dados\Base\NavegadorBase.cs">
+      <SubType>Dados</SubType>
     </Compile>
     <Compile Include="Componentes\Dados\NavegadorDados.cs">
       <SubType>Dados</SubType>
     </Compile>
-    <Compile Include="Componentes\Propriedade\CaixaNumeroPropriedade.cs">
-      <SubType>Caixa de Texto</SubType>
-    </Compile>
-    <Compile Include="Componentes\Propriedade\CaixaTextoPropriedade.cs">
-      <SubType>Propriedades</SubType>
-    </Compile>
-    <Compile Include="Componentes\Rotulo\Rotulo.cs">
-      <SubType>Component</SubType>
+    <Compile Include="Componentes\Rotulo\Base\RotuloBase.cs">
+      <SubType>Comuns</SubType>
     </Compile>
     <Compile Include="Formularios\Bases\DialogoBase.cs">
       <SubType>Form</SubType>
@@ -108,7 +105,7 @@
     <Compile Include="Formularios\Bases\JanelaBase.Designer.cs">
       <DependentUpon>JanelaBase.cs</DependentUpon>
     </Compile>
-    <Compile Include="Componentes\Botoes\Botao.cs">
+    <Compile Include="Componentes\Botoes\Base\BotaoBase.cs">
       <SubType>Botões</SubType>
     </Compile>
     <Compile Include="Componentes\CaixaTexto\CaixaMonetaria.cs">
@@ -126,12 +123,6 @@
     <Compile Include="Componentes\CaixaTexto\CaixaTextoMascara.cs">
       <SubType>Caixa de Texto</SubType>
     </Compile>
-    <Compile Include="Componentes\Dados\Controlador.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Componentes\Dados\Controlador.Designer.cs">
-      <DependentUpon>Controlador.cs</DependentUpon>
-    </Compile>
     <Compile Include="Componentes\Dados\FonteDados.cs">
       <SubType>Dados</SubType>
     </Compile>
@@ -143,10 +134,10 @@
     </Compile>
     <Compile Include="Componentes\Mensagem.cs" />
     <Compile Include="Componentes\ToolStripComponentes\ToolStripBotao.cs">
-      <SubType>Component</SubType>
+      <SubType>Menus</SubType>
     </Compile>
     <Compile Include="Componentes\ToolStripComponentes\ToolStripCaixaNumero.cs">
-      <SubType>Component</SubType>
+      <SubType>Menus</SubType>
     </Compile>
     <Compile Include="ConfiguracoesCaixaFerramenta.cs" />
     <Compile Include="Formularios\BancoDados\frmConfiguracaoBancoDados.cs">
@@ -154,18 +145,6 @@
     </Compile>
     <Compile Include="Formularios\BancoDados\frmConfiguracaoBancoDados.Designer.cs">
       <DependentUpon>frmConfiguracaoBancoDados.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\frmJanelaErro.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\frmJanelaErro.Designer.cs">
-      <DependentUpon>frmJanelaErro.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\frmPesquisaRegistro.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\frmPesquisaRegistro.Designer.cs">
-      <DependentUpon>frmPesquisaRegistro.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IBotao.cs" />
     <Compile Include="Interfaces\ICaixaMonetaria.cs" />
@@ -201,9 +180,6 @@
     <EmbeddedResource Include="Formularios\BancoDados\frmConfiguracaoBancoDados.resx">
       <DependentUpon>frmConfiguracaoBancoDados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\frmPesquisaRegistro.resx">
-      <DependentUpon>frmPesquisaRegistro.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -211,12 +187,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\BibliotecaPublica.CamadaNotificadora\BibliotecaPublica.CamadaNotificadora.csproj">
-      <Project>{f0218c29-2e00-4d73-b0fe-8ccd02d342ba}</Project>
-      <Name>BibliotecaPublica.CamadaNotificadora</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-adicionar-24.png" />

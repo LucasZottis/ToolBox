@@ -1,16 +1,16 @@
-﻿using BibliotecaPublica.Enums;
+﻿using BibliotecaPublica;
+using BibliotecaPublica.Enums;
 using BibliotecaPublica.Estruturas;
-using BibliotecaPublica.Interfaces;
-using CaixaFerramenta.Formularios.Bases;
 using System;
 using System.ComponentModel;
 using System.Windows.Forms;
-using BibliotecaPublica;
+using ToolBox.ToolBoxFramework.Formularios.Bases;
+using ToolBox.ToolBoxFramework.Interfaces;
 
-namespace CaixaFerramenta.Componentes
+namespace ToolBox.ToolBoxFramework.Componentes.Base
 {
-    [DesignerCategory( "Botões" )]
-    public class Botao : Button, IBotao, IComponente
+    [DesignerCategory( "Botões" ), ToolboxItem( false )]
+    public class BotaoBase : Button, IBotao, IComponente
     {
         #region Atributos
 
@@ -156,7 +156,7 @@ namespace CaixaFerramenta.Componentes
 
         #endregion Eventos
 
-        public Botao( IContainer container )
+        public BotaoBase( IContainer container )
         {
             container?.Add( this );
         }

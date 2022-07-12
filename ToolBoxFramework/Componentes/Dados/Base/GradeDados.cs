@@ -1,14 +1,14 @@
 ﻿using BibliotecaPublica.Classes.Verificadores;
 using BibliotecaPublica.Estruturas;
-using CaixaFerramenta.Componentes.Dados;
 using System;
 using System.ComponentModel;
 using System.Data;
 using System.Windows.Forms;
 
-namespace BibliotecaPublica.CaixaFerramenta.Componentes.Dados.Base
+namespace ToolBox.ToolBoxFramework.Componentes.Dados.Base
 {
-    public class GradeDados : DataGridView
+    [ToolboxItem( false ), DesignerCategory( "Dados" )]
+    public class GradeDadosBase : DataGridView
     {
         #region Atributos
 
@@ -60,7 +60,7 @@ namespace BibliotecaPublica.CaixaFerramenta.Componentes.Dados.Base
 
         #region Construtores
 
-        public GradeDados()
+        public GradeDadosBase()
         {
 
         }

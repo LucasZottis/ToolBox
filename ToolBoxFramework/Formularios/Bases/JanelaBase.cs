@@ -2,7 +2,7 @@
 using System;
 using System.ComponentModel;
 
-namespace CaixaFerramenta.Formularios.Bases
+namespace ToolBox.ToolBoxFramework.Formularios.Bases
 {
     [Serializable()]
     public partial class JanelaBase : FormularioBase

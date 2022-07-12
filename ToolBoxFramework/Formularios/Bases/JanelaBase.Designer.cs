@@ -1,5 +1,5 @@
 ﻿
-namespace CaixaFerramenta.Formularios.Bases
+namespace ToolBox.ToolBoxFramework.Formularios.Bases
 {
     partial class JanelaBase
     {

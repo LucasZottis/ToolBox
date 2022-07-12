@@ -4,9 +4,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Windows.Forms;
 
-namespace BibliotecaPublica.CaixaFerramenta.Componentes.Dados.Base
+namespace ToolBox.ToolBoxFramework.Componentes.Dados.Base
 {
-    [ToolboxItem( false )]
+    [ToolboxItem( false ), DesignerCategory( "Dados" )]
     public class BindingSourceBase : BindingSource, ISupportInitialize
     {
         #region Atributos

@@ -2,15 +2,15 @@
 using BibliotecaPublica.Classes.Verificadores;
 using BibliotecaPublica.Enums;
 using BibliotecaPublica.Estruturas;
-using BibliotecaPublica.Interfaces;
 using System;
 using System.ComponentModel;
 using System.Windows.Forms;
 using System.Windows.Forms.Design;
+using ToolBox.ToolBoxFramework.Interfaces;
 
-namespace CaixaFerramenta.Componentes.ToolStripComponentes
+namespace ToolBox.ToolBoxFramework.Componentes.ToolStripComponentes
 {
-    [ToolStripItemDesignerAvailability( ToolStripItemDesignerAvailability.MenuStrip | ToolStripItemDesignerAvailability.ToolStrip | ToolStripItemDesignerAvailability.ContextMenuStrip )]
+    [ToolStripItemDesignerAvailability( ToolStripItemDesignerAvailability.MenuStrip | ToolStripItemDesignerAvailability.ToolStrip | ToolStripItemDesignerAvailability.ContextMenuStrip ), ToolboxItem( false ), DesignerCategory( "Menus" )]
     public class ToolStripCaixaNumero : ToolStripTextBox, IComponente, ICaixaTexto, ICaixaNumero
     {
         #region Atributos

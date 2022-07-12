@@ -1,6 +1,4 @@
-﻿using BibliotecaPublica.CaixaFerramenta.Interfaces;
-
-namespace BibliotecaPublica.Interfaces
+﻿namespace ToolBox.ToolBoxFramework.Interfaces
 {
     public interface ICaixaTexto : ILimpeza
     {

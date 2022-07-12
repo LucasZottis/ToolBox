@@ -1,10 +1,10 @@
 ﻿using BibliotecaPublica.Estruturas;
-using BibliotecaPublica.Interfaces;
 using System;
 using System.ComponentModel;
 using System.Windows.Forms;
+using ToolBox.ToolBoxFramework.Interfaces;
 
-namespace BibliotecaPublica.CaixaFerramenta.Componentes.CaixaTexto
+namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
 {
     [ToolboxItem(true), DesignerCategory("Caixa de texto")]
     public class CaixaMonetariaV2 : NumericUpDown, IComponente, ICaixaTexto

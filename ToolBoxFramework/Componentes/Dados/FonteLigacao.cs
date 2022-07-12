@@ -1,10 +1,10 @@
-﻿using BibliotecaPublica.CaixaFerramenta.Componentes.Dados.Base;
-using BibliotecaPublica.Classes.Verificadores;
+﻿using BibliotecaPublica.Classes.Verificadores;
 using System;
 using System.ComponentModel;
 using System.Data;
+using ToolBox.ToolBoxFramework.Componentes.Dados.Base;
 
-namespace CaixaFerramenta.Componentes.Dados
+namespace ToolBox.ToolBoxFramework.Componentes.Dados
 {
     [DesignerCategory( "Dados" ), ToolboxItem( true )]
     public class FonteLigacao : BindingSourceBase

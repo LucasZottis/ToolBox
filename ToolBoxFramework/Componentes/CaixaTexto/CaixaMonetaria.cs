@@ -1,14 +1,13 @@
-﻿using BibliotecaPublica.CaixaFerramenta.Componentes;
-using BibliotecaPublica.Classes.Servicos.Conversores;
+﻿using BibliotecaPublica.Classes.Servicos.Conversores;
 using BibliotecaPublica.Classes.Verificadores;
 using BibliotecaPublica.Estruturas;
-using BibliotecaPublica.Interfaces;
-using CaixaFerramenta.Componentes.Bases;
 using System;
 using System.ComponentModel;
 using System.Windows.Forms;
+using ToolBox.ToolBoxFramework.Componentes.Bases;
+using ToolBox.ToolBoxFramework.Interfaces;
 
-namespace CaixaFerramenta.Componentes.CaixaTexto
+namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
 {
     [DesignerCategory( "Caixa de Texto" ), ToolboxItem( true )]
     public class CaixaMonetaria : CaixaTextoBase, ICaixaMonetaria

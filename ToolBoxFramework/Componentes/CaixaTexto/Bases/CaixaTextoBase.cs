@@ -1,14 +1,13 @@
-﻿using BibliotecaPublica.CaixaFerramenta.Interfaces;
-using BibliotecaPublica.Classes.Servicos.Conversores;
+﻿using BibliotecaPublica.Classes.Servicos.Conversores;
 using BibliotecaPublica.Classes.Verificadores;
 using BibliotecaPublica.Estruturas;
-using BibliotecaPublica.Interfaces;
 using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
+using ToolBox.ToolBoxFramework.Interfaces;
 
-namespace CaixaFerramenta.Componentes.Bases
+namespace ToolBox.ToolBoxFramework.Componentes.Bases
 {
     [DesignerCategory( "Caixa de Texto" ), ToolboxItem( false )]
     public class CaixaTextoBase : TextBox, ICaixaTexto, IComponente, ILimpeza

@@ -1,5 +1,5 @@
 ﻿
-namespace CaixaFerramenta.Formularios.Bases
+namespace ToolBox.ToolBoxFramework.Formularios.Bases
 {
     partial class FormularioBase
     {
@@ -38,7 +38,7 @@ namespace CaixaFerramenta.Formularios.Bases
             this.AutoScroll = true;
             this.AutoScrollMargin = new System.Drawing.Size(5, 5);
             this.AutoScrollMinSize = new System.Drawing.Size(5, 5);
-            this.BackColor = System.Drawing.Color.Silver;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.KeyPreview = true;
             this.Name = "FormularioBase";

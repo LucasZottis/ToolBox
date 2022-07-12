@@ -1,15 +1,16 @@
-﻿using BibliotecaPublica.CaixaFerramenta.Interfaces;
-using BibliotecaPublica.Classes.Verificadores;
+﻿using BibliotecaPublica.Classes.Verificadores;
 using BibliotecaPublica.Estruturas;
 using System;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
+using ToolBox.ToolBoxFramework.Interfaces;
 
 namespace BibliotecaPublica.CaixaFerramenta.Componentes.CaixaSelecao
 {
-    public class CaixaSelecao : ComboBox, BibliotecaPublica.Interfaces.IComponente, ILimpeza
+    [ToolboxItem( false )]
+    public class CaixaSelecaoBase : ComboBox, IComponente, ILimpeza
     {
         #region Atributos
 
@@ -170,7 +171,7 @@ namespace BibliotecaPublica.CaixaFerramenta.Componentes.CaixaSelecao
 
         #region Construtores
 
-        public CaixaSelecao( IContainer container )
+        public CaixaSelecaoBase( IContainer container )
         {
             container?.Add( this );
         }

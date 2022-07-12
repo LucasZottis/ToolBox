@@ -1,4 +1,4 @@
-﻿namespace BibliotecaPublica.Interfaces
+﻿namespace ToolBox.ToolBoxFramework.Interfaces
 {
     /// <summary>
     /// Interface de componente.

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BibliotecaPublica.CaixaFerramenta.Interfaces
+namespace ToolBox.ToolBoxFramework.Interfaces
 {
     public interface IFonte
     {

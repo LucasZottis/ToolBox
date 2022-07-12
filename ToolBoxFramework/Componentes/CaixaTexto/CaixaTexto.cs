@@ -1,7 +1,7 @@
-﻿using CaixaFerramenta.Componentes.Bases;
-using System.ComponentModel;
+﻿using System.ComponentModel;
+using ToolBox.ToolBoxFramework.Componentes.Bases;
 
-namespace CaixaFerramenta.Componentes.CaixaTexto
+namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
 {
     [DesignerCategory( "Caixa de Texto" ), ToolboxItem( true )]
     public class CaixaTexto : CaixaTextoBase

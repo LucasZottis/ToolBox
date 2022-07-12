@@ -1,5 +1,5 @@
 ﻿
-namespace CaixaFerramenta.Formularios.Bases
+namespace ToolBox.ToolBoxFramework.Formularios.Bases
 {
     partial class DialogoBase
     {
@@ -12,13 +12,14 @@ namespace CaixaFerramenta.Formularios.Bases
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
+        protected override void Dispose( bool disposing )
         {
-            if (disposing && (components != null))
+            if ( disposing && ( components != null ) )
             {
                 components.Dispose();
             }
-            base.Dispose(disposing);
+
+            base.Dispose( disposing );
         }
 
         #region Windows Form Designer generated code
@@ -36,13 +37,13 @@ namespace CaixaFerramenta.Formularios.Bases
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = false;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size( 800, 450 );
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Location = new System.Drawing.Point(15, 15);
+            this.Location = new System.Drawing.Point( 15, 15 );
             this.Name = "DialogoBase";
             this.Text = "DialogoBase";
             this.TituloJanela = "DialogoBase";
-            this.ResumeLayout(false);
+            this.ResumeLayout( false );
 
         }
 

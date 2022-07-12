@@ -1,12 +1,12 @@
 ﻿using BibliotecaPublica.Enums;
 using BibliotecaPublica.Estruturas;
-using BibliotecaPublica.Interfaces;
 using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
+using ToolBox.ToolBoxFramework.Interfaces;
 
-namespace CaixaFerramenta.Componentes.CaixaTexto
+namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
 {
     [DesignerCategory("Caixa de Texto"), ToolboxItem(true)]
     public class CaixaTextoMascara : MaskedTextBox, IComponente
