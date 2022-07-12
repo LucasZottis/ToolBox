@@ -22,7 +22,21 @@ namespace ToolBox.ToolBoxFramework.Componentes.Dados
 
         #region Construtores
 
+        public NavegadorRegistros()
+        {
+        }
 
+        public NavegadorRegistros( BindingSourceBase fontaDados ) : base( fontaDados )
+        {
+        }
+
+        public NavegadorRegistros( IContainer container ) : base( container )
+        {
+        }
+
+        public NavegadorRegistros( bool adicionarItensPadroes ) : base( adicionarItensPadroes )
+        {
+        }
 
         #endregion Construtores
 

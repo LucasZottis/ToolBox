@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Windows.Forms;
 
-namespace ToolBox.ToolBoxFramework.Componentes.Rotulo
+namespace ToolBox.ToolBoxFramework.Componentes.Rotulo.Base
 {
     [ToolboxItem( false ), DesignerCategory( "Comuns" )]
     public class RotuloBase : Label

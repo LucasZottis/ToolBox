@@ -11,7 +11,6 @@ using System.Windows.Forms;
 using ToolBox.ToolBoxFramework.Componentes.ToolStripComponentes;
 using ToolBox.ToolBoxFramework.Interfaces;
 using ToolBox.ToolBoxFramework.Properties;
-using ToolBoxFramework.Componentes.ToolStripComponentes;
 
 namespace ToolBox.ToolBoxFramework.Componentes.Dados.Base
 {

@@ -1,5 +1,4 @@
-﻿using BibliotecaPublica.CaixaFerramenta.Componentes;
-using BibliotecaPublica.Classes;
+﻿using BibliotecaPublica.Classes;
 using BibliotecaPublica.Classes.Config;
 using BibliotecaPublica.Classes.Servicos.Conversores;
 using BibliotecaPublica.Classes.Servicos.Gerenciadores;

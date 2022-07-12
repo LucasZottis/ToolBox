@@ -7,7 +7,7 @@ using System.Windows.Forms;
 using ToolBox.ToolBoxFramework.Formularios.Bases;
 using ToolBox.ToolBoxFramework.Interfaces;
 
-namespace ToolBox.ToolBoxFramework.Componentes.Base
+namespace ToolBox.ToolBoxFramework.Componentes.Botao.Base
 {
     [DesignerCategory( "Botões" ), ToolboxItem( false )]
     public class BotaoBase : Button, IBotao, IComponente

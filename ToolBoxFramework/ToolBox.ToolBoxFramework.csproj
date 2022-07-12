@@ -70,7 +70,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Componentes\CaixaSelecao\Base\CaixaSelecao.cs">
-      <SubType>Component</SubType>
+      <SubType>Comuns</SubType>
     </Compile>
     <Compile Include="Componentes\Dados\Base\BindingSourceBase.cs">
       <SubType>Dados</SubType>
@@ -105,7 +105,7 @@
     <Compile Include="Formularios\Bases\JanelaBase.Designer.cs">
       <DependentUpon>JanelaBase.cs</DependentUpon>
     </Compile>
-    <Compile Include="Componentes\Botoes\Base\BotaoBase.cs">
+    <Compile Include="Componentes\Botao\Base\BotaoBase.cs">
       <SubType>Botões</SubType>
     </Compile>
     <Compile Include="Componentes\CaixaTexto\CaixaMonetaria.cs">

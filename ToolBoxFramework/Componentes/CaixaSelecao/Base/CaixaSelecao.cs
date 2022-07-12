@@ -7,9 +7,9 @@ using System.Drawing;
 using System.Windows.Forms;
 using ToolBox.ToolBoxFramework.Interfaces;
 
-namespace BibliotecaPublica.CaixaFerramenta.Componentes.CaixaSelecao
+namespace ToolBox.ToolBoxFramework.Componentes.CaixaSelecao.Base
 {
-    [ToolboxItem( false )]
+    [ToolboxItem( false ), DesignerCategory( "Comuns" )]
     public class CaixaSelecaoBase : ComboBox, IComponente, ILimpeza
     {
         #region Atributos
