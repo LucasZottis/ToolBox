@@ -1,5 +1,5 @@
-﻿using BibliotecaPublica.Enums;
-using BibliotecaPublica.Estruturas;
+﻿using BibliotecaPublica.BibliotecaPublicaFramework.Enums;
+using BibliotecaPublica.BibliotecaPublicaFramework.Estruturas;
 using System;
 using System.ComponentModel;
 using System.Drawing;
@@ -8,7 +8,7 @@ using ToolBox.ToolBoxFramework.Interfaces;
 
 namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
 {
-    [DesignerCategory("Caixa de Texto"), ToolboxItem(true)]
+    [DesignerCategory( "Caixa de Texto" ), ToolboxItem( true )]
     public class CaixaTextoMascara : MaskedTextBox, IComponente
     {
         #region Atributos
@@ -25,7 +25,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
 
         #region Acessibilidade
 
-        [Browsable(false)]
+        [Browsable( false )]
         public new string AccessibleDescription
         {
             get
@@ -39,7 +39,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(false)]
+        [Browsable( false )]
         public new string AccessibleName
         {
             get
@@ -53,7 +53,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(false)]
+        [Browsable( false )]
         public new AccessibleRole AccessibleRole
         {
             get
@@ -71,7 +71,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
 
         #region Aparência
 
-        [Browsable(false)]
+        [Browsable( false )]
         public new Color BackColor
         {
             get
@@ -85,7 +85,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(false)]
+        [Browsable( false )]
         public new BorderStyle BorderStyle
         {
             get
@@ -99,7 +99,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(false)]
+        [Browsable( false )]
         public new Cursor Cursor
         {
             get
@@ -113,7 +113,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(false)]
+        [Browsable( false )]
         public new Font Font
         {
             get
@@ -127,7 +127,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(false)]
+        [Browsable( false )]
         public new Color ForeColor
         {
             get
@@ -141,7 +141,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(false)]
+        [Browsable( false )]
         public new string[] Lines
         {
             get
@@ -155,7 +155,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(false)]
+        [Browsable( false )]
         public new RightToLeft RightToLeft
         {
             get
@@ -169,7 +169,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(false)]
+        [Browsable( false )]
         public new string Text
         {
             get
@@ -183,7 +183,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(false)]
+        [Browsable( false )]
         public new HorizontalAlignment TextAlign
         {
             get
@@ -197,7 +197,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(false)]
+        [Browsable( false )]
         public new bool UseWaitCursor
         {
             get
@@ -211,7 +211,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(false)]
+        [Browsable( false )]
         private new string Mask
         {
             get { return base.Mask; }
@@ -222,7 +222,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
 
         #region Comportamento
 
-        [Browsable(false)]
+        [Browsable( false )]
         public new bool AcceptsTab
         {
             get
@@ -236,7 +236,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(false)]
+        [Browsable( false )]
         public new bool AllowDrop
         {
             get
@@ -250,7 +250,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(false)]
+        [Browsable( false )]
         public new ContextMenuStrip ContextMenuStrip
         {
             get
@@ -264,7 +264,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(false)]
+        [Browsable( false )]
         public new bool Enabled
         {
             get
@@ -278,7 +278,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(false)]
+        [Browsable( false )]
         public new bool HideSelection
         {
             get
@@ -292,7 +292,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(false)]
+        [Browsable( false )]
         public new ImeMode ImeMode
         {
             get
@@ -306,7 +306,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(false)]
+        [Browsable( false )]
         public new int MaxLength
         {
             get
@@ -320,7 +320,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(false)]
+        [Browsable( false )]
         public new bool Multiline
         {
             get
@@ -334,7 +334,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(false)]
+        [Browsable( false )]
         public new char PasswordChar
         {
             get
@@ -348,7 +348,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(false)]
+        [Browsable( false )]
         public new bool ReadOnly
         {
             get
@@ -362,7 +362,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(false)]
+        [Browsable( false )]
         public new bool ShortcutsEnabled
         {
             get
@@ -376,7 +376,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(false)]
+        [Browsable( false )]
         public new int TabIndex
         {
             get
@@ -390,7 +390,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(false)]
+        [Browsable( false )]
         public new bool TabStop
         {
             get
@@ -404,7 +404,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(false)]
+        [Browsable( false )]
         public new bool UseSystemPasswordChar
         {
             get
@@ -418,7 +418,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(false)]
+        [Browsable( false )]
         public new bool Visible
         {
             get
@@ -432,7 +432,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(false)]
+        [Browsable( false )]
         public new bool WordWrap
         {
             get
@@ -455,7 +455,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
 
         #region Foco
 
-        [Browsable(false)]
+        [Browsable( false )]
         public new bool CausesValidation
         {
             get
@@ -473,7 +473,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
 
         #region Layout
 
-        [Browsable(false)]
+        [Browsable( false )]
         public new AnchorStyles Anchor
         {
             get
@@ -487,7 +487,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(false)]
+        [Browsable( false )]
         public new DockStyle Dock
         {
             get
@@ -501,7 +501,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(false)]
+        [Browsable( false )]
         public new Point Location
         {
             get
@@ -515,7 +515,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(false)]
+        [Browsable( false )]
         public new Padding Margin
         {
             get
@@ -529,7 +529,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(false)]
+        [Browsable( false )]
         public new Size MaximumSize
         {
             get
@@ -543,7 +543,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(false)]
+        [Browsable( false )]
         public new Size MinimumSize
         {
             get
@@ -557,7 +557,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(false)]
+        [Browsable( false )]
         public new Size Size
         {
             get
@@ -580,11 +580,11 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
         #region IComponentes
 
         [
-            Browsable(true), 
-            Category(TextosPadroes.ValidacaoCategoria),
-            DisplayName(TextosPadroes.FazerValidacao),
-            Description(TextosPadroes.FazerValidacaoDescricao),
-            DefaultValue(true)
+            Browsable( true ),
+            Category( TextosPadroes.ValidacaoCategoria ),
+            DisplayName( TextosPadroes.FazerValidacao ),
+            Description( TextosPadroes.FazerValidacaoDescricao ),
+            DefaultValue( true )
         ]
         public bool FazerValidacao
         {
@@ -600,11 +600,11 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
         }
 
         [
-            Browsable(true),
-            Category(TextosPadroes.ComportamentoCategoria),
-            DisplayName(TextosPadroes.BloquearComponente),
-            Description(TextosPadroes.BloquearComponenteDescricao),
-            DefaultValue(false)
+            Browsable( true ),
+            Category( TextosPadroes.ComportamentoCategoria ),
+            DisplayName( TextosPadroes.BloquearComponente ),
+            Description( TextosPadroes.BloquearComponenteDescricao ),
+            DefaultValue( false )
         ]
         public bool BloquearComponente
         {
@@ -620,11 +620,11 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
         }
 
         [
-            Browsable(false),
-            Category(TextosPadroes.ComportamentoCategoria),
-            DisplayName(TextosPadroes.Bloqueado),
-            Description(TextosPadroes.BloqueadoDescricao),
-            DefaultValue(false)
+            Browsable( false ),
+            Category( TextosPadroes.ComportamentoCategoria ),
+            DisplayName( TextosPadroes.Bloqueado ),
+            Description( TextosPadroes.BloqueadoDescricao ),
+            DefaultValue( false )
         ]
         public bool Bloqueado
         {
@@ -641,7 +641,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
 
         #region Acessibilidade
 
-        [Browsable(true), Category("Acessibilidade"), Description("A descrição a ser relatada para os cliente de acessibilidade."), DisplayName("Descrição")]
+        [Browsable( true ), Category( "Acessibilidade" ), Description( "A descrição a ser relatada para os cliente de acessibilidade." ), DisplayName( "Descrição" )]
         public string Descricao
         {
             get
@@ -655,7 +655,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(true), Category("Acessibilidade"), Description("O nome a ser relatada para os cliente de acessibilidade."), DisplayName("Nome")]
+        [Browsable( true ), Category( "Acessibilidade" ), Description( "O nome a ser relatada para os cliente de acessibilidade." ), DisplayName( "Nome" )]
         public string Nome
         {
             get
@@ -669,7 +669,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(true), Category("Acessibilidade"), Description("A função a ser relatada para os cliente de acessibilidade."), DisplayName("Função")]
+        [Browsable( true ), Category( "Acessibilidade" ), Description( "A função a ser relatada para os cliente de acessibilidade." ), DisplayName( "Função" )]
         public AccessibleRole Funcao
         {
             get
@@ -687,7 +687,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
 
         #region Aparência
 
-        [Browsable(true), Category("Aparência"), Description("Cor de fundo da caixa."), DisplayName("Cor de fundo")]
+        [Browsable( true ), Category( "Aparência" ), Description( "Cor de fundo da caixa." ), DisplayName( "Cor de fundo" )]
         public Color CorFundo
         {
             get
@@ -701,7 +701,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(true), Category("Aparência"), Description("Estilo da borda da caixa."), DisplayName("Estilo de borda")]
+        [Browsable( true ), Category( "Aparência" ), Description( "Estilo da borda da caixa." ), DisplayName( "Estilo de borda" )]
         public BorderStyle EstiloBorda
         {
             get
@@ -715,7 +715,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(true), Category("Aparência"), Description("Estilo da fonte que será usado no texto."), DisplayName("Estilo da fonte")]
+        [Browsable( true ), Category( "Aparência" ), Description( "Estilo da fonte que será usado no texto." ), DisplayName( "Estilo da fonte" )]
         public Font Fonte
         {
             get
@@ -729,7 +729,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(true), Category("Aparência"), Description("Cor do texto."), DisplayName("Cor do texto")]
+        [Browsable( true ), Category( "Aparência" ), Description( "Cor do texto." ), DisplayName( "Cor do texto" )]
         public Color CorFonte
         {
             get
@@ -743,7 +743,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(true), Category("Aparência"), Description("Obtém ou define o tamanho da caixa de texto."), DisplayName("Tamanho")]
+        [Browsable( true ), Category( "Aparência" ), Description( "Obtém ou define o tamanho da caixa de texto." ), DisplayName( "Tamanho" )]
         public Size Tamanho
         {
             get
@@ -761,7 +761,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
 
         #region Comportamento
 
-        [Browsable(true), Category("Comportamento"), Description("Obtem ou define o alinhamento do texto."), DisplayName("Alinhamento de texto")]
+        [Browsable( true ), Category( "Comportamento" ), Description( "Obtem ou define o alinhamento do texto." ), DisplayName( "Alinhamento de texto" )]
         public HorizontalAlignment AlinhamentoTexto
         {
             get
@@ -775,7 +775,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(true), Category("Comportamento"), Description("Obtem ou define o menu ao clicar com o botão direito do mouse."), DisplayName("Menu ao clicar botão direito")]
+        [Browsable( true ), Category( "Comportamento" ), Description( "Obtem ou define o menu ao clicar com o botão direito do mouse." ), DisplayName( "Menu ao clicar botão direito" )]
         public ContextMenuStrip MenuStrip
         {
             get
@@ -789,7 +789,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(true), Category("Comportamento"), Description("Obtem ou define se a caixa de texto está habilitada."), DisplayName("Habilitada")]
+        [Browsable( true ), Category( "Comportamento" ), Description( "Obtem ou define se a caixa de texto está habilitada." ), DisplayName( "Habilitada" )]
         public bool Habilitado
         {
             get
@@ -803,7 +803,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(true), Category("Comportamento"), Description("Obtem ou define se a caixa de texto será apenas para leitura."), DisplayName("Apenas leitura")]
+        [Browsable( true ), Category( "Comportamento" ), Description( "Obtem ou define se a caixa de texto será apenas para leitura." ), DisplayName( "Apenas leitura" )]
         public bool ApenasLeitura
         {
             get
@@ -817,7 +817,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(true), Category("Comportamento"), Description("Obtem ou define o índice da tabulação."), DisplayName("Índice de tabulação")]
+        [Browsable( true ), Category( "Comportamento" ), Description( "Obtem ou define o índice da tabulação." ), DisplayName( "Índice de tabulação" )]
         public int PosicaoTabulacao
         {
             get
@@ -831,7 +831,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(true), Category("Comportamento"), Description("Obtem ou define se deve parar na caixa de texto."), DisplayName("Parar na caixa de texto")]
+        [Browsable( true ), Category( "Comportamento" ), Description( "Obtem ou define se deve parar na caixa de texto." ), DisplayName( "Parar na caixa de texto" )]
         public bool PararNoCaixaTexto
         {
             get
@@ -845,7 +845,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(true), Category("Comportamento"), Description("Obtem ou define se a caixa de texto deve estár invisivel no formulário."), DisplayName("Visível")]
+        [Browsable( true ), Category( "Comportamento" ), Description( "Obtem ou define se a caixa de texto deve estár invisivel no formulário." ), DisplayName( "Visível" )]
         public bool Visivel
         {
             get
@@ -859,7 +859,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(true), Category("Comportamento"), Description("Obtem ou define a âncora da caixa de texto."), DisplayName("Âncora")]
+        [Browsable( true ), Category( "Comportamento" ), Description( "Obtem ou define a âncora da caixa de texto." ), DisplayName( "Âncora" )]
         public AnchorStyles Ancora
         {
             get
@@ -873,7 +873,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(true), Category("Comportamento"), Description("Obtem ou define qual parte do formulário a caixa de texto irá ficar fixada."), DisplayName("Fixado")]
+        [Browsable( true ), Category( "Comportamento" ), Description( "Obtem ou define qual parte do formulário a caixa de texto irá ficar fixada." ), DisplayName( "Fixado" )]
         public DockStyle Fixado
         {
             get
@@ -887,7 +887,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(true), Category("Comportamento"), Description("Obtem ou define o tamanho máximo que a caixa de texto pode ficar."), DisplayName("Tamanho máximo")]
+        [Browsable( true ), Category( "Comportamento" ), Description( "Obtem ou define o tamanho máximo que a caixa de texto pode ficar." ), DisplayName( "Tamanho máximo" )]
         public Size TamanhoMaximo
         {
             get
@@ -901,7 +901,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(true), Category("Comportamento"), Description("Obtem ou define o tamanho mínimo que a caixa de texto pode ficar."), DisplayName("Tamanho mínimo")]
+        [Browsable( true ), Category( "Comportamento" ), Description( "Obtem ou define o tamanho mínimo que a caixa de texto pode ficar." ), DisplayName( "Tamanho mínimo" )]
         public Size TamanhoMinimo
         {
             get
@@ -919,7 +919,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
 
         #region Dados
 
-        [Browsable(true), Category("Dados"), Description("Texto da caixa."), DisplayName("Texto")]
+        [Browsable( true ), Category( "Dados" ), Description( "Texto da caixa." ), DisplayName( "Texto" )]
         public string Texto
         {
             get
@@ -933,7 +933,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Category("Dados"), Description("Define o tipo de máscara que será utilizado no controle."), DefaultValue(""), Browsable(true)]
+        [Category( "Dados" ), Description( "Define o tipo de máscara que será utilizado no controle." ), DefaultValue( "" ), Browsable( true )]
         public string Mascara
         {
             get
@@ -951,7 +951,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
 
         #region Diversos
 
-        [Browsable(true), Category("Diversos"), Description("Obtém ou define a localização da caixa de texto em relação ao formulário."), DisplayName("Localização")]
+        [Browsable( true ), Category( "Diversos" ), Description( "Obtém ou define a localização da caixa de texto em relação ao formulário." ), DisplayName( "Localização" )]
         public Point Localizacao
         {
             get
@@ -1064,7 +1064,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
 
         private void CriarMascara()
         {
-            switch (_tipoMascara)
+            switch ( _tipoMascara )
             {
                 case TipoMascara.Telefone:
                 {

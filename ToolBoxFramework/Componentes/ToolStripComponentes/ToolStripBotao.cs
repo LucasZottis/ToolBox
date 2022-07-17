@@ -1,4 +1,4 @@
-﻿using BibliotecaPublica.Enums;
+﻿using BibliotecaPublica.BibliotecaPublicaFramework.Enums;
 using System;
 using System.ComponentModel;
 using System.Windows.Forms;

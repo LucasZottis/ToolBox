@@ -1,4 +1,4 @@
-﻿using BibliotecaPublica.Estruturas;
+﻿using BibliotecaPublica.BibliotecaPublicaFramework.Estruturas;
 using System;
 using System.ComponentModel;
 using System.Windows.Forms;
@@ -6,7 +6,7 @@ using ToolBox.ToolBoxFramework.Interfaces;
 
 namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
 {
-    [ToolboxItem(true), DesignerCategory("Caixa de texto")]
+    [ToolboxItem( true ), DesignerCategory( "Caixa de texto" )]
     public class CaixaMonetariaV2 : NumericUpDown, IComponente, ICaixaTexto
     {
         #region Atributos
@@ -20,11 +20,11 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
         #region Propriedades
 
         [
-            Browsable(true), 
-            Category(TextosPadroes.ValidacaoCategoria), 
-            DisplayName(TextosPadroes.FazerValidacao), 
-            Description(TextosPadroes.FazerValidacaoDescricao), 
-            DefaultValue(ValoresPadroes.FazerValidacao)
+            Browsable( true ),
+            Category( TextosPadroes.ValidacaoCategoria ),
+            DisplayName( TextosPadroes.FazerValidacao ),
+            Description( TextosPadroes.FazerValidacaoDescricao ),
+            DefaultValue( ValoresPadroes.FazerValidacao )
         ]
         public bool FazerValidacao
         {
@@ -40,11 +40,11 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
         }
 
         [
-            Browsable(true),
-            Category(TextosPadroes.ComportamentoCategoria),
-            DisplayName(TextosPadroes.BloquearComponente),
-            Description(TextosPadroes.BloquearComponenteDescricao),
-            DefaultValue(ValoresPadroes.BloquearComponente)
+            Browsable( true ),
+            Category( TextosPadroes.ComportamentoCategoria ),
+            DisplayName( TextosPadroes.BloquearComponente ),
+            Description( TextosPadroes.BloquearComponenteDescricao ),
+            DefaultValue( ValoresPadroes.BloquearComponente )
         ]
         public bool BloquearComponente
         {
@@ -60,11 +60,11 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
         }
 
         [
-            Browsable(false),
-            Category(TextosPadroes.ComportamentoCategoria),
-            DisplayName(TextosPadroes.Bloqueado),
-            Description(TextosPadroes.BloqueadoDescricao),
-            DefaultValue(ValoresPadroes.Bloqueado)
+            Browsable( false ),
+            Category( TextosPadroes.ComportamentoCategoria ),
+            DisplayName( TextosPadroes.Bloqueado ),
+            Description( TextosPadroes.BloqueadoDescricao ),
+            DefaultValue( ValoresPadroes.Bloqueado )
         ]
         public bool Bloqueado
         {
@@ -74,18 +74,18 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
             }
         }
 
-        [Browsable(false)]
+        [Browsable( false )]
         public uint QuantidadeMaxima { get; set; }
 
-        [Browsable(false)]
+        [Browsable( false )]
         public uint QuantidadeMinima { get; set; }
 
         [
-            Browsable(true),
-            Category(TextosPadroes.DiversosCategoria),
-            DisplayName(TextosPadroes.LimparComponente),
-            Description(TextosPadroes.LimparComponenteDescricao),
-            DefaultValue(ValoresPadroes.LimparComponente)
+            Browsable( true ),
+            Category( TextosPadroes.DiversosCategoria ),
+            DisplayName( TextosPadroes.LimparComponente ),
+            Description( TextosPadroes.LimparComponenteDescricao ),
+            DefaultValue( ValoresPadroes.LimparComponente )
         ]
         public bool LimparComponente
         {
@@ -101,8 +101,8 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
         }
 
         [
-            Browsable(true),
-            Bindable(BindableSupport.Yes)
+            Browsable( true ),
+            Bindable( BindableSupport.Yes )
         ]
         public new string Text
         {
@@ -121,16 +121,19 @@ namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
 
         [Browsable( true ), Category( TextosPadroes.DadosCateogria ), Description( TextosPadroes.FazerLimpezaDescricao ), DisplayName( TextosPadroes.FazerLimpeza ), DefaultValue( false )]
         public bool FazerLimpeza { get; set; } = false;
+        public bool PermitirNumeros { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public bool PermitirLetras { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public bool PermitirSimbolos { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         #endregion ILimpeza
 
         #endregion Propriedades
 
-        public CaixaMonetariaV2(IContainer container) : base()
+        public CaixaMonetariaV2( IContainer container ) : base()
         {
-            if (container != null)
+            if ( container != null )
             {
-                container.Add(this);
+                container.Add( this );
             }
 
             TextAlign = HorizontalAlignment.Right;

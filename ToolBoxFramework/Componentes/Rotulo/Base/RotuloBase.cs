@@ -31,35 +31,17 @@ namespace ToolBox.ToolBoxFramework.Componentes.Rotulo.Base
 
         #region Privados
 
-        #region Sobreescritos
-
-
-
-        #endregion Sobreescritos
-
 
 
         #endregion Privados
 
         #region Protegidos
 
-        #region Sobreescritos
-
-
-
-        #endregion Sobreescritos
-
 
 
         #endregion Protegidos
 
         #region Internos
-
-        #region Sobreescritos
-
-
-
-        #endregion Sobreescritos
 
 
 

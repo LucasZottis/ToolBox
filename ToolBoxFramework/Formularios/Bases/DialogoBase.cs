@@ -1,4 +1,4 @@
-﻿using BibliotecaPublica.Estruturas;
+﻿using BibliotecaPublica.BibliotecaPublicaFramework.Estruturas;
 using System;
 using System.ComponentModel;
 using System.Drawing;

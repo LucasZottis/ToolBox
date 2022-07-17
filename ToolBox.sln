@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolBox.ToolBoxFramework", "ToolBoxFramework\ToolBox.ToolBoxFramework.csproj", "{0908AC65-0105-485C-A19B-11CF08B4C530}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestesFramework", "TestesFramework\TestesFramework.csproj", "{BAA036FE-89AF-4FC1-B652-A4EBC7B66F2B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{0908AC65-0105-485C-A19B-11CF08B4C530}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0908AC65-0105-485C-A19B-11CF08B4C530}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0908AC65-0105-485C-A19B-11CF08B4C530}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAA036FE-89AF-4FC1-B652-A4EBC7B66F2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAA036FE-89AF-4FC1-B652-A4EBC7B66F2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAA036FE-89AF-4FC1-B652-A4EBC7B66F2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAA036FE-89AF-4FC1-B652-A4EBC7B66F2B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

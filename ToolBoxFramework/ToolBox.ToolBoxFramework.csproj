@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>ToolBox.ToolBoxFramework</RootNamespace>
     <AssemblyName>ToolBoxFramework</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
@@ -35,12 +35,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Accessibility" />
-    <Reference Include="BibliotecaPublica">
-      <HintPath>..\..\..\MEGASync\BibliotecaPublica\BibliotecaPublica.dll</HintPath>
-    </Reference>
-    <Reference Include="CamadaNotificadora, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="BibliotecaPublicaFramework, Version=2021.11.2.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\MEGASync\BibliotecaPublica\CamadaNotificadora.dll</HintPath>
+      <HintPath>..\..\..\MEGASync\BibliotecasUteis\BibliotecaPublicaFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="CamadaNotificadoraFramework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\MEGASync\BibliotecasUteis\CamadaNotificadoraFramework.dll</HintPath>
     </Reference>
     <Reference Include="FluentValidation">
       <HintPath>..\..\..\MEGASync\BibliotecaPublica\FluentValidation.dll</HintPath>
@@ -71,6 +72,9 @@
     </Compile>
     <Compile Include="Componentes\CaixaSelecao\Base\CaixaSelecao.cs">
       <SubType>Comuns</SubType>
+    </Compile>
+    <Compile Include="Componentes\CaixaTexto\CaixaTextoMonetaria.cs">
+      <SubType>Caixa de texto monetária</SubType>
     </Compile>
     <Compile Include="Componentes\Dados\Base\BindingSourceBase.cs">
       <SubType>Dados</SubType>
@@ -107,9 +111,6 @@
     </Compile>
     <Compile Include="Componentes\Botao\Base\BotaoBase.cs">
       <SubType>Botões</SubType>
-    </Compile>
-    <Compile Include="Componentes\CaixaTexto\CaixaMonetaria.cs">
-      <SubType>Caixa de Texto</SubType>
     </Compile>
     <Compile Include="Componentes\CaixaTexto\CaixaMonetariaV2.cs">
       <SubType>Caixa de texto</SubType>
@@ -151,7 +152,6 @@
     <Compile Include="Interfaces\ICaixaNumero.cs" />
     <Compile Include="Interfaces\ICaixaTexto.cs" />
     <Compile Include="Interfaces\IComponente.cs" />
-    <Compile Include="Interfaces\IFonte.cs" />
     <Compile Include="Interfaces\IFormulario.cs" />
     <Compile Include="Interfaces\ILimpeza.cs" />
     <Compile Include="Interfaces\INotificacaoFormulario.cs" />

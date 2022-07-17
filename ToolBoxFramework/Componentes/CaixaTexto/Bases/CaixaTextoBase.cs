@@ -1,6 +1,6 @@
-﻿using BibliotecaPublica.Classes.Servicos.Conversores;
-using BibliotecaPublica.Classes.Verificadores;
-using BibliotecaPublica.Estruturas;
+﻿using BibliotecaPublica.BibliotecaPublicaFramework.Classes.Servicos.Conversores;
+using BibliotecaPublica.BibliotecaPublicaFramework.Classes.Verificadores;
+using BibliotecaPublica.BibliotecaPublicaFramework.Estruturas;
 using System;
 using System.ComponentModel;
 using System.Drawing;
@@ -10,15 +10,9 @@ using ToolBox.ToolBoxFramework.Interfaces;
 namespace ToolBox.ToolBoxFramework.Componentes.Bases
 {
     [DesignerCategory( "Caixa de Texto" ), ToolboxItem( false )]
-    public class CaixaTextoBase : TextBox, ICaixaTexto, IComponente, ILimpeza
+    public class CaixaTextoBase : TextBox, ICaixaTexto, IComponente
     {
         #region Atributos
-
-        protected bool _naoPermitirNumeros = false;
-        protected bool _bloquearComponente = false;
-        protected bool _fazerValidacao = false;
-
-        protected uint _quantidadeMinima = 0;
 
         private string _valorPadrao = string.Empty;
 
@@ -26,7 +20,41 @@ namespace ToolBox.ToolBoxFramework.Componentes.Bases
 
         #region Propriedadades
 
-        #region Propriedades Sobreescritas
+        #region ICaixaTexto
+
+        [Browsable( true ), DisplayName( TextosPadroes.PermitirNumeros ), Description( TextosPadroes.PermitirNumerosDescricao ), Category( TextosPadroes.ComportamentoCategoria ), DefaultValue( true )]
+        public bool PermitirNumeros { get; set; } = true;
+
+        [Browsable( true ), DisplayName( TextosPadroes.PermitirLetras ), Description( TextosPadroes.PermitirLetrasDescricao ), Category( TextosPadroes.ComportamentoCategoria ), DefaultValue( true )]
+        public bool PermitirLetras { get; set; } = true;
+
+        [Browsable( true ), DisplayName( TextosPadroes.PermitirSimbolos ), Description( TextosPadroes.PermitirSimbolosDescricao ), Category( TextosPadroes.ComportamentoCategoria ), DefaultValue( true )]
+        public bool PermitirSimbolos { get; set; } = true;
+
+        #endregion ICaixaTexto
+
+        #region IComponente
+
+        [Browsable( true ), DisplayName( TextosPadroes.BloquearComponente ), Description( TextosPadroes.BloquearComponenteDescricao ), Category( TextosPadroes.ComportamentoCategoria ), DefaultValue( false )]
+        public bool BloquearComponente { get; set; } = false;
+
+        [Browsable( true ), DisplayName( TextosPadroes.Bloqueado ), Description( TextosPadroes.BloqueadoDescricao ), Category( TextosPadroes.ComportamentoCategoria ), DefaultValue( true )]
+        public bool Bloqueado
+        {
+            set
+            {
+                Enabled = !value;
+            }
+        }
+
+        #endregion IComponente
+
+        #region ILimpeza
+
+        [Browsable( true ), DisplayName( TextosPadroes.FazerLimpeza ), Description( TextosPadroes.FazerLimpezaDescricao ), Category( TextosPadroes.DadosCateogria ), DefaultValue( false )]
+        public bool FazerLimpeza { get; set; } = false;
+
+        #endregion ILimpeza
 
         #region Acessibilidade
 
@@ -74,9 +102,83 @@ namespace ToolBox.ToolBoxFramework.Componentes.Bases
 
         #endregion Acessibilidade
 
+        #region Ocultadas
+
+        [Browsable( false ), DisplayName( TextosPadroes.PermitirTab ), Category( TextosPadroes.ComportamentoCategoria ), DefaultValue( false )]
+        public new bool AcceptsTab
+        {
+            get
+            {
+                return base.AcceptsTab;
+            }
+
+            set
+            {
+                base.AcceptsTab = value;
+            }
+        }
+
+        [Browsable( false )]
+        public new bool AllowDrop
+        {
+            get
+            {
+                return base.AllowDrop;
+            }
+
+            set
+            {
+                base.AllowDrop = value;
+            }
+        }
+
+        [Browsable( false )]
+        public new bool HideSelection
+        {
+            get
+            {
+                return base.HideSelection;
+            }
+
+            set
+            {
+                base.HideSelection = value;
+            }
+        }
+
+        [Browsable( false )]
+        public new ImeMode ImeMode
+        {
+            get
+            {
+                return base.ImeMode;
+            }
+
+            set
+            {
+                base.ImeMode = value;
+            }
+        }
+
+        [Browsable( false )]
+        public new string[] Lines
+        {
+            get
+            {
+                return base.Lines;
+            }
+
+            set
+            {
+                base.Lines = value;
+            }
+        }
+
+        #endregion Ocultadas
+
         #region Aparência
 
-        [DisplayName( "Cor de fundo" )]
+        [Browsable( true ), DisplayName( TextosPadroes.CorFundo ), Category( TextosPadroes.AparenciaCategoria )]
         public new Color BackColor
         {
             get
@@ -132,7 +234,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.Bases
             }
         }
 
-        [DisplayName( "Cor do texto" )]
+        [Browsable( true ), DisplayName( TextosPadroes.CorFonte ), Category( TextosPadroes.AparenciaCategoria )]
         public new Color ForeColor
         {
             get
@@ -157,20 +259,6 @@ namespace ToolBox.ToolBoxFramework.Componentes.Bases
             set
             {
                 base.Size = value;
-            }
-        }
-
-        [Browsable( false )]
-        public new string[] Lines
-        {
-            get
-            {
-                return base.Lines;
-            }
-
-            set
-            {
-                base.Lines = value;
             }
         }
 
@@ -202,39 +290,25 @@ namespace ToolBox.ToolBoxFramework.Componentes.Bases
             }
         }
 
+        [Browsable( true ), DisplayName( TextosPadroes.CaractereSenha ), Category( TextosPadroes.AparenciaCategoria ), DefaultValue( false )]
+        public new char PasswordChar
+        {
+            get
+            {
+                return base.PasswordChar;
+            }
+
+            set
+            {
+                base.PasswordChar = value;
+            }
+        }
+
         #endregion Aparência
 
         #region Comportamento
 
-        [Category( "Comportamento" ), DisplayName( "Barras de rolagem" )]
-        public new ScrollBars ScrollBars
-        {
-            get
-            {
-                return base.ScrollBars;
-            }
-
-            set
-            {
-                base.ScrollBars = value;
-            }
-        }
-
-        [Category( "Comportamento" ), DisplayName( "Alinhamento de texto" )]
-        public new HorizontalAlignment TextAlign
-        {
-            get
-            {
-                return base.TextAlign;
-            }
-
-            set
-            {
-                base.TextAlign = value;
-            }
-        }
-
-        [Browsable( false )]
+        [Browsable( true )]
         public new bool AcceptsReturn
         {
             get
@@ -248,35 +322,63 @@ namespace ToolBox.ToolBoxFramework.Componentes.Bases
             }
         }
 
-        [Browsable( false )]
-        public new bool AcceptsTab
+        [Browsable( true ), DisplayName( TextosPadroes.QuantidadeMaxima ), Category( TextosPadroes.ComportamentoCategoria ), DefaultValue( ValoresPadroes.QuantidadeMaxima )]
+        public new int MaxLength
         {
             get
             {
-                return base.AcceptsTab;
+                return base.MaxLength;
             }
 
             set
             {
-                base.AcceptsTab = value;
+                base.MaxLength = value;
             }
         }
 
-        [Browsable( false )]
-        public new bool AllowDrop
+        [Browsable( true ), DisplayName( TextosPadroes.MultiLinha ), Category( TextosPadroes.ComportamentoCategoria ), DefaultValue( false )]
+        public new bool Multiline
         {
             get
             {
-                return base.AllowDrop;
+                return base.Multiline;
             }
 
             set
             {
-                base.AllowDrop = value;
+                base.Multiline = value;
             }
         }
 
-        [Browsable( false )]
+        [Browsable( true ), DisplayName( TextosPadroes.BarraRolagem ), Category( TextosPadroes.ComportamentoCategoria ), DefaultValue( ScrollBars.None )]
+        public new ScrollBars ScrollBars
+        {
+            get
+            {
+                return base.ScrollBars;
+            }
+
+            set
+            {
+                base.ScrollBars = value;
+            }
+        }
+
+        [Browsable( true ), DisplayName( TextosPadroes.AlinhamentoTexto ), Category( TextosPadroes.ComportamentoCategoria ), DefaultValue( HorizontalAlignment.Left )]
+        public new HorizontalAlignment TextAlign
+        {
+            get
+            {
+                return base.TextAlign;
+            }
+
+            set
+            {
+                base.TextAlign = value;
+            }
+        }
+
+        [Browsable( true ), DisplayName( TextosPadroes.ConverterCaractereParaMinusculasOuMaiusculas ), Category( TextosPadroes.ComportamentoCategoria ), DefaultValue( CharacterCasing.Normal )]
         public new CharacterCasing CharacterCasing
         {
             get
@@ -290,7 +392,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.Bases
             }
         }
 
-        [Category( "Comportamento" ), DisplayName( "Menu ao clicar botão direito" )]
+        [Browsable( true ), DisplayName( TextosPadroes.MenuContexto ), Category( TextosPadroes.ComportamentoCategoria ), DefaultValue( null )]
         public new ContextMenuStrip ContextMenuStrip
         {
             get
@@ -304,7 +406,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.Bases
             }
         }
 
-        [Category( "Comportamento" ), DefaultValue( true ), DisplayName( "Habilitada" )]
+        [Browsable( true ), DisplayName( TextosPadroes.Habilitado ), Category( TextosPadroes.ComportamentoCategoria ), DefaultValue( true )]
         public new bool Enabled
         {
             get
@@ -324,77 +426,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.Bases
             }
         }
 
-        [Browsable( false )]
-        public new bool HideSelection
-        {
-            get
-            {
-                return base.HideSelection;
-            }
-
-            set
-            {
-                base.HideSelection = value;
-            }
-        }
-
-        [Browsable( false )]
-        public new ImeMode ImeMode
-        {
-            get
-            {
-                return base.ImeMode;
-            }
-
-            set
-            {
-                base.ImeMode = value;
-            }
-        }
-
-        [Browsable( false )]
-        public new int MaxLength
-        {
-            get
-            {
-                return base.MaxLength;
-            }
-
-            set
-            {
-                base.MaxLength = value;
-            }
-        }
-
-        [Browsable( false )]
-        public new bool Multiline
-        {
-            get
-            {
-                return base.Multiline;
-            }
-
-            set
-            {
-                base.Multiline = value;
-            }
-        }
-
-        [Browsable( false )]
-        public new char PasswordChar
-        {
-            get
-            {
-                return base.PasswordChar;
-            }
-
-            set
-            {
-                base.PasswordChar = value;
-            }
-        }
-
-        [Category( "Comportamento" ), DisplayName( "Apenas leitura" )]
+        [Browsable( true ), DisplayName( TextosPadroes.ApenasLeitura ), Category( TextosPadroes.ComportamentoCategoria ), DefaultValue( false )]
         public new bool ReadOnly
         {
             get
@@ -408,7 +440,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.Bases
             }
         }
 
-        [Browsable( false )]
+        [Browsable( true ), DisplayName( TextosPadroes.HabilitarAtalhos ), Category( TextosPadroes.ComportamentoCategoria ), DefaultValue( true )]
         public new bool ShortcutsEnabled
         {
             get
@@ -422,7 +454,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.Bases
             }
         }
 
-        [Category( "Comportamento" ), DisplayName( "Índice de tabulação" )]
+        [Category( TextosPadroes.ComportamentoCategoria ), DisplayName( "Índice de tabulação" )]
         public new int TabIndex
         {
             get
@@ -436,7 +468,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.Bases
             }
         }
 
-        [Category( "Comportamento" ), DisplayName( "Parar na caixa de texto" )]
+        [Category( TextosPadroes.ComportamentoCategoria ), DisplayName( "Parar na caixa de texto" )]
         public new bool TabStop
         {
             get
@@ -450,7 +482,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.Bases
             }
         }
 
-        [Browsable( false )]
+        [Browsable( true ), DisplayName( TextosPadroes.UsarCaractereSenha ), Category( TextosPadroes.ComportamentoCategoria ), DefaultValue( false )]
         public new bool UseSystemPasswordChar
         {
             get
@@ -464,7 +496,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.Bases
             }
         }
 
-        [Category( "Comportamento" ), DisplayName( "Visível" )]
+        [Category( TextosPadroes.ComportamentoCategoria ), DisplayName( "Visível" )]
         public new bool Visible
         {
             get
@@ -478,7 +510,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.Bases
             }
         }
 
-        [Browsable( false )]
+        [Browsable( true ), DisplayName( TextosPadroes.QuebraLinhaAutomatica ), Category( TextosPadroes.ComportamentoCategoria ), DefaultValue( false )]
         public new bool WordWrap
         {
             get
@@ -492,7 +524,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.Bases
             }
         }
 
-        [Category( "Comportamento" ), DisplayName( "Âncora" )]
+        [Category( TextosPadroes.ComportamentoCategoria ), DisplayName( "Âncora" )]
         public new AnchorStyles Anchor
         {
             get
@@ -506,7 +538,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.Bases
             }
         }
 
-        [Category( "Comportamento" ), DisplayName( "Fixado" )]
+        [Browsable( true ), DisplayName( TextosPadroes.Fixar ), Category( TextosPadroes.ComportamentoCategoria )]
         public new DockStyle Dock
         {
             get
@@ -520,7 +552,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.Bases
             }
         }
 
-        [Category( "Comportamento" ), DisplayName( "Tamanho máximo" )]
+        [Category( TextosPadroes.ComportamentoCategoria ), DisplayName( "Tamanho máximo" )]
         public new Size MaximumSize
         {
             get
@@ -534,7 +566,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.Bases
             }
         }
 
-        [Category( "Comportamento" ), DisplayName( "Tamanho mínimo" )]
+        [Category( TextosPadroes.ComportamentoCategoria ), DisplayName( "Tamanho mínimo" )]
         public new Size MinimumSize
         {
             get
@@ -552,7 +584,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.Bases
 
         #region Dados
 
-        [Category( "Dados" ), DisplayName( "Texto" )]
+        [Browsable( true ), DisplayName( TextosPadroes.Texto ), Category( TextosPadroes.DadosCateogria ), DefaultValue( null )]
         public new string Text
         {
             get
@@ -562,6 +594,11 @@ namespace ToolBox.ToolBoxFramework.Componentes.Bases
 
             set
             {
+                if ( DesignMode )
+                {
+                    AlterarTextoPadrao( value );
+                }
+
                 base.Text = value;
             }
         }
@@ -664,108 +701,13 @@ namespace ToolBox.ToolBoxFramework.Componentes.Bases
 
         #endregion Layout
 
-        #endregion Propriedades Sobreescritas
-
-        #region Propriedades de Interface
-
-        #region IComponente
-
-        [
-            Browsable( true ),
-            Category( TextosPadroes.ValidacaoCategoria ),
-            DisplayName( TextosPadroes.FazerValidacao ),
-            Description( TextosPadroes.FazerValidacaoDescricao ),
-            DefaultValue( false )
-        ]
-        public bool FazerValidacao
-        {
-            get
-            {
-                return _fazerValidacao;
-            }
-
-            set
-            {
-                _fazerValidacao = true;
-            }
-        }
-
-        [
-            Browsable( true ),
-            Category( TextosPadroes.ComportamentoCategoria ),
-            Description( TextosPadroes.BloquearComponenteDescricao ),
-            DisplayName( TextosPadroes.BloquearComponente ),
-            DefaultValue( false )
-        ]
-        public bool BloquearComponente
-        {
-            get
-            {
-                return _bloquearComponente;
-            }
-
-            set
-            {
-                _bloquearComponente = value;
-            }
-        }
-
-        [
-            Browsable( true ),
-            Category( TextosPadroes.ComportamentoCategoria ),
-            DisplayName( TextosPadroes.Bloqueado ),
-            Description( TextosPadroes.BloqueadoDescricao ),
-            DefaultValue( true ),
-        ]
-        public bool Bloqueado
-        {
-            set
-            {
-                Enabled = !value;
-            }
-        }
-
-        #endregion IComponente
-
-        #region ILimpeza
-
-        [Browsable( true ), Category( TextosPadroes.DadosCateogria ), Description( TextosPadroes.FazerLimpezaDescricao ), DisplayName( TextosPadroes.FazerLimpeza ), DefaultValue( false )]
-        public bool FazerLimpeza { get; set; } = false;
-
-        #endregion ILimpeza
-
-        #endregion Propriedades de Interface
-
-        #region Comportamento
-
-        [
-            Browsable( true ),
-            Category( TextosPadroes.ComportamentoCategoria ),
-            DisplayName( TextosPadroes.PermitirNumeros ),
-            Description( TextosPadroes.PermitirNumerosDescricao ),
-            DefaultValue( false ),
-        ]
-        public bool NaoPermitirNumeros
-        {
-            get
-            {
-                return _naoPermitirNumeros;
-            }
-
-            set
-            {
-                _naoPermitirNumeros = value;
-            }
-        }
-
-        #endregion Comportamento
-
         #endregion Propriedadades
 
         #region Construtores
 
         private CaixaTextoBase()
         {
+            Margin = new Padding( 10, 5, 10, 5 );
             MaxLength = ValoresPadroes.QuantidadeMaxima.ParaInt();
             Text = _valorPadrao;
         }
@@ -780,18 +722,90 @@ namespace ToolBox.ToolBoxFramework.Componentes.Bases
 
         #endregion Construtores
 
-        #region Métodos Privados
+        #region Privados
 
-        private bool VerificarSeNumeroInserido( char caractere )
+        private void AlterarTextoPadrao( string texto )
         {
-            return caractere > 47 && caractere < 58 && _naoPermitirNumeros;
+            if ( VerificarTextoInserido( texto ) )
+            {
+                _valorPadrao = texto;
+            }
         }
 
-        private bool VerificarValorPadrao( string valor )
+        #endregion Privados
+
+        #region Métodos Protegidos
+
+        protected override void OnEnabledChanged( EventArgs e )
+        {
+            base.OnEnabledChanged( e );
+
+            if ( Enabled )
+            {
+                BackColor = Color.White;
+            }
+            else
+            {
+                BackColor = Color.Gainsboro;
+            }
+        }
+
+        protected override void OnKeyPress( KeyPressEventArgs e )
+        {
+            if ( VerificarCaractereInvalidoInserido( e.KeyChar ) )
+            {
+                e.Handled = true;
+                return;
+            }
+
+            base.OnKeyPress( e );
+        }
+
+        protected virtual bool VerificarSeLetraFoiInserido( char caractere )
+        {
+            return !PermitirLetras && caractere.Letra();
+        }
+
+        protected virtual bool VerificarSeNumeroFoiInserido( char caractere )
+        {
+            return !PermitirNumeros && caractere.Numero();
+        }
+
+        protected virtual bool VerificarSeSimboloFoiInserido( char caractere )
+        {
+            return !PermitirSimbolos && caractere.Simbolo();
+        }
+
+        protected bool VerificarCaractereInvalidoInserido( char caractere )
+        {
+            if ( caractere.Retorno() )
+            {
+                return false;
+            }
+
+            if ( VerificarSeLetraFoiInserido( caractere ) )
+            {
+                return true;
+            }
+
+            if ( VerificarSeNumeroFoiInserido( caractere ) )
+            {
+                return true;
+            }
+
+            if ( VerificarSeSimboloFoiInserido( caractere ) )
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        protected bool VerificarTextoInserido( string valor )
         {
             for ( int i = 0; i < valor.Length; i++ )
             {
-                if ( VerificarSeNumeroInserido( valor[ i ] ) )
+                if ( VerificarCaractereInvalidoInserido( valor[ i ] ) )
                 {
                     return false;
                 }
@@ -800,76 +814,38 @@ namespace ToolBox.ToolBoxFramework.Componentes.Bases
             return true;
         }
 
-        #endregion Métodos Privados
-
-        #region Métodos Protegidos
-
-        protected void AoDesabilitar()
-        {
-            BackColor = Color.Gainsboro;
-        }
-
-        protected void AoHabilitar()
-        {
-            BackColor = Color.White;
-        }
-
         #endregion Métodos Protegidos
 
-        #region Métodos Sobrescritos
+        #region Públicos
 
-        protected override void OnKeyPress( KeyPressEventArgs e )
-        {
-            if ( VerificarSeNumeroInserido( e.KeyChar ) )
-            {
-                e.Handled = true;
-            }
-            else
-            {
-                base.OnKeyPress( e );
-            }
-        }
-
-        protected override void OnEnabledChanged( EventArgs e )
-        {
-            if ( Enabled )
-            {
-                AoHabilitar();
-            }
-            else
-            {
-                AoDesabilitar();
-            }
-
-            base.OnEnabledChanged( e );
-        }
-
-        #endregion Métodos Sobrescritos
-
-        #region Métodos Públicos
-
-        #region Métodos de Interface
-
-        public bool Validar()
-        {
-            throw new NotImplementedException();
-        }
+        #region ICaixaTexto
 
         public bool TemTexto()
         {
             return Text.TemConteudo();
         }
 
-        /// <summary>
-        /// Executa a limpeza de resíduo do componente.
-        /// </summary>
+        #endregion ICaixaTexto
+
+        #region IComponente
+
+        public Point ObterPontoCentral()
+        {
+            return new Point( ( Size.Width / 2 ).ParaInt(), ( Size.Height / 2 ).ParaInt() );
+        }
+
+        #endregion IComponente
+
+        #region ILimpeza
+
         public void Limpar()
         {
             Clear();
+            Text = _valorPadrao;
         }
 
-        #endregion Métodos de Interface
+        #endregion ILimpeza
 
-        #endregion Métodos Públicos
+        #endregion Públicos
     }
 }

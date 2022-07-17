@@ -1,9 +1,8 @@
-﻿using BibliotecaPublica.Classes;
-using BibliotecaPublica.Classes.Config;
-using BibliotecaPublica.Classes.Servicos.Conversores;
-using BibliotecaPublica.Classes.Servicos.Gerenciadores;
-using BibliotecaPublica.Classes.Verificadores;
-using BibliotecaPublica.Estruturas;
+﻿using BibliotecaPublica.BibliotecaPublicaFramework.Classes.Config;
+using BibliotecaPublica.BibliotecaPublicaFramework.Classes.Servicos.Conversores;
+using BibliotecaPublica.BibliotecaPublicaFramework.Classes.Servicos.Gerenciadores;
+using BibliotecaPublica.BibliotecaPublicaFramework.Classes.Verificadores;
+using BibliotecaPublica.BibliotecaPublicaFramework.Estruturas;
 using MaterialSkin.Controls;
 using System;
 using System.IO;
@@ -12,7 +11,7 @@ using ToolBox.ToolBoxFramework.Componentes;
 
 namespace ToolBox.ToolBoxFramework.Formularios.BancoDados
 {
-    public partial class frmConfiguracaoBancoDados : MaterialForm 
+    public partial class frmConfiguracaoBancoDados : MaterialForm
     {
         #region Constantes
 
@@ -63,18 +62,18 @@ namespace ToolBox.ToolBoxFramework.Formularios.BancoDados
         {
             InitializeComponent();
 
-            _sqlServer = new GerenciadorServicosWindows("MSSQL$SQLEXPRESS", ValoresPadroes.TempoLimiteServico);
-            _sqlServerLaunchPad = new GerenciadorServicosWindows("MSSQLLaunchpad$SQLEXPRESS", ValoresPadroes.TempoLimiteServico);
+            _sqlServer = new GerenciadorServicosWindows( "MSSQL$SQLEXPRESS", ValoresPadroes.TempoLimiteServico );
+            _sqlServerLaunchPad = new GerenciadorServicosWindows( "MSSQLLaunchpad$SQLEXPRESS", ValoresPadroes.TempoLimiteServico );
 
             BuscarConfiguracaoLocal();
         }
 
-        public frmConfiguracaoBancoDados(string caminhoAplicativoExterno, string nomeCadeiaConexao)
+        public frmConfiguracaoBancoDados( string caminhoAplicativoExterno, string nomeCadeiaConexao )
         {
             InitializeComponent();
 
-            _sqlServer = new GerenciadorServicosWindows("MSSQL$SQLEXPRESS", ValoresPadroes.TempoLimiteServico);
-            _sqlServerLaunchPad = new GerenciadorServicosWindows("MSSQLLaunchpad$SQLEXPRESS", ValoresPadroes.TempoLimiteServico);
+            _sqlServer = new GerenciadorServicosWindows( "MSSQL$SQLEXPRESS", ValoresPadroes.TempoLimiteServico );
+            _sqlServerLaunchPad = new GerenciadorServicosWindows( "MSSQLLaunchpad$SQLEXPRESS", ValoresPadroes.TempoLimiteServico );
             _caminhoAplicativoExterno = caminhoAplicativoExterno;
             _nomeCadeiaConexao = nomeCadeiaConexao;
 
@@ -89,24 +88,24 @@ namespace ToolBox.ToolBoxFramework.Formularios.BancoDados
         {
             try
             {
-                _arquivo.AlterarConfiguracao("CaminhoBancoDados", _caminhoArquivo);
-                _arquivo.AlterarConfiguracao("NomeBancoDados", _nomeBancoDados);
-                _arquivo.AlterarConfiguracao("NomeServidor", _servidor);
-                _arquivo.AlterarConfiguracao("UsarCredenciaisPersonalizadas", _usarCredenciaisPersonalizadas.ToString());
+                _arquivo.AlterarConfiguracao( "CaminhoBancoDados", _caminhoArquivo );
+                _arquivo.AlterarConfiguracao( "NomeBancoDados", _nomeBancoDados );
+                _arquivo.AlterarConfiguracao( "NomeServidor", _servidor );
+                _arquivo.AlterarConfiguracao( "UsarCredenciaisPersonalizadas", _usarCredenciaisPersonalizadas.ToString() );
 
-                _arquivo.AlterarCadeiaConexao(_nomeCadeiaConexao, SistemaOld.CadeiaConexao);
+                //_arquivo.AlterarCadeiaConexao(_nomeCadeiaConexao, SistemaOld.CadeiaConexao);
 
                 _arquivo.SalvarArquivoAlterado();
 
-                Mensagem.Informar("Salvou!");
+                Mensagem.Informar( "Salvou!" );
             }
-            catch (Exception ex)
+            catch ( Exception ex )
             {
-                SetarMensagem(ex.Message);
+                SetarMensagem( ex.Message );
             }
         }
 
-        private void SetarMensagem(string texto)
+        private void SetarMensagem( string texto )
         {
             lblResultadoTesteConexao.Text = string.Empty;
             lblResultadoTesteConexao.Text = texto;
@@ -115,63 +114,63 @@ namespace ToolBox.ToolBoxFramework.Formularios.BancoDados
 
         private void PararServicos()
         {
-            SetarMensagem("Parando serviços");
+            SetarMensagem( "Parando serviços" );
 
-            if (_sqlServer.VerificarServicoIniciado())
+            if ( _sqlServer.VerificarServicoIniciado() )
             {
                 _sqlServer.PararServico();
             }
 
-            if (_sqlServerLaunchPad.VerificarServicoIniciado())
+            if ( _sqlServerLaunchPad.VerificarServicoIniciado() )
             {
                 _sqlServerLaunchPad.PararServico();
             }
 
-            SetarMensagem("Serviços parados");
+            SetarMensagem( "Serviços parados" );
         }
 
         private void IniciarServicos()
         {
-            SetarMensagem("Iniciando serviços");
+            SetarMensagem( "Iniciando serviços" );
 
-            if (_sqlServer.VerificarServicoParado())
+            if ( _sqlServer.VerificarServicoParado() )
             {
                 _sqlServer.IniciarServico();
             }
 
-            if (_sqlServerLaunchPad.VerificarServicoParado())
+            if ( _sqlServerLaunchPad.VerificarServicoParado() )
             {
                 _sqlServerLaunchPad.IniciarServico();
             }
 
-            SetarMensagem("Serviços iniciados");
+            SetarMensagem( "Serviços iniciados" );
         }
 
         private bool VerificarCampos()
         {
-            if (_caminhoArquivo.EstaVazio())
+            if ( _caminhoArquivo.EstaVazio() )
             {
                 return false;
             }
 
-            if (_nomeBancoDados.EstaVazio())
+            if ( _nomeBancoDados.EstaVazio() )
             {
                 return false;
             }
 
-            if (_servidor.EstaVazio())
+            if ( _servidor.EstaVazio() )
             {
                 return false;
             }
 
-            if (_usarCredenciaisPersonalizadas)
+            if ( _usarCredenciaisPersonalizadas )
             {
-                if (_usuario.EstaVazio())
+                if ( _usuario.EstaVazio() )
                 {
                     return false;
                 }
 
-                if (_senha.EstaVazio())
+                if ( _senha.EstaVazio() )
                 {
                     return false;
                 }
@@ -182,36 +181,36 @@ namespace ToolBox.ToolBoxFramework.Formularios.BancoDados
 
         private void BuscarConfiguracaoLocal()
         {
-            _caminhoArquivo = Configuracao.BuscarConfiguracao("CaminhoBancoDados");
-            _servidor = Configuracao.BuscarConfiguracao("NomeServidor");
-            _nomeBancoDados = Configuracao.BuscarConfiguracao("NomeBancoDados");
-            _usarCredenciaisPersonalizadas = Configuracao.BuscarConfiguracao<bool>("UsarCredenciaisPersonalizadas");
-            _usuario = Configuracao.BuscarConfiguracao("Usuario");
-            _senha = Configuracao.BuscarConfiguracao("Senha");
+            _caminhoArquivo = Configuracao.BuscarConfiguracao( "CaminhoBancoDados" );
+            _servidor = Configuracao.BuscarConfiguracao( "NomeServidor" );
+            _nomeBancoDados = Configuracao.BuscarConfiguracao( "NomeBancoDados" );
+            _usarCredenciaisPersonalizadas = Configuracao.BuscarConfiguracao<bool>( "UsarCredenciaisPersonalizadas" );
+            _usuario = Configuracao.BuscarConfiguracao( "Usuario" );
+            _senha = Configuracao.BuscarConfiguracao( "Senha" );
         }
 
-        private string ObterNomeBancoDados(string nomeArquivoBancoDados)
+        private string ObterNomeBancoDados( string nomeArquivoBancoDados )
         {
-            return $"DB_{Path.GetFileNameWithoutExtension(nomeArquivoBancoDados)}".ToUpper();
+            return $"DB_{Path.GetFileNameWithoutExtension( nomeArquivoBancoDados )}".ToUpper();
         }
 
         private void BuscarConfiguracaoTerceiro()
         {
-            if (_arquivo == null)
+            if ( _arquivo == null )
             {
-                _arquivo = new ArquivoConfiguracao(_caminhoAplicativoExterno);
+                _arquivo = new ArquivoConfiguracao( _caminhoAplicativoExterno );
             }
 
-            _caminhoArquivo = _arquivo.BuscarConfiguracao("CaminhoBancoDados");
-            _servidor = _arquivo.BuscarConfiguracao("NomeServidor");
-            _nomeBancoDados = _arquivo.BuscarConfiguracao("NomeBancoDados");
-            _usarCredenciaisPersonalizadas = _arquivo.BuscarConfiguracao("UsarCredenciaisPersonalizadas").ParaBoolean();
-            _usuario = _arquivo.BuscarConfiguracao("Usuario");
-            _senha = _arquivo.BuscarConfiguracao("Senha");
+            _caminhoArquivo = _arquivo.BuscarConfiguracao( "CaminhoBancoDados" );
+            _servidor = _arquivo.BuscarConfiguracao( "NomeServidor" );
+            _nomeBancoDados = _arquivo.BuscarConfiguracao( "NomeBancoDados" );
+            _usarCredenciaisPersonalizadas = _arquivo.BuscarConfiguracao( "UsarCredenciaisPersonalizadas" ).ParaBoolean();
+            _usuario = _arquivo.BuscarConfiguracao( "Usuario" );
+            _senha = _arquivo.BuscarConfiguracao( "Senha" );
 
-            if (_nomeBancoDados.TemConteudo())
+            if ( _nomeBancoDados.TemConteudo() )
             {
-                _nomeBancoDadosSemExtensao = ObterNomeBancoDados(_nomeBancoDados);
+                _nomeBancoDadosSemExtensao = ObterNomeBancoDados( _nomeBancoDados );
             }
         }
 
@@ -272,9 +271,9 @@ namespace ToolBox.ToolBoxFramework.Formularios.BancoDados
 
         #endregion Métodos
 
-        private void btnBuscarArquivo_Click(object sender, EventArgs e)
+        private void btnBuscarArquivo_Click( object sender, EventArgs e )
         {
-            using (OpenFileDialog dialogo = new OpenFileDialog())
+            using ( OpenFileDialog dialogo = new OpenFileDialog() )
             {
                 bool abrirDialogo = true;
 
@@ -282,53 +281,53 @@ namespace ToolBox.ToolBoxFramework.Formularios.BancoDados
                 {
                     PararServicos();
                 }
-                catch (Exception ex)
+                catch ( Exception ex )
                 {
-                    Mensagem.Avisar("Não foi possível parar algum dos serviços necessários e será necessários pará-los manualmente. Para fazer isso, consulte o manual de instrução que está na pasta desse programa.");
-                    SetarMensagem(ex.Message);
+                    Mensagem.Avisar( "Não foi possível parar algum dos serviços necessários e será necessários pará-los manualmente. Para fazer isso, consulte o manual de instrução que está na pasta desse programa." );
+                    SetarMensagem( ex.Message );
                     abrirDialogo = false;
                 }
 
-                if (abrirDialogo && dialogo.ShowDialog() == DialogResult.OK)
+                if ( abrirDialogo && dialogo.ShowDialog() == DialogResult.OK )
                 {
                     txtCaminhoArquivo.Text = dialogo.FileName;
-                    txtNomeBancoDados.Text = Path.GetFileName(dialogo.FileName);
-                    _nomeBancoDadosSemExtensao = ObterNomeBancoDados(txtNomeBancoDados.Text);
+                    txtNomeBancoDados.Text = Path.GetFileName( dialogo.FileName );
+                    _nomeBancoDadosSemExtensao = ObterNomeBancoDados( txtNomeBancoDados.Text );
                 }
             }
         }
 
-        private void rtnCredenciaisWindows_CheckedChanged(object sender, EventArgs e)
+        private void rtnCredenciaisWindows_CheckedChanged( object sender, EventArgs e )
         {
             gbxSeguranca.Enabled = !rtnCredenciaisWindows.Checked;
         }
 
-        private void btnSalvar_Click(object sender, EventArgs e)
+        private void btnSalvar_Click( object sender, EventArgs e )
         {
             bool salvar = true;
 
-            if (!VerificarCampos())
+            if ( !VerificarCampos() )
             {
-                SetarMensagem("Está faltando algumas informações.");
+                SetarMensagem( "Está faltando algumas informações." );
                 return;
             }
-            else if (!_conexaoFuncionando)
+            else if ( !_conexaoFuncionando )
             {
-                salvar = Mensagem.Perguntar("O teste de conexão com o banco de dados não obteve sucesso ou não foi realizado. Deseja continuar salvando mesmo assim?") == DialogResult.Yes;
+                salvar = Mensagem.Perguntar( "O teste de conexão com o banco de dados não obteve sucesso ou não foi realizado. Deseja continuar salvando mesmo assim?" ) == DialogResult.Yes;
             }
 
-            if (salvar)
+            if ( salvar )
             {
                 Salvar();
                 Close();
             }
             else
             {
-                SetarMensagem("Teste de conexão sem sucesso ou não foi realizado.");
+                SetarMensagem( "Teste de conexão sem sucesso ou não foi realizado." );
             }
         }
 
-        private void btnTestarConexao_Click(object sender, EventArgs e)
+        private void btnTestarConexao_Click( object sender, EventArgs e )
         {
             bool executarTeste = true;
 
@@ -338,35 +337,35 @@ namespace ToolBox.ToolBoxFramework.Formularios.BancoDados
             {
                 IniciarServicos();
             }
-            catch (Exception ex)
+            catch ( Exception ex )
             {
-                Mensagem.Avisar("Não foi possível iniciar algum dos serviços necessários e será preciso inicia-los manualmente. Para fazer isso, consulte o manual de instrução que está na pasta desse programa.");
-                SetarMensagem(ex.Message);
+                Mensagem.Avisar( "Não foi possível iniciar algum dos serviços necessários e será preciso inicia-los manualmente. Para fazer isso, consulte o manual de instrução que está na pasta desse programa." );
+                SetarMensagem( ex.Message );
                 executarTeste = false;
             }
 
-            if (executarTeste)
+            if ( executarTeste )
             {
                 //ExecutarTesteConexao();
             }
         }
 
-        private void frmConfiguracaoBancoDados_Load(object sender, EventArgs e)
+        private void frmConfiguracaoBancoDados_Load( object sender, EventArgs e )
         {
             try
             {
-                if (_arquivo == null)
+                if ( _arquivo == null )
                 {
-                    _arquivo = new ArquivoConfiguracao(_caminhoAplicativoExterno);
+                    _arquivo = new ArquivoConfiguracao( _caminhoAplicativoExterno );
                 }
             }
-            catch (ArgumentNullException ex)
+            catch ( ArgumentNullException ex )
             {
-                Mensagem.MostrarErro(ex);
+                Mensagem.MostrarErro( ex );
             }
-            catch (Exception ex)
+            catch ( Exception ex )
             {
-                Mensagem.MostrarErro(ex);
+                Mensagem.MostrarErro( ex );
             }
 
             txtCaminhoArquivo.Text = _caminhoArquivo;
@@ -377,12 +376,12 @@ namespace ToolBox.ToolBoxFramework.Formularios.BancoDados
             txtSenha.Text = _senha;
         }
 
-        private void btnSair_Click(object sender, EventArgs e)
+        private void btnSair_Click( object sender, EventArgs e )
         {
             Close();
         }
 
-        private void frmConfiguracaoBancoDados_FormClosing(object sender, FormClosingEventArgs e)
+        private void frmConfiguracaoBancoDados_FormClosing( object sender, FormClosingEventArgs e )
         {
             _sqlServer.FecharServico();
             _sqlServer.Dispose();

@@ -49,7 +49,11 @@ namespace ToolBox.ToolBoxFramework.Componentes.Dados
         protected override void EncerrarInicializacao()
         {
             base.EncerrarInicializacao();
-            _fonteDados.ListChanged += new ListChangedEventHandler( ( object acionador, ListChangedEventArgs argumentos ) => { RefreshItemsCore(); } );
+
+            if ( _fonteDados != null )
+            {
+                _fonteDados.ListChanged += new ListChangedEventHandler( ( object acionador, ListChangedEventArgs argumentos ) => { RefreshItemsCore(); } );
+            }
 
             AtualizarItens();
         }

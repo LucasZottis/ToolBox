@@ -1,8 +1,8 @@
-﻿using BibliotecaPublica;
-using BibliotecaPublica.Classes.Servicos.Conversores;
-using BibliotecaPublica.Classes.Verificadores;
-using BibliotecaPublica.Enums;
-using BibliotecaPublica.Estruturas;
+﻿using BibliotecaPublica.BibliotecaPublicaFramework;
+using BibliotecaPublica.BibliotecaPublicaFramework.Classes.Servicos.Conversores;
+using BibliotecaPublica.BibliotecaPublicaFramework.Classes.Verificadores;
+using BibliotecaPublica.BibliotecaPublicaFramework.Enums;
+using BibliotecaPublica.BibliotecaPublicaFramework.Estruturas;
 using System;
 using System.ComponentModel;
 using System.Data;
@@ -1183,6 +1183,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.Dados.Base
 
         private void AoMudarListaFonteDados( object sender, ListChangedEventArgs e )
         {
+            _fonte.ListChanged += new ListChangedEventHandler( ( object acionador, ListChangedEventArgs argumentos ) => { RefreshItemsCore(); } );
             RefreshItemsCore();
         }
 
@@ -1570,7 +1571,7 @@ namespace ToolBox.ToolBoxFramework.Componentes.Dados.Base
                 return;
             }
 
-            OnRefreshItems();
+            RefreshItemsCore();
         }
 
         public override void AddStandardItems()

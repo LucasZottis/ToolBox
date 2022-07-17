@@ -1,10 +1,10 @@
-﻿using BibliotecaPublica;
-using BibliotecaPublica.CamadaNotificadora;
-using BibliotecaPublica.CamadaNotificadora.Enums;
-using BibliotecaPublica.CamadaNotificadora.Interfaces;
-using BibliotecaPublica.Classes.Verificadores;
-using BibliotecaPublica.Enums;
-using BibliotecaPublica.Estruturas;
+﻿using BibliotecaPublica.BibliotecaPublicaFramework;
+using BibliotecaPublica.BibliotecaPublicaFramework.Classes.Verificadores;
+using BibliotecaPublica.BibliotecaPublicaFramework.Enums;
+using BibliotecaPublica.BibliotecaPublicaFramework.Estruturas;
+using CamadaNotificadora.Framework;
+using CamadaNotificadora.Framework.Enums;
+using CamadaNotificadora.Framework.Interfaces;
 using FluentValidation.Results;
 using System;
 using System.Collections.Generic;

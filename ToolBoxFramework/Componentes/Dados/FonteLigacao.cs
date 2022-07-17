@@ -1,4 +1,4 @@
-﻿using BibliotecaPublica.Classes.Verificadores;
+﻿using BibliotecaPublica.BibliotecaPublicaFramework.Classes.Verificadores;
 using System;
 using System.ComponentModel;
 using System.Data;

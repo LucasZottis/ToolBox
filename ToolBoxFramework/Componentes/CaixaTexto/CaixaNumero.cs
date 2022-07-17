@@ -1,7 +1,7 @@
-﻿using BibliotecaPublica.Classes.Servicos.Conversores;
-using BibliotecaPublica.Classes.Verificadores;
-using BibliotecaPublica.Enums;
-using BibliotecaPublica.Estruturas;
+﻿using BibliotecaPublica.BibliotecaPublicaFramework.Classes.Servicos.Conversores;
+using BibliotecaPublica.BibliotecaPublicaFramework.Classes.Verificadores;
+using BibliotecaPublica.BibliotecaPublicaFramework.Enums;
+using BibliotecaPublica.BibliotecaPublicaFramework.Estruturas;
 using System;
 using System.ComponentModel;
 using System.Windows.Forms;

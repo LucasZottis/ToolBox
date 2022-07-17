@@ -1,4 +1,4 @@
-﻿using BibliotecaPublica.Classes.Servicos.Conversores;
+﻿using BibliotecaPublica.BibliotecaPublicaFramework.Classes.Servicos.Conversores;
 using System;
 using System.ComponentModel;
 using System.Data;

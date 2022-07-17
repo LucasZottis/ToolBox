@@ -1,4 +1,4 @@
-﻿using BibliotecaPublica.Enums;
+﻿using BibliotecaPublica.BibliotecaPublicaFramework.Enums;
 
 namespace ToolBox.ToolBoxFramework.Interfaces
 {

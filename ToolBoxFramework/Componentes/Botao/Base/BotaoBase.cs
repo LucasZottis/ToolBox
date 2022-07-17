@@ -1,6 +1,6 @@
-﻿using BibliotecaPublica;
-using BibliotecaPublica.Enums;
-using BibliotecaPublica.Estruturas;
+﻿using BibliotecaPublica.BibliotecaPublicaFramework;
+using BibliotecaPublica.BibliotecaPublicaFramework.Enums;
+using BibliotecaPublica.BibliotecaPublicaFramework.Estruturas;
 using System;
 using System.ComponentModel;
 using System.Windows.Forms;

@@ -1,4 +1,4 @@
-﻿using BibliotecaPublica.CamadaNotificadora;
+﻿using CamadaNotificadora.Framework;
 
 namespace ToolBox.ToolBoxFramework.Interfaces
 {

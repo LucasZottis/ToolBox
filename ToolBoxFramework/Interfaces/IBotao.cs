@@ -1,4 +1,4 @@
-﻿using BibliotecaPublica.Enums;
+﻿using BibliotecaPublica.BibliotecaPublicaFramework.Enums;
 using System.Windows.Forms;
 
 namespace ToolBox.ToolBoxFramework.Interfaces

@@ -1,7 +1,7 @@
-﻿using BibliotecaPublica.Classes.Servicos.Conversores;
-using BibliotecaPublica.Classes.Verificadores;
-using BibliotecaPublica.Enums;
-using BibliotecaPublica.Estruturas;
+﻿using BibliotecaPublica.BibliotecaPublicaFramework.Classes.Servicos.Conversores;
+using BibliotecaPublica.BibliotecaPublicaFramework.Classes.Verificadores;
+using BibliotecaPublica.BibliotecaPublicaFramework.Enums;
+using BibliotecaPublica.BibliotecaPublicaFramework.Estruturas;
 using System;
 using System.ComponentModel;
 using System.Windows.Forms;
@@ -260,6 +260,9 @@ namespace ToolBox.ToolBoxFramework.Componentes.ToolStripComponentes
 
         [Browsable( true ), Category( TextosPadroes.DadosCateogria ), Description( TextosPadroes.FazerLimpezaDescricao ), DisplayName( TextosPadroes.FazerLimpeza ), DefaultValue( false )]
         public bool FazerLimpeza { get; set; } = false;
+        public bool PermitirNumeros { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public bool PermitirLetras { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public bool PermitirSimbolos { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         #endregion ILimpeza
 
