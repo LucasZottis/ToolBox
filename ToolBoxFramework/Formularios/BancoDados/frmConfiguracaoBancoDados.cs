@@ -7,9 +7,9 @@ using MaterialSkin.Controls;
 using System;
 using System.IO;
 using System.Windows.Forms;
-using ToolBox.ToolBoxFramework.Componentes;
+using ToolBox.ToolBoxWinForms.Framework.Componentes;
 
-namespace ToolBox.ToolBoxFramework.Formularios.BancoDados
+namespace ToolBox.ToolBoxWinForms.Framework.Formularios.BancoDados
 {
     public partial class frmConfiguracaoBancoDados : MaterialForm
     {

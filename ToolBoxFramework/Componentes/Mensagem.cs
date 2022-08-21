@@ -2,14 +2,14 @@
 using System.Text;
 using System.Windows.Forms;
 
-namespace ToolBox.ToolBoxFramework.Componentes
+namespace ToolBox.ToolBoxWinForms.Framework.Componentes
 {
     public static class Mensagem
     {
         #region Atributos
 
         private static readonly string _novalinha = "\n";
-        private static string _titulo = ConfiguracoesCaixaFerramenta.TituloFormularios;
+        private static string _titulo = ToolBoxConfig.TituloFormularios;
 
         #endregion Atributos
 

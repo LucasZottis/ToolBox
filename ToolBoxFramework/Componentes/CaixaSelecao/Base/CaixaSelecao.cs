@@ -5,9 +5,9 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
-using ToolBox.ToolBoxFramework.Interfaces;
+using ToolBox.ToolBoxWinForms.Framework.Interfaces;
 
-namespace ToolBox.ToolBoxFramework.Componentes.CaixaSelecao.Base
+namespace ToolBox.ToolBoxWinForms.Framework.Componentes.CaixaSelecao.Base
 {
     [ToolboxItem( false ), DesignerCategory( "Comuns" )]
     public class CaixaSelecaoBase : ComboBox, IComponente, ILimpeza

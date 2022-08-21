@@ -2,9 +2,9 @@
 using System;
 using System.ComponentModel;
 using System.Windows.Forms;
-using ToolBox.ToolBoxFramework.Interfaces;
+using ToolBox.ToolBoxWinForms.Framework.Interfaces;
 
-namespace ToolBox.ToolBoxFramework.Componentes.CaixaMarcacao.Base
+namespace ToolBox.ToolBoxWinForms.Framework.Componentes.CaixaMarcacao.Base
 {
     [ToolboxItem( false )]
     public class CaixaMarcacaoBase : CheckBox, IComponente

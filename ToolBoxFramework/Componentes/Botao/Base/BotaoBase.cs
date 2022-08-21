@@ -4,10 +4,10 @@ using BibliotecaPublica.BibliotecaPublicaFramework.Estruturas;
 using System;
 using System.ComponentModel;
 using System.Windows.Forms;
-using ToolBox.ToolBoxFramework.Formularios.Bases;
-using ToolBox.ToolBoxFramework.Interfaces;
+using ToolBox.ToolBoxWinForms.Framework.Formularios.Bases;
+using ToolBox.ToolBoxWinForms.Framework.Interfaces;
 
-namespace ToolBox.ToolBoxFramework.Componentes.Botao.Base
+namespace ToolBox.ToolBoxWinForms.Framework.Componentes.Botao.Base
 {
     [DesignerCategory( "Botões" ), ToolboxItem( false )]
     public class BotaoBase : Button, IBotao, IComponente

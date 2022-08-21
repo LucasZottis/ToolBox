@@ -1,4 +1,4 @@
-﻿namespace ToolBox.ToolBoxFramework.Interfaces
+﻿namespace ToolBox.ToolBoxWinForms.Framework.Interfaces
 {
     /// <summary>
     /// Interface de implementação de limpeza de componente.

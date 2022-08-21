@@ -8,11 +8,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
-using ToolBox.ToolBoxFramework.Componentes.ToolStripComponentes;
-using ToolBox.ToolBoxFramework.Interfaces;
-using ToolBox.ToolBoxFramework.Properties;
+using ToolBox.ToolBoxWinForms.Framework.Componentes.ToolStripComponentes;
+using ToolBox.ToolBoxWinForms.Framework.Interfaces;
+using ToolBox.ToolBoxWinForms.Framework.Properties;
 
-namespace ToolBox.ToolBoxFramework.Componentes.Dados.Base
+namespace ToolBox.ToolBoxWinForms.Framework.Componentes.Dados.Base
 {
     [DesignerCategory( "Dados" ), ToolboxItem( false )]
     public class NavegadorBase : BindingNavigator, ISupportInitialize

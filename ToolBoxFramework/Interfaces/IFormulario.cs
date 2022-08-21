@@ -1,6 +1,6 @@
 ﻿using BibliotecaPublica.BibliotecaPublicaFramework.Enums;
 
-namespace ToolBox.ToolBoxFramework.Interfaces
+namespace ToolBox.ToolBoxWinForms.Framework.Interfaces
 {
     public interface IFormulario
     {

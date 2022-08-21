@@ -11,10 +11,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-using ToolBox.ToolBoxFramework.Componentes;
-using ToolBox.ToolBoxFramework.Interfaces;
+using ToolBox.ToolBoxWinForms.Framework.Componentes;
+using ToolBox.ToolBoxWinForms.Framework.Interfaces;
 
-namespace ToolBox.ToolBoxFramework.Formularios.Bases
+namespace ToolBox.ToolBoxWinForms.Framework.Formularios.Bases
 {
     [Serializable()]
     [DefaultEvent( "CarregarFormulario" )]
@@ -1127,7 +1127,7 @@ namespace ToolBox.ToolBoxFramework.Formularios.Bases
 
         private void AoAlterarTitulo()
         {
-            Text = $"{ConfiguracoesCaixaFerramenta.TituloFormularios}";
+            Text = $"{ToolBoxConfig.TituloFormularios}";
 
             if ( !DesignMode && _titulo.TemConteudo() )
             {

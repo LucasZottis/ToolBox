@@ -5,9 +5,9 @@ using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-using ToolBox.ToolBoxFramework.Interfaces;
+using ToolBox.ToolBoxWinForms.Framework.Interfaces;
 
-namespace ToolBox.ToolBoxFramework.Componentes.Bases
+namespace ToolBox.ToolBoxWinForms.Framework.Componentes.Bases
 {
     [DesignerCategory( "Caixa de Texto" ), ToolboxItem( false )]
     public class CaixaTextoBase : TextBox, ICaixaTexto, IComponente

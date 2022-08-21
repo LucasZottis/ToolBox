@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Windows.Forms;
 
-namespace ToolBox.ToolBoxFramework.Componentes.Dados.Base
+namespace ToolBox.ToolBoxWinForms.Framework.Componentes.Dados.Base
 {
     [ToolboxItem( false ), DesignerCategory( "Dados" )]
     public class GradeDadosBase : DataGridView

@@ -5,10 +5,10 @@ using BibliotecaPublica.BibliotecaPublicaFramework.Estruturas;
 using System;
 using System.ComponentModel;
 using System.Windows.Forms;
-using ToolBox.ToolBoxFramework.Componentes.Bases;
-using ToolBox.ToolBoxFramework.Interfaces;
+using ToolBox.ToolBoxWinForms.Framework.Componentes.Bases;
+using ToolBox.ToolBoxWinForms.Framework.Interfaces;
 
-namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
+namespace ToolBox.ToolBoxWinForms.Framework.Componentes.CaixaTexto
 {
     [DesignerCategory( "Caixa de Texto" ), ToolboxItem( true )]
     public class CaixaNumero : CaixaTextoBase, ICaixaNumero

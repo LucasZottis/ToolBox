@@ -1,5 +1,4 @@
-﻿
-namespace ToolBox.ToolBoxFramework.Formularios.Bases
+﻿namespace ToolBox.ToolBoxWinForms.Framework.Formularios.Bases
 {
     partial class FormularioBase
     {

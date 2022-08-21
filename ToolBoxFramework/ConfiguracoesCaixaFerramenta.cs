@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using ToolBox.ToolBoxFramework.Interfaces;
+using ToolBox.ToolBoxWinForms.Framework.Interfaces;
 
-namespace ToolBox.ToolBoxFramework
+namespace ToolBox.ToolBoxWinForms.Framework
 {
-    public static class ConfiguracoesCaixaFerramenta
+    public static class ToolBoxConfig
     {
         #region Atributos
 

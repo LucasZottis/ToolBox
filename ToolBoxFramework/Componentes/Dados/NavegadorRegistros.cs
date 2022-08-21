@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel;
 using System.Data;
-using ToolBox.ToolBoxFramework.Componentes.Dados.Base;
+using ToolBox.ToolBoxWinForms.Framework.Componentes.Dados.Base;
 
-namespace ToolBox.ToolBoxFramework.Componentes.Dados
+namespace ToolBox.ToolBoxWinForms.Framework.Componentes.Dados
 {
     [DesignerCategory( "Dados" )]
     public class NavegadorRegistros : NavegadorBase

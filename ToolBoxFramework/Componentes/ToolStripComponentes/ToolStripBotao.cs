@@ -3,9 +3,9 @@ using System;
 using System.ComponentModel;
 using System.Windows.Forms;
 using System.Windows.Forms.Design;
-using ToolBox.ToolBoxFramework.Interfaces;
+using ToolBox.ToolBoxWinForms.Framework.Interfaces;
 
-namespace ToolBox.ToolBoxFramework.Componentes.ToolStripComponentes
+namespace ToolBox.ToolBoxWinForms.Framework.Componentes.ToolStripComponentes
 {
     [ToolStripItemDesignerAvailability( ToolStripItemDesignerAvailability.ToolStrip ), ToolboxItem( false ), DesignerCategory( "Menus" )]
     public class ToolStripBotao : ToolStripButton, IBotao

@@ -4,9 +4,9 @@ using BibliotecaPublica.BibliotecaPublicaFramework.Estruturas;
 using System.ComponentModel;
 using System.Globalization;
 using System.Windows.Forms;
-using ToolBox.ToolBoxFramework.Componentes.Bases;
+using ToolBox.ToolBoxWinForms.Framework.Componentes.Bases;
 
-namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
+namespace ToolBox.ToolBoxWinForms.Framework.Componentes.CaixaTexto
 {
     [DesignerCategory( "Caixa de texto monetária" ), ToolboxItem( true )]
     public class CaixaTextoMonetaria : CaixaTextoBase

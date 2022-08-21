@@ -2,9 +2,9 @@
 using System;
 using System.ComponentModel;
 using System.Windows.Forms;
-using ToolBox.ToolBoxFramework.Interfaces;
+using ToolBox.ToolBoxWinForms.Framework.Interfaces;
 
-namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
+namespace ToolBox.ToolBoxWinForms.Framework.Componentes.CaixaTexto
 {
     [ToolboxItem( true ), DesignerCategory( "Caixa de texto" )]
     public class CaixaMonetariaV2 : NumericUpDown, IComponente, ICaixaTexto

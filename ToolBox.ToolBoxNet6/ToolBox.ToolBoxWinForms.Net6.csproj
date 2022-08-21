@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>ToolBoxWinForms.Net6</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Resources\Web\HTML\" />
+    <Folder Include="Resources\Web\JavaScript\" />
+    <Folder Include="Resources\Web\CSS\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CefSharp.WinForms.NETCore" Version="103.0.90" />
+    <PackageReference Include="FluentValidation" Version="11.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="BibliotecaPublicaFramework">
+      <HintPath>..\..\..\MEGASync\BibliotecasUteis\BibliotecaPublicaFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="CamadaNotificadoraFramework">
+      <HintPath>..\..\..\MEGASync\BibliotecasUteis\CamadaNotificadoraFramework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
-using ToolBox.ToolBoxFramework.Componentes.Bases;
+using ToolBox.ToolBoxWinForms.Framework.Componentes.Bases;
 
-namespace ToolBox.ToolBoxFramework.Componentes.CaixaTexto
+namespace ToolBox.ToolBoxWinForms.Framework.Componentes.CaixaTexto
 {
     [DesignerCategory( "Caixa de Texto" ), ToolboxItem( true )]
     public class CaixaTexto : CaixaTextoBase

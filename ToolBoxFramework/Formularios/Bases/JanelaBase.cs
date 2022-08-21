@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 
-namespace ToolBox.ToolBoxFramework.Formularios.Bases
+namespace ToolBox.ToolBoxWinForms.Framework.Formularios.Bases
 {
     [Serializable()]
     public partial class JanelaBase : FormularioBase
@@ -9,7 +9,7 @@ namespace ToolBox.ToolBoxFramework.Formularios.Bases
         public JanelaBase()
         {
             InitializeComponent();
-            ConfiguracoesCaixaFerramenta.FormulariosAbertos.Add( this );
+            ToolBoxConfig.FormulariosAbertos.Add( this );
         }
 
         #region Métodos Sobreescritos
@@ -17,7 +17,7 @@ namespace ToolBox.ToolBoxFramework.Formularios.Bases
         protected override void OnClosing( CancelEventArgs e )
         {
             base.OnClosing( e );
-            ConfiguracoesCaixaFerramenta.FormulariosAbertos.Remove( this );
+            ToolBoxConfig.FormulariosAbertos.Remove( this );
         }
 
         #endregion Métodos Sobreescritos

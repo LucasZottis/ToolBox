@@ -3,9 +3,9 @@ using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
-using ToolBox.ToolBoxFramework.Interfaces;
+using ToolBox.ToolBoxWinForms.Framework.Interfaces;
 
-namespace ToolBox.ToolBoxFramework.Formularios.Bases
+namespace ToolBox.ToolBoxWinForms.Framework.Formularios.Bases
 {
     [Serializable()]
     public partial class DialogoBase : FormularioBase
