@@ -6,6 +6,8 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <AssemblyName>ToolBoxWinForms.Net6</AssemblyName>
+    <BaseOutputPath>D:\MEGASync\BibliotecasUteis</BaseOutputPath>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,6 +22,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="BibliotecaPublica">
+      <HintPath>BibliotecaPublica</HintPath>
+    </Reference>
     <Reference Include="BibliotecaPublicaFramework">
       <HintPath>..\..\..\MEGASync\BibliotecasUteis\BibliotecaPublicaFramework.dll</HintPath>
     </Reference>
