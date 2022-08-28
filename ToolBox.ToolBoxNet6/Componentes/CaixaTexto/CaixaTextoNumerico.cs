@@ -1,11 +1,10 @@
 ﻿using System.Globalization;
-using ToolBox.ToolBoxNet6;
 using ToolBox.ToolBoxWinForms.Net6.Componentes.CaixaTexto.Base;
 
 namespace ToolBox.ToolBoxWinForms.Net6.Componentes.CaixaTexto
 {
     [DesignerCategory( "Caixa de texto numérico" ), ToolboxItem( true )]
-    internal class CaixaTextoNumerico : CaixaTextoBase, ICaixaTextoNumerico
+    public class CaixaTextoNumerico : CaixaTextoBase, ICaixaTextoNumerico
     {
         #region Atributos
 

@@ -79,11 +79,5 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ToolBoxFramework\ToolBox.ToolBoxWinForms.Framework.csproj">
-      <Project>{0908ac65-0105-485c-a19b-11cf08b4c530}</Project>
-      <Name>ToolBox.ToolBoxWinForms.Framework</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

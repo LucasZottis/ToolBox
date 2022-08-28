@@ -1,7 +1,7 @@
 ﻿namespace ToolBox.ToolBoxWinForms.Net6.Componentes.CaixaTexto.Base
 {
     [DesignerCategory( "Caixa de Texto" ), ToolboxItem( false )]
-    internal class CaixaTextoBase : TextBox, ICaixaTexto, IComponente, ILimpeza
+    public class CaixaTextoBase : TextBox, ICaixaTexto, IComponente, ILimpeza
     {
         #region Atributos
 

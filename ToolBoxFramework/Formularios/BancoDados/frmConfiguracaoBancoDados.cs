@@ -1,9 +1,4 @@
-﻿using BibliotecaPublica.BibliotecaPublicaFramework.Classes.Config;
-using BibliotecaPublica.BibliotecaPublicaFramework.Classes.Servicos.Conversores;
-using BibliotecaPublica.BibliotecaPublicaFramework.Classes.Servicos.Gerenciadores;
-using BibliotecaPublica.BibliotecaPublicaFramework.Classes.Verificadores;
-using BibliotecaPublica.BibliotecaPublicaFramework.Estruturas;
-using MaterialSkin.Controls;
+﻿using MaterialSkin.Controls;
 using System;
 using System.IO;
 using System.Windows.Forms;

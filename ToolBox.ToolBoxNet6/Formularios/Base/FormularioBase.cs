@@ -1,9 +1,14 @@
-﻿using CamadaNotificadora.Framework;
-using CamadaNotificadora.Framework.Enums;
+﻿using BibliotecaPublica.Extensoes.Extensoes;
+using BibliotecaPublica.Geral.Estruturas;
+using BibliotecaPublica.Notificacoes;
+using BibliotecaPublica.Notificacoes.Enums;
 using FluentValidation.Results;
 
 namespace ToolBox.ToolBoxWinForms.Net6.Formularios.Base
 {
+    /// <summary>
+    /// Classe de formulário que serve de base para criação de novos formulários.
+    /// </summary>
     public partial class FormularioBase : Form, IFormulario
     {
         private EventoAoAlterarModoJanela _aoAlterarModoJanela;

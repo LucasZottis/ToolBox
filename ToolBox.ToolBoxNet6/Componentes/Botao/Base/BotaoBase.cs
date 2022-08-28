@@ -1,4 +1,4 @@
-﻿namespace ToolBox.ToolBoxNet6.Componentes.Botao.Base
+﻿namespace ToolBox.ToolBoxWinForms.Net6.Componentes.Botao.Base
 {
     [DesignerCategory( "Botão" ), ToolboxItem( false )]
     public class BotaoBase : Button, IComponente

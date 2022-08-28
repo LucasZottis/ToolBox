@@ -1,4 +1,4 @@
-﻿using ToolBox.ToolBoxNet6.Componentes.Botao.Base;
+﻿using ToolBox.ToolBoxWinForms.Net6.Componentes.Botao.Base;
 
 namespace ToolBox.ToolBoxWinForms.Net6.Componentes.Botao
 {
