@@ -3,21 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToolBox.Geral", "ToolBox.ToolBoxNet6\ToolBox.Geral.csproj", "{F3900853-3658-4E53-B93F-586DEFE7A651}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToolBox.CaixaTexto", "ToolBox.CaixaTexto\ToolBox.CaixaTexto.csproj", "{FA66022A-89A6-4400-8CDB-18E825A98F66}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolBox.CaixaTexto", "ToolBox.CaixaTexto\ToolBox.CaixaTexto.csproj", "{FA66022A-89A6-4400-8CDB-18E825A98F66}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToolBox.Botao", "ToolBox.Botao\ToolBox.Botao.csproj", "{2DA6C206-4FCB-4D50-A257-A40E36CFFDBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolBox.CaixaMarcacao", "ToolBox.CaixaMarcacao\ToolBox.CaixaMarcacao.csproj", "{08B0DB9C-9392-4D36-A0F7-341E18E67AB6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToolBox.Dados", "ToolBox.Dados\ToolBox.Dados.csproj", "{C9311353-F052-4B02-86B6-B76F01EA8E08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolBox.Botao", "ToolBox.Botao\ToolBox.Botao.csproj", "{2DA6C206-4FCB-4D50-A257-A40E36CFFDBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToolBox.Painel", "ToolBox.Painel\ToolBox.Painel.csproj", "{2ADB79B6-6688-4FE9-86F0-562900E36490}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolBox.Dados", "ToolBox.Dados\ToolBox.Dados.csproj", "{C9311353-F052-4B02-86B6-B76F01EA8E08}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToolBox.Rotulo", "ToolBox.Rotulo\ToolBox.Rotulo.csproj", "{6A968D30-A3A0-434B-B92B-51655E91F333}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolBox.Painel", "ToolBox.Painel\ToolBox.Painel.csproj", "{2ADB79B6-6688-4FE9-86F0-562900E36490}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToolBox.Formulario", "ToolBox.Formulario\ToolBox.Formulario.csproj", "{86D904B6-1FA5-4EF9-9C04-92ECCF4B6DF9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolBox.Rotulo", "ToolBox.Rotulo\ToolBox.Rotulo.csproj", "{6A968D30-A3A0-434B-B92B-51655E91F333}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToolBox.Geral", "ToolBox.Geral\ToolBox.Geral.csproj", "{550AB7A3-8F7A-425F-A3DA-F063108AEA25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolBox.Formulario", "ToolBox.Formulario\ToolBox.Formulario.csproj", "{86D904B6-1FA5-4EF9-9C04-92ECCF4B6DF9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToolBox.Marcacao", "ToolBox.Marcacao\ToolBox.Marcacao.csproj", "{9DC140F7-633F-4AED-815A-EA088E2212A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,18 +25,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F3900853-3658-4E53-B93F-586DEFE7A651}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F3900853-3658-4E53-B93F-586DEFE7A651}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F3900853-3658-4E53-B93F-586DEFE7A651}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F3900853-3658-4E53-B93F-586DEFE7A651}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FA66022A-89A6-4400-8CDB-18E825A98F66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FA66022A-89A6-4400-8CDB-18E825A98F66}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FA66022A-89A6-4400-8CDB-18E825A98F66}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FA66022A-89A6-4400-8CDB-18E825A98F66}.Release|Any CPU.Build.0 = Release|Any CPU
-		{08B0DB9C-9392-4D36-A0F7-341E18E67AB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{08B0DB9C-9392-4D36-A0F7-341E18E67AB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{08B0DB9C-9392-4D36-A0F7-341E18E67AB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{08B0DB9C-9392-4D36-A0F7-341E18E67AB6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2DA6C206-4FCB-4D50-A257-A40E36CFFDBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2DA6C206-4FCB-4D50-A257-A40E36CFFDBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2DA6C206-4FCB-4D50-A257-A40E36CFFDBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -57,6 +49,14 @@ Global
 		{86D904B6-1FA5-4EF9-9C04-92ECCF4B6DF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86D904B6-1FA5-4EF9-9C04-92ECCF4B6DF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86D904B6-1FA5-4EF9-9C04-92ECCF4B6DF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{550AB7A3-8F7A-425F-A3DA-F063108AEA25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{550AB7A3-8F7A-425F-A3DA-F063108AEA25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{550AB7A3-8F7A-425F-A3DA-F063108AEA25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{550AB7A3-8F7A-425F-A3DA-F063108AEA25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DC140F7-633F-4AED-815A-EA088E2212A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DC140F7-633F-4AED-815A-EA088E2212A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DC140F7-633F-4AED-815A-EA088E2212A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DC140F7-633F-4AED-815A-EA088E2212A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

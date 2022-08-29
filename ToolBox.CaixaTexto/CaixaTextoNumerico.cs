@@ -1,6 +1,4 @@
-﻿using System.Globalization;
-
-namespace ToolBox.CaixaTexto
+﻿namespace ToolBox.CaixaTexto
 {
     [DesignerCategory( "Caixa de texto numérico" ), ToolboxItem( true )]
     public class CaixaTextoNumerico : CaixaTextoBase, ICaixaTextoNumerico

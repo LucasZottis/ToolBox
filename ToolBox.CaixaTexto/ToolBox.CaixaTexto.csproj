@@ -21,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ToolBox.Geral\ToolBox.Geral.csproj" />
     <ProjectReference Include="..\ToolBox.ToolBoxNet6\ToolBox.Geral.csproj" />
   </ItemGroup>
 

@@ -1,4 +1,4 @@
-﻿namespace ToolBox.CaixaMarcacao
+﻿namespace ToolBox.Marcacao
 {
     [DesignerCategory( "Caixa marcação" ), ToolboxItem( true )]
     public class CaixaMarcacao : CaixaMarcacaoBase
