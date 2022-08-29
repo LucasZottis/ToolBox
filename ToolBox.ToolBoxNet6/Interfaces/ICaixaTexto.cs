@@ -1,4 +1,4 @@
-﻿namespace ToolBox.ToolBoxWinForms.Net6.Interfaces
+﻿namespace ToolBox.Geral.Interfaces
 {
     public interface ICaixaTexto
     {

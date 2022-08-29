@@ -1,4 +1,4 @@
-﻿namespace ToolBox.ToolBoxWinForms.Net6
+﻿namespace ToolBox.Geral
 {
     public delegate void EventoCrudNavegador();
     public delegate void EventoExcluirItemNavegador( int codigoItem );

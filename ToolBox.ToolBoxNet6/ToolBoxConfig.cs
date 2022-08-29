@@ -1,6 +1,7 @@
-﻿using ToolBox.ToolBoxWinForms.Net6.Componentes.Dados.GradeDados.Estilos;
+﻿using ToolBox.Geral.Componentes.Dados.GradeDados.Estilos;
+using ToolBox.Geral.Enums;
 
-namespace ToolBox.ToolBoxWinForms.Net6
+namespace ToolBox.Geral
 {
     public static class ToolBoxConfig
     {

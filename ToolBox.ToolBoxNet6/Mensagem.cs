@@ -1,7 +1,10 @@
 ﻿using System.Text;
 
-namespace ToolBox.ToolBoxWinForms.Net6
+namespace ToolBox.Geral
 {
+    /// <summary>
+    /// Classe para mostrar notificações para o usuário.
+    /// </summary>
     public static class Mensagem
     {
         #region Atributos
@@ -79,6 +82,10 @@ namespace ToolBox.ToolBoxWinForms.Net6
 
         #region MostrarErro
 
+        /// <summary>
+        /// Método para mostrar mensagens originadas de exceção.
+        /// </summary>
+        /// <param name="ex">Exceção que deve ser mostrada.</param>
         public static void MostrarErro( Exception ex )
         {
             MessageBox.Show( MontarMensagemExcecao( ex ), _titulo, MessageBoxButtons.OK, MessageBoxIcon.Error );
