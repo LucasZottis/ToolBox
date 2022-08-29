@@ -1,12 +1,4 @@
-﻿using BibliotecaPublica.Extensoes.Extensoes;
-using BibliotecaPublica.Geral.Estruturas;
-using BibliotecaPublica.Notificacoes;
-using BibliotecaPublica.Notificacoes.Enums;
-using FluentValidation.Results;
-using ToolBox.Geral;
-using ToolBox.Geral.Interfaces;
-
-namespace ToolBox.ToolBoxWinForms.Net6.Formularios.Base
+﻿namespace ToolBox.ToolBoxWinForms.Net6.Formularios.Base
 {
     /// <summary>
     /// Classe de formulário que serve de base para criação de novos formulários.

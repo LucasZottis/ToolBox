@@ -1,9 +1,7 @@
-﻿using ToolBox.Geral.Interfaces;
-
-namespace ToolBox.Painel.Base
+﻿namespace ToolBox.Dados.GradeDados
 {
     [ToolboxItem( false ), DesignerCategory( "Paineis" )]
-    public class PainelBase : Panel, IComponente
+    public class GradeDadosBase : DataGridView, IComponente
     {
         #region Propriedades
 
@@ -21,17 +19,39 @@ namespace ToolBox.Painel.Base
 
         #region Construtores
 
-        public PainelBase( IContainer container ) : base()
+        public GradeDadosBase( IContainer container ) : base()
         {
             if ( container != null )
             {
                 container.Add( this );
             }
+
+            ExecutarConfiguracaoPadrao();
         }
 
         #endregion Construtores
 
         #region Métodos
+
+        #region Privados
+
+        private void ExecutarConfiguracaoPadrao()
+        {
+            BackgroundColor = Color.LightGray;
+
+            AllowUserToAddRows = false;
+            AllowUserToDeleteRows = false;
+            AllowUserToResizeColumns = false;
+            AllowUserToResizeRows = false;
+            AllowUserToOrderColumns = false;
+
+            RowHeadersWidth = 15;
+            RowHeadersVisible = false;
+            MultiSelect = false;
+            SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        }
+
+        #endregion Privados
 
         #region Públicos
 

@@ -1,5 +1,5 @@
-﻿using ToolBox.Geral.Componentes.Dados.GradeDados.Estilos;
-using ToolBox.Geral.Enums;
+﻿using ToolBox.Geral.Enums;
+using ToolBox.Geral.Estilos;
 
 namespace ToolBox.Geral
 {

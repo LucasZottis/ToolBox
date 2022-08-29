@@ -1,6 +1,6 @@
 ﻿using ToolBox.Geral.Componentes.Rotulos.Base;
 
-namespace ToolBox.Geral.Componentes.Rotulos
+namespace ToolBox.Rotulo
 {
     [DesignerCategory( "Rotulos" ), ToolboxItem( true )]
     public class Rotulo : RotuloBase

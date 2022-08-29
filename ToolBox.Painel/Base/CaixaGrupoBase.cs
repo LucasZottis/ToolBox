@@ -1,6 +1,6 @@
 ﻿using ToolBox.Geral.Interfaces;
 
-namespace ToolBox.Geral.Componentes.Paineis.Base
+namespace ToolBox.Painel.Base
 {
     [ToolboxItem( false ), DesignerCategory( "Paineis" )]
     public class CaixaGrupoBase : GroupBox, IComponente

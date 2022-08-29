@@ -1,7 +1,6 @@
 ﻿using System.Data;
-using ToolBox.Geral.Componentes.Dados.Base;
 
-namespace ToolBox.Geral.Componentes.Dados
+namespace ToolBox.Dados.LigacaoDados
 {
     [ToolboxItem( true ), DesignerCategory( "Dados" )]
     public class VinculoFonteDados : LigacaoFonteDadosBase

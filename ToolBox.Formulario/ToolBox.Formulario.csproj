@@ -22,6 +22,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\ToolBox.ToolBoxNet6\ToolBox.Geral.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Base\CaixaFlutuanteBase.cs">
       <SubType>Form</SubType>
     </Compile>

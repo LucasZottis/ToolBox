@@ -1,6 +1,6 @@
-﻿using ToolBox.Geral.Componentes.Paineis.Base;
+﻿using ToolBox.Painel.Base;
 
-namespace ToolBox.Geral.Componentes.Paineis
+namespace ToolBox.Painel
 {
     [ToolboxItem( true ), DesignerCategory( "Paineis" )]
     public class Painel : PainelBase
