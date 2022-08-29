@@ -1,6 +1,4 @@
-﻿using ToolBox.Geral.Interfaces;
-
-namespace ToolBox.Geral.Componentes.Rotulos.Base
+﻿namespace ToolBox.Rotulo
 {
     [DesignerCategory( "Rotulos" ), ToolboxItem( false )]
     public class RotuloBase : Label, IComponente

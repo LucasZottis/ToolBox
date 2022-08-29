@@ -6,6 +6,7 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationIcon>ToolBox.ico</ApplicationIcon>
+    <Version>1.0.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -22,7 +23,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ToolBox.Geral\ToolBox.Geral.csproj" />
-    <ProjectReference Include="..\ToolBox.ToolBoxNet6\ToolBox.Geral.csproj" />
   </ItemGroup>
 
 </Project>

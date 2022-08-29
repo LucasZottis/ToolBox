@@ -1,6 +1,4 @@
-﻿using ToolBox.Painel.Base;
-
-namespace ToolBox.Painel
+﻿namespace ToolBox.Painel
 {
     [ToolboxItem( true ), DesignerCategory( "Paineis" )]
     public class CaixaGrupo : CaixaGrupoBase

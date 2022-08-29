@@ -1,4 +1,4 @@
-﻿namespace ToolBox.ToolBoxWinForms.Net6.Formularios.Base
+﻿namespace ToolBox.Formulario.Base
 {
     /// <summary>
     /// Classe de formulário que serve de base para criação de novos formulários.

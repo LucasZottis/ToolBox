@@ -1,6 +1,4 @@
-﻿using ToolBox.Geral.Interfaces;
-
-namespace ToolBox.Botao
+﻿namespace ToolBox.Botao
 {
     [DesignerCategory( "Botão" ), ToolboxItem( false )]
     public class BotaoBase : Button, IComponente

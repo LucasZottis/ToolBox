@@ -6,6 +6,7 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationIcon>ToolBox.ico</ApplicationIcon>
+    <Version>1.0.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,18 +27,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Base\CaixaFlutuanteBase.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Base\DialogoBase.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Update="Base\CaixaFlutuanteBase.cs" />
+    <Compile Update="Base\DialogoBase.cs" />
     <Compile Update="Base\FormularioBase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Base\JanelaBase.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Update="Base\JanelaBase.cs" />
   </ItemGroup>
 
 </Project>

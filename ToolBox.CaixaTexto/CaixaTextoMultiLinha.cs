@@ -1,8 +1,6 @@
-﻿using System.ComponentModel;
-
-namespace ToolBox.CaixaTexto
+﻿namespace ToolBox.CaixaTexto
 {
-    [DesignerCategory( "Caixa de Texto Multi Linha" ), ToolboxItem( true )]
+    [DesignerCategory( "Caixa de Texto" ), ToolboxItem( true )]
     internal class CaixaTextoMultiLinha : CaixaTexto
     {
         #region Atributos

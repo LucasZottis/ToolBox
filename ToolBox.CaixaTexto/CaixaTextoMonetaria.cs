@@ -1,8 +1,6 @@
-﻿using System.Globalization;
-
-namespace ToolBox.CaixaTexto
+﻿namespace ToolBox.CaixaTexto
 {
-    [DesignerCategory( "Caixa de texto monetária" ), ToolboxItem( true )]
+    [DesignerCategory( "Caixa de Texto" ), ToolboxItem( true )]
 
     internal class CaixaTextoMonetaria : CaixaTextoBase
     {

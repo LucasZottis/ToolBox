@@ -1,6 +1,4 @@
-﻿using ToolBox.Geral.Interfaces;
-
-namespace ToolBox.Painel.Base
+﻿namespace ToolBox.Painel.Base
 {
     [ToolboxItem( false ), DesignerCategory( "Paineis" )]
     public class PainelBase : Panel, IComponente

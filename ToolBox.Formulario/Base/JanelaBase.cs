@@ -1,4 +1,4 @@
-﻿namespace ToolBox.ToolBoxWinForms.Net6.Formularios.Base
+﻿namespace ToolBox.Formulario.Base
 {
     public partial class JanelaBase : FormularioBase
     {
