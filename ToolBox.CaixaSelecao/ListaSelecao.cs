@@ -1,10 +1,10 @@
-﻿namespace ToolBox.CaixaSelecao
+﻿namespace ToolBox.ListaSelecao
 {
-    public class CaixaSelecao : CaixaSelecaoBase
+    public class ListaSelecao : ListaSelecaoBase
     {
         #region Construtores
 
-        public CaixaSelecao( IContainer container ) : base( container )
+        public ListaSelecao( IContainer container ) : base( container )
         {
             DropDownStyle = ComboBoxStyle.DropDownList;
             FlatStyle = FlatStyle.System;

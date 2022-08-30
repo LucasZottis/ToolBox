@@ -1,7 +1,7 @@
-﻿namespace ToolBox.CaixaSelecao
+﻿namespace ToolBox.ListaSelecao
 {
     [DesignerCategory( "Caixa de seleção" ), ToolboxItem( false )]
-    public class CaixaSelecaoBase : ComboBox, IComponente, ILimpeza
+    public class ListaSelecaoBase : ComboBox, IComponente, ILimpeza
     {
         #region Atributos
 
@@ -56,7 +56,7 @@
 
         #region Construtores
 
-        public CaixaSelecaoBase( IContainer container )
+        public ListaSelecaoBase( IContainer container )
         {
             if ( container != null )
             {
