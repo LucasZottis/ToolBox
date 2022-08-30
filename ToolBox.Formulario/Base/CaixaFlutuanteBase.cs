@@ -1,4 +1,5 @@
 ﻿namespace ToolBox.Formulario.Base
+{
     public partial class CaixaFlutuanteBase : FormularioBase
     {
         #region Propriedades

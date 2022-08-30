@@ -1,5 +1,6 @@
 ﻿namespace ToolBox.Formulario.Base
 {
+
     public partial class DialogoBase : FormularioBase
     {
         #region Propriedades

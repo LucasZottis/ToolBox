@@ -19,6 +19,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToolBox.Geral", "ToolBox.Ge
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToolBox.Marcacao", "ToolBox.Marcacao\ToolBox.Marcacao.csproj", "{9DC140F7-633F-4AED-815A-EA088E2212A2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolBox.CaixaSelecao", "ToolBox.CaixaSelecao\ToolBox.CaixaSelecao.csproj", "{6ED0AA86-8FB2-4718-A9EF-D38D8DEA8A68}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{9DC140F7-633F-4AED-815A-EA088E2212A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DC140F7-633F-4AED-815A-EA088E2212A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DC140F7-633F-4AED-815A-EA088E2212A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6ED0AA86-8FB2-4718-A9EF-D38D8DEA8A68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6ED0AA86-8FB2-4718-A9EF-D38D8DEA8A68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6ED0AA86-8FB2-4718-A9EF-D38D8DEA8A68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6ED0AA86-8FB2-4718-A9EF-D38D8DEA8A68}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
