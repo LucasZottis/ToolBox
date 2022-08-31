@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ToolBox.Geral\ToolBox.Geral.csproj" />
+    <PackageReference Include="ToolBox.Geral" Version="1.0.0" />
   </ItemGroup>
 
 </Project>
