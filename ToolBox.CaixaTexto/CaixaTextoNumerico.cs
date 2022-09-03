@@ -1,6 +1,10 @@
 ﻿namespace ToolBox.CaixaTexto
 {
-    [DesignerCategory( "Caixa de Texto" ), ToolboxItem( true )]
+    [
+        DesignerCategory( "Caixa de Texto" ),
+        ToolboxItem( true ),
+        Designer( typeof( CaixaTextoNumerico ) )
+    ]
     public class CaixaTextoNumerico : CaixaTextoBase, ICaixaTextoNumerico
     {
         #region Atributos

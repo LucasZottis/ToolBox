@@ -1,8 +1,11 @@
 ﻿namespace ToolBox.CaixaTexto
 {
-    [DesignerCategory( "Caixa de Texto" ), ToolboxItem( true )]
-
-    internal class CaixaTextoMonetaria : CaixaTextoBase
+    [
+        DesignerCategory( "Caixa de Texto" ),
+        ToolboxItem( true ),
+        Designer( typeof( CaixaTextoMonetaria ) )
+    ]
+    public class CaixaTextoMonetaria : CaixaTextoBase
     {
         #region Atributos
 

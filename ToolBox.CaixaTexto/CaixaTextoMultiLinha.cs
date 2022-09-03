@@ -1,7 +1,11 @@
 ﻿namespace ToolBox.CaixaTexto
 {
-    [DesignerCategory( "Caixa de Texto" ), ToolboxItem( true )]
-    internal class CaixaTextoMultiLinha : CaixaTexto
+    [
+        DesignerCategory( "Caixa de Texto" ),
+        ToolboxItem( true ),
+        Designer( typeof( CaixaTextoMultiLinha ) )
+    ]
+    public class CaixaTextoMultiLinha : CaixaTexto
     {
         #region Atributos
 
