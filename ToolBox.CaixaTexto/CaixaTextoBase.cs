@@ -1,9 +1,6 @@
 ﻿namespace ToolBox.CaixaTexto
 {
-    [
-        DesignerCategory( "Caixa de Texto" ),
-        ToolboxItem( false )
-    ]
+    [DesignerCategory( "Caixa de Texto" ), ToolboxItem( false )]
     public class CaixaTextoBase : TextBox, ICaixaTexto, IComponente, ILimpeza
     {
         #region Atributos

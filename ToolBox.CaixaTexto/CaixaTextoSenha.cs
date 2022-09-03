@@ -1,10 +1,6 @@
 ﻿namespace ToolBox.CaixaTexto
 {
-    [
-        DesignerCategory( "Caixa de Texto" ),
-        ToolboxItem( true ),
-        Designer( typeof( CaixaTextoSenha ) )
-    ]
+    [DesignerCategory( "Caixa de Texto" ), ToolboxItem( true )]
     public class CaixaTextoSenha : CaixaTextoBase
     {
         #region Atributos
