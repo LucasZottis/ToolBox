@@ -1,5 +1,6 @@
 ﻿namespace ToolBox.ListaSelecao
 {
+    [ToolboxItem( true )]
     public class ListaSelecao : ListaSelecaoBase
     {
         #region Construtores
