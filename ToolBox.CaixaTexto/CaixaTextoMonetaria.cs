@@ -2,7 +2,7 @@
 {
     [DesignerCategory( "Caixa de Texto" ), ToolboxItem( true )]
 
-    internal class CaixaTextoMonetaria : CaixaTextoBase
+    public class CaixaTextoMonetaria : CaixaTextoBase
     {
         #region Atributos
 
