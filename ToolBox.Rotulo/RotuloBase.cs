@@ -3,12 +3,6 @@
     [DesignerCategory( "Rotulos" ), ToolboxItem( false )]
     public class RotuloBase : Label, IComponente
     {
-        #region Atributos
-
-
-
-        #endregion Atributos
-
         #region Propriedades
 
         [Browsable( true ), DisplayName( TextosPadroes.BloquearComponente ), Description( TextosPadroes.BloquearComponenteDescricao ), Category( TextosPadroes.ComportamentoCategoria ), DefaultValue( false )]
@@ -33,29 +27,13 @@
             {
                 container.Add( this );
             }
+
+            AutoSize = true;
         }
 
         #endregion Construtores
 
         #region Métodos
-
-        #region Privados
-
-
-
-        #endregion Privados
-
-        #region Protegidos
-
-
-
-        #endregion Protegidos
-
-        #region Internos
-
-
-
-        #endregion Internos
 
         #region Públicos
 
