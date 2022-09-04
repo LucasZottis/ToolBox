@@ -1,6 +1,6 @@
 ﻿namespace ToolBox.ListaSelecao
 {
-    [DesignerCategory( "Caixa de seleção" ), ToolboxItem( true )]
+    [DesignerCategory( "Caixa de seleção" ), ToolboxItem( false )]
     public class ListaSelecaoBase : ComboBox, IComponente, ILimpeza
     {
         #region Atributos
