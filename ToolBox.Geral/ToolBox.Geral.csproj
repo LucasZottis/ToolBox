@@ -9,6 +9,7 @@
     <BaseOutputPath>D:\MEGASync\BibliotecasUteis</BaseOutputPath>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <ApplicationIcon>ToolBox.ico</ApplicationIcon>
+    <Version>1.0.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -28,11 +29,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="BibliotecaPublica.Colecoes" Version="1.0.0" />
-    <PackageReference Include="BibliotecaPublica.Excecoes" Version="1.1.0" />
-    <PackageReference Include="BibliotecaPublica.Extensoes" Version="1.0.0" />
-    <PackageReference Include="BibliotecaPublica.Geral" Version="1.0.0" />
-    <PackageReference Include="BibliotecaPublica.Utils" Version="1.0.2.1" />
+    <PackageReference Include="BibliotecaPublica.Core" Version="1.7.2" />
+    <PackageReference Include="BibliotecaPublica.Extensoes" Version="2.2.0" />
+    <PackageReference Include="BibliotecaPublica.Notificacoes" Version="1.1.1" />
   </ItemGroup>
 
 </Project>

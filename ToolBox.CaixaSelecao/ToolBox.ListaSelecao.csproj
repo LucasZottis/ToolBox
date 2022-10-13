@@ -5,11 +5,17 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Version>1.0.1.2</Version>
+    <Version>1.0.2.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ToolBox.Geral" Version="1.0.0" />
+    <PackageReference Include="BibliotecaPublica.Core" Version="1.7.2" />
+    <PackageReference Include="BibliotecaPublica.Extensoes" Version="2.2.0" />
+    <PackageReference Include="BibliotecaPublica.Notificacoes" Version="1.1.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ToolBox.Geral\ToolBox.Geral.csproj" />
   </ItemGroup>
 
 </Project>

@@ -706,7 +706,7 @@
         private CaixaTextoBase()
         {
             Margin = new Padding( 10, 5, 10, 5 );
-            MaxLength = ValoresPadroes.QuantidadeMaxima.ParaInt();
+            MaxLength = ValoresPadroes.QuantidadeMaxima;
             Text = _valorPadrao;
         }
 
@@ -831,7 +831,7 @@
 
         public Point ObterPontoCentral()
         {
-            return new Point( ( Size.Width / 2 ).ParaInt(), ( Size.Height / 2 ).ParaInt() );
+            return new Point( ( Size.Width / 2 ), ( Size.Height / 2 ) );
         }
 
         #endregion IComponente

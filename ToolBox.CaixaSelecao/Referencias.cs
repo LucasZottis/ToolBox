@@ -1,3 +1,3 @@
-﻿global using ToolBox.Geral.Interfaces;
+﻿global using BibliotecaPublica.Core.Structs;
 global using System.ComponentModel;
-global using BibliotecaPublica.Geral.Estruturas;
+global using ToolBox.Geral.Interfaces;

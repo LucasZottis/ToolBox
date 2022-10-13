@@ -60,7 +60,7 @@
 
         public Point ObterPontoCentral()
         {
-            return new Point( ( Size.Width / 2 ).ParaInt(), ( Size.Height / 2 ).ParaInt() );
+            return new Point( ( Size.Width / 2 ), ( Size.Height / 2 ) );
         }
 
         #endregion IComponente
