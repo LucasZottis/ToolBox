@@ -28,18 +28,17 @@ namespace ToolBox.Formulario.Base
 
         #region IFormulario
 
-        [Browsable( false ), DisplayName( TextosPadroes.ModoJanela ), Description( TextosPadroes.ModoJanelaDescricao ), Category( TextosPadroes.ComportamentoCategoria ), DefaultValue( ModoJanela.Navegacao )]
+        [
+            Browsable( false ), 
+            DisplayName( TextosPadroes.ModoJanela ), 
+            Description( TextosPadroes.ModoJanelaDescricao ), 
+            Category( TextosPadroes.ComportamentoCategoria ), 
+            DefaultValue( ModoJanela.Navegacao )
+        ]
         public ModoJanela ModoJanela
         {
-            get
-            {
-                return _modoJanela;
-            }
-
-            set
-            {
-                AlterarModoJanela( value );
-            }
+            get => _modoJanela;
+            set => AlterarModoJanela( value );
         }
 
         #endregion IFormulario
@@ -293,28 +292,18 @@ namespace ToolBox.Formulario.Base
         protected virtual void DesbloquearComponentes()
         {
             if ( DesignMode )
-            {
                 return;
-            }
 
             foreach ( IComponente componente in _ListaIComponente )
-            {
                 if ( componente.BloquearComponente )
-                {
                     componente.Bloqueado = false;
-                }
-            }
         }
 
         protected virtual void LimparSujeiraComponentes()
         {
             foreach ( ILimpeza componente in _listaILimpeza )
-            {
                 if ( componente.FazerLimpeza )
-                {
                     componente.Limpar();
-                }
-            }
         }
 
         protected override void OnLoad( EventArgs e )
@@ -324,9 +313,7 @@ namespace ToolBox.Formulario.Base
             ObterComponentes();
 
             if ( ModoJanela == ModoJanela.Navegacao )
-            {
                 BloquearComponentes();
-            }
 
             _aoCarregarFormulario?.Invoke();
         }
@@ -382,28 +369,20 @@ namespace ToolBox.Formulario.Base
             switch ( tipoNotificacao )
             {
                 case TipoNotificacao.Informacao:
-                {
                     Mensagem.Informar( mensagem );
                     break;
-                }
 
                 case TipoNotificacao.Aviso:
-                {
                     Mensagem.Avisar( mensagem );
                     break;
-                }
 
                 case TipoNotificacao.Pergunta:
-                {
                     Mensagem.Perguntar( mensagem );
                     break;
-                }
 
                 default:
-                {
-                    Mensagem.Avisar( @"Usar notificação para erro no ""catch"" da interface de usuário." );
+                    Mensagem.Avisar( @"Usar método ""MostrarErro"" da classe ""Mensagem"" para mostrar erro no ""catch"" da interface de usuário." );
                     break;
-                }
             }
         }
 

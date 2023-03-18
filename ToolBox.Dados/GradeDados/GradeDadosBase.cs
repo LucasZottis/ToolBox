@@ -1,39 +1,41 @@
 ﻿namespace ToolBox.Dados.GradeDados
 {
     [ToolboxItem( false ), DesignerCategory( "Paineis" )]
-    public class GradeDadosBase : DataGridView, IComponente
+    public class GradeDadosBase 
+        : DataGridView, IComponente
     {
-        #region Propriedades
-
-        #region IComponente
-
-        [Browsable( true ), DisplayName( TextosPadroes.BloquearComponente ), Description( TextosPadroes.BloquearComponenteDescricao ), Category( TextosPadroes.ComportamentoCategoria ), DefaultValue( false )]
+        [
+            Browsable( true ),
+            DisplayName( TextosPadroes.BloquearComponente ),
+            Description( TextosPadroes.BloquearComponenteDescricao ),
+            Category( TextosPadroes.ComportamentoCategoria ),
+            DefaultValue( false )
+        ]
         public bool BloquearComponente { get; set; } = false;
 
         [Browsable( false )]
         public bool Bloqueado { set => Enabled = !value; }
 
-        #endregion IComponente
+        [
+            Browsable( true ),
+            DisplayName( "Gerar Colunas Automaticamente" ),
+            Category( TextosPadroes.ComportamentoCategoria ),
+            DefaultValue( false )
+        ]
+        public new bool AutoGenerateColumns
+        {
+            get => base.AutoGenerateColumns;
+            set => base.AutoGenerateColumns = value;
+        }
 
-        #endregion Propriedades
-
-        #region Construtores
-
-        public GradeDadosBase( IContainer container ) : base()
+        public GradeDadosBase( IContainer container ) 
+            : base()
         {
             if ( container != null )
-            {
                 container.Add( this );
-            }
 
             ExecutarConfiguracaoPadrao();
         }
-
-        #endregion Construtores
-
-        #region Métodos
-
-        #region Privados
 
         private void ExecutarConfiguracaoPadrao()
         {
@@ -49,23 +51,10 @@
             RowHeadersVisible = false;
             MultiSelect = false;
             SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            AutoGenerateColumns = false;
         }
-
-        #endregion Privados
-
-        #region Públicos
-
-        #region IComponente
 
         public Point ObterPontoCentral()
-        {
-            return new Point( ( Size.Width / 2 ), ( Size.Height / 2 ) );
-        }
-
-        #endregion IComponente
-
-        #endregion Públicos
-
-        #endregion Métodos
+            => new Point( ( Size.Width / 2 ), ( Size.Height / 2 ) );
     }
 }

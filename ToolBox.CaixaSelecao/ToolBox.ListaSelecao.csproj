@@ -5,12 +5,14 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Version>1.0.2.0</Version>
+    <Version>2.0.0.1</Version>
+    <Title>ToolBox Listas de Seleção</Title>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="BibliotecaPublica.Core" Version="1.7.2" />
-    <PackageReference Include="BibliotecaPublica.Extensoes" Version="2.2.0" />
+    <PackageReference Include="BibliotecaPublica.Core" Version="2.3.0" />
+    <PackageReference Include="BibliotecaPublica.Extensoes" Version="2.2.2" />
     <PackageReference Include="BibliotecaPublica.Notificacoes" Version="1.1.1" />
   </ItemGroup>
 

@@ -6,7 +6,9 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationIcon>ToolBox.ico</ApplicationIcon>
-    <Version>1.0.1.0</Version>
+    <Version>2.0.0.1</Version>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>ToolBox Marcações</Title>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,8 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="BibliotecaPublica.Core" Version="1.7.2" />
-    <PackageReference Include="BibliotecaPublica.Extensoes" Version="2.2.0" />
+    <PackageReference Include="BibliotecaPublica.Core" Version="2.3.0" />
+    <PackageReference Include="BibliotecaPublica.Extensoes" Version="2.2.2" />
     <PackageReference Include="BibliotecaPublica.Notificacoes" Version="1.1.1" />
   </ItemGroup>
 
