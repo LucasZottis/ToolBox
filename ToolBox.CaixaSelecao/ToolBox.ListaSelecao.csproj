@@ -8,6 +8,7 @@
     <Version>6.0.0.0</Version>
     <Title>ToolBox Listas de Seleção</Title>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageOutputPath>D:\MEGASync\Deploys\ToolBox\ListaSelecao</PackageOutputPath>
   </PropertyGroup>
 
   <ItemGroup>

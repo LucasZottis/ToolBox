@@ -9,6 +9,7 @@
     <Version>6.0.0.0</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>ToolBox Paineis</Title>
+    <PackageOutputPath>D:\MEGASync\Deploys\ToolBox\Painel</PackageOutputPath>
   </PropertyGroup>
 
   <ItemGroup>
