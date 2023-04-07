@@ -1,4 +1,6 @@
-﻿namespace ToolBox.CaixaTexto
+﻿using ToolBox.Geral.Helpers;
+
+namespace ToolBox.CaixaTexto
 {
     [DesignerCategory( "Caixa de Texto" ), ToolboxItem( false )]
     public class CaixaTextoBase : TextBox, ICaixaTexto, IComponente, ILimpeza
@@ -546,29 +548,15 @@
         [Category( TextosPadroes.ComportamentoCategoria ), DisplayName( "Tamanho máximo" )]
         public new Size MaximumSize
         {
-            get
-            {
-                return base.MaximumSize;
-            }
-
-            set
-            {
-                base.MaximumSize = value;
-            }
+            get => base.MaximumSize;
+            set => base.MaximumSize = value;
         }
 
         [Category( TextosPadroes.ComportamentoCategoria ), DisplayName( "Tamanho mínimo" )]
         public new Size MinimumSize
         {
-            get
-            {
-                return base.MinimumSize;
-            }
-
-            set
-            {
-                base.MinimumSize = value;
-            }
+            get => base.MinimumSize;
+            set => base.MinimumSize = value;
         }
 
         #endregion Comportamento
@@ -701,8 +689,6 @@
 
         #endregion Propriedades
 
-        #region Construtores
-
         private CaixaTextoBase()
         {
             Margin = new Padding( 10, 5, 10, 5 );
@@ -710,144 +696,75 @@
             Text = _valorPadrao;
         }
 
-        public CaixaTextoBase( IContainer container ) : this()
+        public CaixaTextoBase( IContainer container ) 
+            : this()
         {
             if ( container != null )
-            {
                 container.Add( this );
-            }
         }
-
-        #endregion Construtores
-
-        #region Métodos
-
-        #region Privados
 
         private void AlterarTextoPadrao( string texto )
         {
             if ( VerificarTextoInserido( texto ) )
-            {
                 _valorPadrao = texto;
-            }
         }
-
-        #endregion Privados
-
-        #region Protegidos
 
         protected override void OnEnabledChanged( EventArgs e )
         {
             base.OnEnabledChanged( e );
 
             if ( Enabled )
-            {
                 BackColor = Color.White;
-            }
             else
-            {
                 BackColor = Color.Gainsboro;
-            }
         }
 
         protected override void OnKeyPress( KeyPressEventArgs e )
         {
-            if ( VerificarCaractereInvalidoInserido( e.KeyChar ) )
-            {
-                e.Handled = true;
+            e.Handled = VerificarCaractereInvalidoInserido( e.KeyChar );
+
+            if ( e.Handled )
                 return;
-            }
 
             base.OnKeyPress( e );
         }
 
         protected virtual bool VerificarSeLetraFoiInserido( char caractere )
-        {
-            return !PermitirLetras && caractere.Letra();
-        }
+            => !PermitirLetras && caractere.Letra();
 
         protected virtual bool VerificarSeNumeroFoiInserido( char caractere )
-        {
-            return !PermitirNumeros && caractere.Numero();
-        }
+            => !PermitirNumeros && caractere.Numero();
 
         protected virtual bool VerificarSeSimboloFoiInserido( char caractere )
-        {
-            return !PermitirSimbolos && caractere.Simbolo();
-        }
+            => !PermitirSimbolos && caractere.Simbolo();
 
         protected bool VerificarCaractereInvalidoInserido( char caractere )
         {
-            if ( caractere.Retorno() )
-            {
-                return false;
-            }
-
-            if ( VerificarSeLetraFoiInserido( caractere ) )
-            {
-                return true;
-            }
-
-            if ( VerificarSeNumeroFoiInserido( caractere ) )
-            {
-                return true;
-            }
-
-            if ( VerificarSeSimboloFoiInserido( caractere ) )
-            {
-                return true;
-            }
-
-            return false;
+            return !caractere.Retorno()
+                && ( VerificarSeLetraFoiInserido( caractere )
+                || VerificarSeNumeroFoiInserido( caractere )
+                || VerificarSeSimboloFoiInserido( caractere ) );
         }
 
         protected bool VerificarTextoInserido( string valor )
         {
             for ( int i = 0; i < valor.Length; i++ )
-            {
                 if ( VerificarCaractereInvalidoInserido( valor[ i ] ) )
-                {
                     return false;
-                }
-            }
 
             return true;
         }
 
-        #endregion Protegidos
-
-        #region Públicos
-
-        #region ICaixaTexto
-
         public bool TemTexto()
-        {
-            return Text.TemConteudo();
-        }
-
-        #endregion ICaixaTexto
-
-        #region IComponente
+            => Text.TemConteudo();
 
         public Point ObterPontoCentral()
-        {
-            return new Point( ( Size.Width / 2 ), ( Size.Height / 2 ) );
-        }
-
-        #endregion IComponente
-
-        #region ILimpeza
+            => PointHelper.GetCenterPoint( Size );
 
         public void Limpar()
         {
             Clear();
             Text = _valorPadrao;
         }
-
-        #endregion ILimpeza
-
-        #endregion Públicos
-
-        #endregion Métodos
     }
 }
