@@ -4,10 +4,8 @@ using ToolBox.Geral.Interfaces;
 
 namespace ToolBox.Controles;
 
-[ToolboxItem( false )]
-public class ControleUsuarioBase
-    : UserControl
-    , IComponente
+public partial class ControleUsuarioBase
+    : UserControl, IComponente
 {
     [Browsable( true ), DisplayName( TextosPadroes.BloquearComponente ), Description( TextosPadroes.BloquearComponenteDescricao ), Category( TextosPadroes.ComportamentoCategoria )]
     public bool BloquearComponente { get; set; }
@@ -17,6 +15,6 @@ public class ControleUsuarioBase
 
     public Point ObterPontoCentral()
     {
-        throw new NotImplementedException();
+        return new Point( 0, 0 );
     }
 }

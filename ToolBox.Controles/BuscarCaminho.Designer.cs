@@ -28,62 +28,60 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.cgpCaminho = new ToolBox.Painel.CaixaGrupo(this.components);
-            this.cxtCaminho = new ToolBox.CaixaTexto.CaixaTexto(this.components);
-            this.btfBuscar = new ToolBox.Botao.BotaoFlat(this.components);
-            this.cgpCaminho.SuspendLayout();
-            this.SuspendLayout();
+            components =  new System.ComponentModel.Container() ;
+            cgpCaminho =  new Painel.CaixaGrupo( components ) ;
+            cxtCaminho =  new CaixaTexto.CaixaTexto( components ) ;
+            btfBuscar =  new Botao.BotaoFlat( components ) ;
+            cgpCaminho.SuspendLayout();
+            SuspendLayout();
             // 
             // cgpCaminho
             // 
-            this.cgpCaminho.Controls.Add(this.cxtCaminho);
-            this.cgpCaminho.Controls.Add(this.btfBuscar);
-            this.cgpCaminho.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cgpCaminho.Location = new System.Drawing.Point(0, 0);
-            this.cgpCaminho.Name = "cgpCaminho";
-            this.cgpCaminho.Size = new System.Drawing.Size(505, 45);
-            this.cgpCaminho.TabIndex = 0;
-            this.cgpCaminho.TabStop = false;
+            cgpCaminho.Controls.Add( cxtCaminho );
+            cgpCaminho.Controls.Add( btfBuscar );
+            cgpCaminho.Dock =  DockStyle.Fill ;
+            cgpCaminho.Location =  new Point( 0, 0 ) ;
+            cgpCaminho.Name =  "cgpCaminho" ;
+            cgpCaminho.Size =  new Size( 505, 45 ) ;
+            cgpCaminho.TabIndex =  0 ;
+            cgpCaminho.TabStop =  false ;
             // 
             // cxtCaminho
             // 
-            this.cxtCaminho.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cxtCaminho.Location = new System.Drawing.Point(3, 19);
-            this.cxtCaminho.Margin = new System.Windows.Forms.Padding(10, 5, 10, 5);
-            this.cxtCaminho.Name = "cxtCaminho";
-            this.cxtCaminho.PasswordChar = '\0';
-            this.cxtCaminho.PlaceholderText = "";
-            this.cxtCaminho.Size = new System.Drawing.Size(447, 23);
-            this.cxtCaminho.TabIndex = 1;
-            this.cxtCaminho.Text = "";
-            this.cxtCaminho.WordWrap = true;
+            cxtCaminho.Dock =  DockStyle.Fill ;
+            cxtCaminho.Location =  new Point( 3, 19 ) ;
+            cxtCaminho.Margin =  new Padding( 10, 5, 10, 5 ) ;
+            cxtCaminho.Name =  "cxtCaminho" ;
+            cxtCaminho.PasswordChar =  '\0' ;
+            cxtCaminho.PlaceholderText =  "" ;
+            cxtCaminho.Size =  new Size( 447, 23 ) ;
+            cxtCaminho.TabIndex =  1 ;
+            cxtCaminho.Text =  "" ;
             // 
             // btfBuscar
             // 
-            this.btfBuscar.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btfBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btfBuscar.ForeColor = System.Drawing.Color.Black;
-            this.btfBuscar.Image = global::ToolBox.Controles.Properties.Resources.icons8_pasta_24;
-            this.btfBuscar.Location = new System.Drawing.Point(450, 19);
-            this.btfBuscar.Name = "btfBuscar";
-            this.btfBuscar.Size = new System.Drawing.Size(52, 23);
-            this.btfBuscar.TabIndex = 0;
-            this.btfBuscar.UseVisualStyleBackColor = true;
-            this.btfBuscar.Click += new System.EventHandler(this.Buscar);
+            btfBuscar.Dock =  DockStyle.Right ;
+            btfBuscar.FlatStyle =  FlatStyle.Flat ;
+            btfBuscar.ForeColor =  Color.Black ;
+            btfBuscar.Image =  Properties.Resources.icons8_pasta_24 ;
+            btfBuscar.Location =  new Point( 450, 19 ) ;
+            btfBuscar.Name =  "btfBuscar" ;
+            btfBuscar.Size =  new Size( 52, 23 ) ;
+            btfBuscar.TabIndex =  0 ;
+            btfBuscar.UseVisualStyleBackColor =  true ;
+            btfBuscar.Click +=  Buscar ;
             // 
             // BuscarCaminho
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Transparent;
-            this.Controls.Add(this.cgpCaminho);
-            this.Name = "BuscarCaminho";
-            this.Size = new System.Drawing.Size(505, 45);
-            this.cgpCaminho.ResumeLayout(false);
-            this.cgpCaminho.PerformLayout();
-            this.ResumeLayout(false);
-
+            AutoScaleDimensions =  new SizeF( 7F, 15F ) ;
+            AutoScaleMode =  AutoScaleMode.Font ;
+            BackColor =  Color.Transparent ;
+            Controls.Add( cgpCaminho );
+            Name =  "BuscarCaminho" ;
+            Size =  new Size( 505, 45 ) ;
+            cgpCaminho.ResumeLayout( false );
+            cgpCaminho.PerformLayout();
+            ResumeLayout( false );
         }
 
         #endregion

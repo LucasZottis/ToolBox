@@ -12,7 +12,7 @@ public partial class BuscarCaminho
     : ControleUsuarioBase
     , ILimpeza
 {
-    private AposBuscarCaminho _aposBuscarCaminho;
+    private AposBuscarCaminho? _aposBuscarCaminho;
     private bool _usoIcone = true;
 
     [Browsable( true ), DisplayName( TextosPadroes.TituloJanela ), Description( TextosPadroes.TituloJanelaDescricao ), Category( TextosPadroes.AparenciaCategoria ), DefaultValue( "" )]
@@ -64,6 +64,16 @@ public partial class BuscarCaminho
     {
         add => _aposBuscarCaminho += value;
         remove => _aposBuscarCaminho -= value;
+    }
+
+    public new Color ForeColor
+    {
+        set
+        {
+            cgpCaminho.ForeColor = value;
+            btfBuscar.ForeColor = value;
+            btfBuscar.FlatAppearance.BorderColor = value;
+        }
     }
 
     public BuscarCaminho()
