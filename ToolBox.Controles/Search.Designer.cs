@@ -1,4 +1,4 @@
-﻿namespace ToolBox.Controles
+﻿namespace ToolBox.UserControls
 {
     partial class Search
     {
