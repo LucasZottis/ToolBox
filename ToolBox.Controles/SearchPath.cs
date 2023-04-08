@@ -1,6 +1,5 @@
 ﻿using BibliotecaPublica.Extensoes.Extensoes;
 
-
 namespace ToolBox.UserControls;
 
 public delegate void AfterSearchPath( string caminho );
@@ -20,7 +19,7 @@ public partial class SearchPath
     }
 
     [Browsable( false ), DisplayName( "Caminho" ), Description( "Define ou obtém o caminho de uma pasta ou arquivo." ), Category( TextosPadroes.DadosCateogria ), DefaultValue( "" )]
-    public string Path
+    public string SelectedPath
     {
         get => txtPath.Text;
         set => txtPath.Text = value;
@@ -101,25 +100,29 @@ public partial class SearchPath
 
     private void SearchFilePath()
     {
-        using var localizador = new OpenFileDialog()
+        using var browser = new OpenFileDialog()
         {
             Filter = Extensions,
-            InitialDirectory = this.InitialDirectory
+            InitialDirectory = this.InitialDirectory,
+            Multiselect = false,
+            RestoreDirectory = false,
         };
 
-        if ( localizador.ShowDialog() == DialogResult.OK )
-            Path = localizador.FileName;
+        if ( browser.ShowDialog() == DialogResult.OK )
+            SelectedPath = browser.FileName;
     }
 
     private void SearchFolderPath()
     {
-        using var localizador = new FolderBrowserDialog()
+        using var browser = new FolderBrowserDialog()
         {
-            InitialDirectory = this.InitialDirectory
+            InitialDirectory = this.InitialDirectory,
+            ShowNewFolderButton = true,
+            ShowHiddenFiles = true,
         };
 
-        if ( localizador.ShowDialog() == DialogResult.OK )
-            Path = localizador.SelectedPath;
+        if ( browser.ShowDialog() == DialogResult.OK )
+            SelectedPath = browser.SelectedPath;
     }
 
     private void OnClick( object sender, EventArgs e )
@@ -129,8 +132,8 @@ public partial class SearchPath
         else
             SearchFilePath();
 
-        if ( Path.TemConteudo() )
-            _onAfterSearch?.Invoke( Path );
+        if ( SelectedPath.TemConteudo() )
+            _onAfterSearch?.Invoke( SelectedPath );
     }
 
     public void CleanUp()
@@ -139,5 +142,5 @@ public partial class SearchPath
     }
 
     public bool PathExists()
-        => Path.TemConteudo() && System.IO.Path.Exists( Path );
+        => SelectedPath.TemConteudo() && System.IO.Path.Exists( SelectedPath );
 }
