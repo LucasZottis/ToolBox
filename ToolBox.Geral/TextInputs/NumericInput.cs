@@ -1,7 +1,8 @@
 ﻿namespace ToolBox.TextBoxes
 {
     [DesignerCategory( "Caixa de Texto" ), ToolboxItem( true )]
-    public class CaixaTextoNumerico : CaixaTextoBase, INumericInput
+    public class NumericInput 
+        : InputBase, INumericInput
     {
         #region Atributos
 
@@ -209,7 +210,7 @@
 
         #region Construtores
 
-        public CaixaTextoNumerico( IContainer container ) : base( container )
+        public NumericInput( IContainer container ) : base( container )
         {
             PermitirLetras = false;
             PermitirSimbolos = false;

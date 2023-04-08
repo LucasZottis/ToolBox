@@ -8,7 +8,7 @@
     <AssemblyName>$(MSBuildProjectName.Replace(" ", "_"))</AssemblyName>
     <BaseOutputPath>D:\MEGASync\BibliotecasUteis</BaseOutputPath>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
-    <Version>7.3.0.0</Version>
+    <Version>7.4.0.0</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>ToolBox Geral</Title>
     <PackageOutputPath>D:\MEGASync\Deploys\ToolBox\Geral</PackageOutputPath>
@@ -89,27 +89,25 @@
     <Compile Update="Tags\BaseTag.cs">
       <SubType>Rotulos</SubType>
     </Compile>
-    <Compile Update="TextBoxes\CaixaTexto.cs">
+    <Compile Update="TextInputs\TextInput.cs">
       <SubType>Caixa de Texto</SubType>
     </Compile>
-    <Compile Update="TextBoxes\CaixaTextoBase.cs">
+    <Compile Update="TextInputs\InputBase.cs">
       <SubType>Caixa de Texto</SubType>
     </Compile>
-    <Compile Update="TextBoxes\CaixaTextoMonetaria.cs">
+    <Compile Update="TextInputs\MonetaryInput.cs">
       <SubType>Caixa de Texto</SubType>
     </Compile>
-    <Compile Update="TextBoxes\CaixaTextoMultiLinha.cs">
+    <Compile Update="TextInputs\MultiLineTextInput.cs">
       <SubType>Caixa de Texto</SubType>
     </Compile>
-    <Compile Update="TextBoxes\CaixaTextoNumerico.cs">
+    <Compile Update="TextInputs\NumericInput.cs">
       <SubType>Caixa de Texto</SubType>
     </Compile>
-    <Compile Update="TextBoxes\CaixaTextoSenha.cs">
+    <Compile Update="TextInputs\PasswordInput.cs">
       <SubType>Caixa de Texto</SubType>
     </Compile>
-    <Compile Update="TextBoxes\DynamicDateTimeMaskedTextBox.cs">
-      <SubType>Caixa de Texto</SubType>
-    </Compile>
+    <Compile Update="TextInputs\DateTimeInput.cs" />
   </ItemGroup>
 
 </Project>

@@ -3,7 +3,8 @@
 namespace ToolBox.TextBoxes
 {
     [DesignerCategory( "Caixa de Texto" ), ToolboxItem( false )]
-    public class CaixaTextoBase : TextBox, ITextInput, IControl, ICleanUp
+    public class InputBase 
+        : TextBox, ITextInput, IControl, ICleanUp
     {
         #region Atributos
 
@@ -689,14 +690,14 @@ namespace ToolBox.TextBoxes
 
         #endregion Propriedades
 
-        private CaixaTextoBase()
+        private InputBase()
         {
             Margin = new Padding( 10, 5, 10, 5 );
             MaxLength = ValoresPadroes.QuantidadeMaxima;
             Text = _valorPadrao;
         }
 
-        public CaixaTextoBase( IContainer container )
+        public InputBase( IContainer container )
             : this()
         {
             if ( container != null )

@@ -3,130 +3,138 @@
 
 namespace ToolBox.UserControls;
 
-public delegate void AposBuscarCaminho( string caminho );
+public delegate void AfterSearchPath( string caminho );
 
 [ToolboxItem( true )]
-public partial class Search
+public partial class SearchPath
     : UserControlBase, ICleanUp
 {
-    private AposBuscarCaminho? _aposBuscarCaminho;
-    private bool _usoIcone = true;
+    private AfterSearchPath? _onAfterSearch;
+    private bool _useIcon = true;
 
     [Browsable( true ), DisplayName( TextosPadroes.TituloJanela ), Description( TextosPadroes.TituloJanelaDescricao ), Category( TextosPadroes.AparenciaCategoria ), DefaultValue( "" )]
-    public string Titulo
+    public string Title
     {
         get => cgpCaminho.Text;
         set => cgpCaminho.Text = value;
     }
 
     [Browsable( false ), DisplayName( "Caminho" ), Description( "Define ou obtém o caminho de uma pasta ou arquivo." ), Category( TextosPadroes.DadosCateogria ), DefaultValue( "" )]
-    public string Caminho
+    public string Path
     {
-        get => cxtCaminho.Text;
-        set => cxtCaminho.Text = value;
+        get => txtPath.Text;
+        set => txtPath.Text = value;
     }
 
     [Browsable( true ), DisplayName( "Usar Ícone" ), Description( "Define ou obtém se deve mostrar o ícone no botão buscar ao invés de texto." ), Category( TextosPadroes.AparenciaCategoria ), DefaultValue( true )]
-    public bool UsoIcone
+    public bool UseIcon
     {
-        get => _usoIcone;
+        get => _useIcon;
 
         set
         {
-            _usoIcone = value;
-            AoAlterarUsoIcone();
+            _useIcon = value;
+            OnUseIconChange();
         }
     }
 
     [Browsable( true ), DisplayName( "Buscar por pastas" ), Description( "Define ou obtém se deve executar a busca por pastas ou por arquivos." ), Category( TextosPadroes.ComportamentoCategoria ), DefaultValue( false )]
-    public bool BuscarPasta { get; set; }
+    public bool SearchFolder { get; set; }
 
     [Browsable( true ), DisplayName( TextosPadroes.FazerLimpeza ), Description( TextosPadroes.FazerLimpezaDescricao ), Category( TextosPadroes.ComportamentoCategoria ), DefaultValue( true )]
-    public bool RunCleanUp { get; set; }
-        = true;
+    public bool RunCleanUp { get; set; } = true;
 
     [Browsable( true ), DisplayName( "Extensões de arquivo" ), Description( "Define ou obtém as extensões que serão buscadas." ), Category( TextosPadroes.ComportamentoCategoria ), DefaultValue( "" )]
-    public string Extensoes { get; set; }
-        = string.Empty;
+    public string Extensions { get; set; } = string.Empty;
 
     [Browsable( true ), DisplayName( TextosPadroes.TextoAjuda ), Description( TextosPadroes.TextoAjudaDescricao ), Category( TextosPadroes.DadosCateogria ), DefaultValue( "" )]
-    public string TextoAjuda
+    public string PlaceHolder
     {
-        get => cxtCaminho.PlaceholderText;
-        set => cxtCaminho.PlaceholderText = value;
+        get => txtPath.PlaceholderText;
+        set => txtPath.PlaceholderText = value;
     }
 
     [Browsable( true ), DisplayName( "Após buscar caminho" ), Description( "Evento que ocorre após selecionar um caminho." ), Category( TextosPadroes.DadosCateogria )]
-    public event AposBuscarCaminho AposBuscarCaminho
+    public event AfterSearchPath OnAfterSearchPath
     {
-        add => _aposBuscarCaminho += value;
-        remove => _aposBuscarCaminho -= value;
+        add => _onAfterSearch += value;
+        remove => _onAfterSearch -= value;
     }
+
+    [Browsable( false ), DisplayName( "Diretório inicial" ), Description( "Define ou obtém a pasta que deve mostrar ao abrir o diálogo." ), Category( TextosPadroes.DadosCateogria ), DefaultValue( "" )]
+    public string InitialDirectory { get; set; } = string.Empty;
 
     public new Color ForeColor
     {
         set
         {
             cgpCaminho.ForeColor = value;
-            btfBuscar.ForeColor = value;
-            btfBuscar.FlatAppearance.BorderColor = value;
+            btfSearch.ForeColor = value;
+            btfSearch.FlatAppearance.BorderColor = value;
         }
     }
 
-    public Search()
+    public SearchPath()
     {
         InitializeComponent();
     }
 
-    private void AoAlterarUsoIcone()
+    private void OnUseIconChange()
     {
-        if ( _usoIcone )
-            UsarIcone();
+        if ( _useIcon )
+            SetToUseIcon();
         else
-            UsarTexto();
+            SetToUseText();
     }
 
-    private void UsarIcone()
+    private void SetToUseIcon()
     {
-        btfBuscar.Text = "";
-        btfBuscar.Image = UserControls.Properties.Resources.icons8_pasta_24;
+        btfSearch.Text = "";
+        btfSearch.Image = Properties.Resources.icons8_pasta_24;
     }
 
-    private void UsarTexto()
+    private void SetToUseText()
     {
-        btfBuscar.Text = "Buscar";
-        btfBuscar.Image = null;
+        btfSearch.Text = "Buscar";
+        btfSearch.Image = null;
     }
 
-    private void LocalizarArquivo()
+    private void SearchFilePath()
     {
-        using var localizador = new OpenFileDialog() { Filter = Extensoes };
+        using var localizador = new OpenFileDialog()
+        {
+            Filter = Extensions,
+            InitialDirectory = this.InitialDirectory
+        };
 
         if ( localizador.ShowDialog() == DialogResult.OK )
-            Caminho = localizador.FileName;
+            Path = localizador.FileName;
     }
 
-    private void LocalizarPasta()
+    private void SearchFolderPath()
     {
-        using var localizador = new FolderBrowserDialog();
+        using var localizador = new FolderBrowserDialog()
+        {
+            InitialDirectory = this.InitialDirectory
+        };
 
         if ( localizador.ShowDialog() == DialogResult.OK )
-            Caminho = localizador.SelectedPath;
+            Path = localizador.SelectedPath;
     }
 
-    private void Buscar( object sender, EventArgs e )
+    private void OnClick( object sender, EventArgs e )
     {
-        if ( BuscarPasta )
-            LocalizarPasta();
+        if ( SearchFolder )
+            SearchFolderPath();
         else
-            LocalizarArquivo();
+            SearchFilePath();
 
-        if ( Caminho.TemConteudo() )
-            _aposBuscarCaminho?.Invoke( Caminho );
+        if ( Path.TemConteudo() )
+            _onAfterSearch?.Invoke( Path );
     }
 
     public void CleanUp()
     {
-        cxtCaminho.CleanUp();
+        txtPath.CleanUp();
     }
 }

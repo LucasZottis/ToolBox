@@ -1,7 +1,8 @@
 ﻿namespace ToolBox.TextBoxes
 {
     [DesignerCategory( "Caixa de Texto" ), ToolboxItem( true )]
-    public class CaixaTexto : CaixaTextoBase
+    public class TextInput 
+        : InputBase
     {
         #region Propriedades
 
@@ -76,7 +77,7 @@
 
         #region Construtores
 
-        public CaixaTexto( IContainer container ) : base( container )
+        public TextInput( IContainer container ) : base( container )
         {
 
         }

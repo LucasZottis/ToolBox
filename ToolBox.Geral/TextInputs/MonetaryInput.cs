@@ -2,7 +2,8 @@
 {
     [DesignerCategory( "Caixa de Texto" ), ToolboxItem( true )]
 
-    public class CaixaTextoMonetaria : CaixaTextoBase
+    public class MonetaryInput 
+        : InputBase
     {
         #region Atributos
 
@@ -155,7 +156,7 @@
 
         #region Construtores
 
-        public CaixaTextoMonetaria( IContainer container ) : base( container )
+        public MonetaryInput( IContainer container ) : base( container )
         {
             PermitirLetras = false;
             PermitirSimbolos = false;

@@ -1,7 +1,8 @@
 ﻿namespace ToolBox.TextBoxes
 {
     [DesignerCategory( "Caixa de Texto" ), ToolboxItem( true )]
-    public class CaixaTextoMultiLinha : CaixaTexto
+    public class MultiLineTextInput 
+        : TextInput
     {
         #region Atributos
 
@@ -29,7 +30,7 @@
 
         #region Construtores
 
-        public CaixaTextoMultiLinha( IContainer container ) : base( container )
+        public MultiLineTextInput( IContainer container ) : base( container )
         {
             Multiline = true;
             ScrollBars = ScrollBars.Both;

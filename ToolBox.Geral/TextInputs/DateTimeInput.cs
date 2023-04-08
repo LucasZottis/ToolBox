@@ -3,8 +3,8 @@
 namespace ToolBox.TextBoxes;
 
 [ToolboxItem( true )]
-public class DynamicDateTimeMaskedTextBox
-    : CaixaTextoBase
+public class DateTimeInput
+    : InputBase
 {
     private bool _ignorarTecla = false;
     private DateTimeMask _mask = DateTimeMask.Normal;
@@ -52,7 +52,7 @@ public class DynamicDateTimeMaskedTextBox
         set => base.TextAlign = value;
     }
 
-    public DynamicDateTimeMaskedTextBox( IContainer container )
+    public DateTimeInput( IContainer container )
         : base( container )
     {
         _errorProvider = new ErrorProvider();
