@@ -1,29 +1,24 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net7.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
     <ApplicationIcon>ToolBox.ico</ApplicationIcon>
-    <Version>7.0.0.0</Version>
+    <Version>7.0.0.1</Version>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Title>ToolBox Botão</Title>
     <PackageOutputPath>D:\MEGASync\Deploys\ToolBox\Botao</PackageOutputPath>
   </PropertyGroup>
-
   <ItemGroup>
     <Content Include="ToolBox.ico" />
   </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="BibliotecaPublica.Core" Version="6.0.0" />
     <PackageReference Include="BibliotecaPublica.Extensoes" Version="6.0.0" />
     <PackageReference Include="BibliotecaPublica.Notificacoes" Version="6.0.0" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\ToolBox.Geral\ToolBox.csproj" />
   </ItemGroup>
-
 </Project>
