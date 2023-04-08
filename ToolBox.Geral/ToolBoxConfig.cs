@@ -1,12 +1,11 @@
-﻿using ToolBox.Geral.Enums;
-using ToolBox.Geral.Estilos;
+﻿using ToolBox.Datas.Base;
+using ToolBox.Datas.DataGrid.DataGridStyles;
+using ToolBox.Datas.DataGrid.DataGridStyles.Alternatives;
 
-namespace ToolBox.Geral
+namespace ToolBox
 {
     public static class ToolBoxConfig
     {
-        #region Atributos
-
         #region Temas
 
         #region Branco padrão
@@ -126,186 +125,100 @@ namespace ToolBox.Geral
 
         #endregion Temas
 
-        #endregion Atributos
+        public static string AppName { get; set; } = string.Empty;
 
-        #region Propriedades
+        public static Theme Theme { get; set; } = Theme.White;
 
-        public static string TituloPadrao { get; set; } = string.Empty;
+        public static Font GeneralFont { get; set; }
 
-        public static Tema Tema { get; set; } = Tema.Branco;
-
-        public static Font Fonte { get; set; }
-
-        public static Color CorFundoJanela { get; set; }
+        public static Color BackgroundColor { get; set; }
 
         public static Color CorFundoGradeDados
-        {
-            get
-            {
-                return ObterCorFundoGradeDados();
-            }
-        }
+            => ObterCorFundoGradeDados();
 
-        public static Color CorFundoDaGradeDaGradeDeDados
-        {
-            get
-            {
-                return ObterCorDaGradeDeGradeDeDados();
-            }
-        }
+        //public static Color CorFundoDaGradeDaGradeDeDados
+        //    => ObterCorDaGradeDeGradeDeDados();
 
-        public static EstiloGradeDadosBase EstiloGradeDados
-        {
-            get
-            {
-                return ObterEstiloDeGradeDeDados();
-            }
-        }
+        public static DataGridStyleBase DataGridStyle
+            => ObterEstiloDeGradeDeDados();
 
-        public static EstiloGradeDadosBase EstiloGradeDadosAlternativo
-        {
-            get
-            {
-                return ObterEstiloDeGradeDeDadosAlternativo();
-            }
-        }
-
-        #endregion Propriedades
-
-        #region Métodos
-
-        #region Privados
+        public static DataGridStyleBase DataGridAlternativeStyle
+            => ObterEstiloDeGradeDeDadosAlternativo();
 
         private static Color ObterCorFundoGradeDados()
         {
-            switch ( Tema )
+            switch ( Theme )
             {
                 default:
-                case Tema.Branco:
-                {
+                case Theme.White:
                     return Color.White;
-                }
-
-                case Tema.Cinza:
-                {
+                case Theme.Gray:
                     return Color.Silver;
-                }
-
-                case Tema.Vermelho:
-                {
+                case Theme.Red:
                     return Color.FromArgb( 255, 204, 204 );
-                }
-
-                case Tema.Amarelo:
-                {
+                case Theme.Yellow:
                     return Color.PaleGoldenrod;
-                }
-
-                case Tema.Azul:
-                {
+                case Theme.Blue:
                     return Color.LightBlue;
-                }
             }
         }
 
-        private static Color ObterCorDaGradeDeGradeDeDados()
+        //private static Color ObterCorDaGradeDeGradeDeDados()
+        //{
+        //    switch ( Theme )
+        //    {
+        //        default:
+        //        case Tema.Branco:
+        //            return Color.DarkGray;
+        //        case Tema.Cinza:
+        //            return SystemColors.ControlDark;
+        //        case Tema.Vermelho:
+        //            return Color.IndianRed;
+        //        case Tema.Amarelo:
+        //            return Color.Goldenrod;
+        //        case Tema.Azul:
+        //            return Color.MidnightBlue;
+        //    }
+        //}
+
+        private static DataGridStyleBase ObterEstiloDeGradeDeDados()
         {
-            switch ( Tema )
+            switch ( Theme )
             {
                 default:
-                case Tema.Branco:
-                {
-                    return Color.DarkGray;
-                }
+                case Theme.White:
+                    return new DataGridWhiteStyle();
 
-                case Tema.Cinza:
-                {
-                    return SystemColors.ControlDark;
-                }
+                case Theme.Gray:
+                    return new DataGridGrayStyle();
 
-                case Tema.Vermelho:
-                {
-                    return Color.IndianRed;
-                }
+                case Theme.Red:
+                    return new DataGridRedStyle();
 
-                case Tema.Amarelo:
-                {
-                    return Color.Goldenrod;
-                }
+                case Theme.Yellow:
+                    return new DataGridYellowStyle();
 
-                case Tema.Azul:
-                {
-                    return Color.MidnightBlue;
-                }
+                case Theme.Blue:
+                    return new DataGridBlueStyle();
             }
         }
 
-        private static EstiloGradeDadosBase ObterEstiloDeGradeDeDados()
+        private static DataGridStyleBase ObterEstiloDeGradeDeDadosAlternativo()
         {
-            switch ( Tema )
+            switch ( Theme )
             {
                 default:
-                case Tema.Branco:
-                {
-                    return new EstiloGradeDadosBranco();
-                }
-
-                case Tema.Cinza:
-                {
-                    return new EstiloGradeDadosCinza();
-                }
-
-                case Tema.Vermelho:
-                {
-                    return new EstiloGradeDadosVermelho();
-                }
-
-                case Tema.Amarelo:
-                {
-                    return new EstiloGradeDadosAmarelo();
-                }
-
-                case Tema.Azul:
-                {
-                    return new EstiloGradeDadosAzul();
-                }
+                case Theme.White:
+                    return new DataGridAlternativeWhiteStyle();
+                case Theme.Gray:
+                    return new DataGridAlternativeGrayStyle();
+                case Theme.Red:
+                    return new DataGridAlternativeRedStyle();
+                case Theme.Yellow:
+                    return new DataGridAlternativeYellowStyle();
+                case Theme.Blue:
+                    return new DataGridAlternativeBlueStyle();
             }
         }
-
-        private static EstiloGradeDadosBase ObterEstiloDeGradeDeDadosAlternativo()
-        {
-            switch ( Tema )
-            {
-                default:
-                case Tema.Branco:
-                {
-                    return new EstiloGradeDadosBrancoAlternativo();
-                }
-
-                case Tema.Cinza:
-                {
-                    return new EstiloGradeDadosCinzaAlternativo();
-                }
-
-                case Tema.Vermelho:
-                {
-                    return new EstiloGradeDadosVermelhoAlternativo();
-                }
-
-                case Tema.Amarelo:
-                {
-                    return new EstiloGradeDadosAmareloAlternativo();
-                }
-
-                case Tema.Azul:
-                {
-                    return new EstiloGradeDadosAzulAlternativo();
-                }
-            }
-        }
-
-        #endregion Privados
-
-        #endregion Métodos
     }
 }

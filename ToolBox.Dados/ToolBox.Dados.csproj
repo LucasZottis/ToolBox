@@ -23,19 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ToolBox.Geral\ToolBox.Geral.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="GradeDados\GradeDadosBase.cs">
-      <SubType>Paineis</SubType>
-    </Compile>
-    <Compile Update="LigacaoDados\LigacaoFonteDadosBase.cs">
-      <SubType>Caixa de Texto</SubType>
-    </Compile>
-    <Compile Update="LigacaoDados\VinculoFonteDados.cs">
-      <SubType>Dados</SubType>
-    </Compile>
+    <ProjectReference Include="..\ToolBox.Geral\ToolBox.csproj" />
   </ItemGroup>
 
 </Project>

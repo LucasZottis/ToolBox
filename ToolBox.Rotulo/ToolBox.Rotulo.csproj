@@ -23,13 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ToolBox.Geral\ToolBox.Geral.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="Rotulo.cs">
-      <SubType>Rotulos</SubType>
-    </Compile>
+    <ProjectReference Include="..\ToolBox.Geral\ToolBox.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,4 @@
-﻿namespace ToolBox.Geral.Enums;
+﻿namespace ToolBox.Enums;
 
 /// <summary>
 /// Contém tipos de máscaras de data.

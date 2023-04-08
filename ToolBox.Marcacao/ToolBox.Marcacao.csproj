@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ToolBox.Geral\ToolBox.Geral.csproj" />
+    <ProjectReference Include="..\ToolBox.Geral\ToolBox.csproj" />
   </ItemGroup>
 
 </Project>

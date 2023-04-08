@@ -23,22 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ToolBox.Geral\ToolBox.Geral.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="Base\CaixaGrupoBase.cs">
-      <SubType>Paineis</SubType>
-    </Compile>
-    <Compile Update="Base\PainelBase.cs">
-      <SubType>Paineis</SubType>
-    </Compile>
-    <Compile Update="CaixaGrupo.cs">
-      <SubType>Paineis</SubType>
-    </Compile>
-    <Compile Update="Painel.cs">
-      <SubType>Paineis</SubType>
-    </Compile>
+    <ProjectReference Include="..\ToolBox.Geral\ToolBox.csproj" />
   </ItemGroup>
 
 </Project>

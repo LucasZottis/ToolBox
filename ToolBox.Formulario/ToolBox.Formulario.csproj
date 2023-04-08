@@ -23,16 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ToolBox.Geral\ToolBox.Geral.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Compile Update="Base\CaixaFlutuanteBase.cs" />
-    <Compile Update="Base\DialogoBase.cs" />
-    <Compile Update="Base\FormularioBase.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Base\JanelaBase.cs" />
+    <ProjectReference Include="..\ToolBox.Geral\ToolBox.csproj" />
   </ItemGroup>
 
 </Project>

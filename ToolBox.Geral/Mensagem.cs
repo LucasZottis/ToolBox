@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace ToolBox.Geral
+namespace ToolBox
 {
     /// <summary>
     /// Classe para mostrar notificações para o usuário.
@@ -10,7 +10,7 @@ namespace ToolBox.Geral
         #region Atributos
 
         private static readonly string _novalinha = "\n";
-        private static string _titulo = ToolBoxConfig.TituloPadrao;
+        private static string _titulo = ToolBoxConfig.AppName;
 
         #endregion Atributos
 

@@ -1,4 +1,4 @@
-﻿namespace ToolBox.Geral
+﻿namespace ToolBox
 {
     public delegate void EventoCrudNavegador();
     public delegate void EventoExcluirItemNavegador( int codigoItem );
