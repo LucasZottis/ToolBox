@@ -137,4 +137,7 @@ public partial class SearchPath
     {
         txtPath.CleanUp();
     }
+
+    public bool PathExists()
+        => Path.TemConteudo() && System.IO.Path.Exists( Path );
 }
