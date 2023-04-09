@@ -1,8 +1,8 @@
-﻿namespace ToolBox.TextBoxes
+﻿namespace ToolBox.TextInputs
 {
     [DesignerCategory( "Caixa de Texto" ), ToolboxItem( true )]
 
-    public class MonetaryInput 
+    public class MonetaryInput
         : InputBase
     {
         #region Atributos
@@ -88,22 +88,22 @@
         [Browsable( false )]
         public new bool PermitirNumeros
         {
-            get { return base.AllowNumbers; }
-            set { base.AllowNumbers = true; }
+            get { return AllowNumbers; }
+            set { AllowNumbers = true; }
         }
 
         [Browsable( false )]
         public new bool PermitirLetras
         {
-            get { return base.AllowLetters; }
-            set { base.AllowLetters = value; }
+            get { return AllowLetters; }
+            set { AllowLetters = value; }
         }
 
         [Browsable( false )]
         public new bool PermitirSimbolos
         {
-            get { return base.AllowSymbols; }
-            set { base.AllowSymbols = value; }
+            get { return AllowSymbols; }
+            set { AllowSymbols = value; }
         }
 
         [Browsable( false )]

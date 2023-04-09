@@ -1,7 +1,7 @@
-﻿namespace ToolBox.TextBoxes;
+﻿namespace ToolBox.TextInputs;
 
 [DesignerCategory( "Caixa de Texto" ), ToolboxItem( true )]
-public class PasswordInput 
+public class PasswordInput
     : InputBase
 {
     #region Atributos

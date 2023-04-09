@@ -1,7 +1,7 @@
-﻿namespace ToolBox.TextBoxes
+﻿namespace ToolBox.TextInputs
 {
     [DesignerCategory( "Caixa de Texto" ), ToolboxItem( true )]
-    public class MultiLineTextInput 
+    public class MultiLineTextInput
         : TextInput
     {
         #region Atributos

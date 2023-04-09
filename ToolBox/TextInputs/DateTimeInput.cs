@@ -1,6 +1,6 @@
 ﻿using ToolBox.Enums;
 
-namespace ToolBox.TextBoxes;
+namespace ToolBox.TextInputs;
 
 [ToolboxItem( true )]
 public class DateTimeInput
@@ -27,15 +27,15 @@ public class DateTimeInput
     [Browsable( false )]
     public new bool PermitirLetras
     {
-        get => base.AllowLetters;
-        set => base.AllowLetters = value;
+        get => AllowLetters;
+        set => AllowLetters = value;
     }
 
     [Browsable( false )]
     public new bool PermitirSimbolos
     {
-        get => base.AllowSymbols;
-        set => base.AllowSymbols = value;
+        get => AllowSymbols;
+        set => AllowSymbols = value;
     }
 
     [Browsable( false )]
@@ -62,8 +62,8 @@ public class DateTimeInput
     private void Configure()
     {
         base.TextAlign = HorizontalAlignment.Center;
-        base.AllowLetters = false;
-        base.AllowSymbols = false;
+        AllowLetters = false;
+        AllowSymbols = false;
 
         SetMaxLength();
         SetPlaceHolder();

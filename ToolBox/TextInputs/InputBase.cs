@@ -1,9 +1,9 @@
 ﻿using Toolbox.Utils.Helpers;
 
-namespace ToolBox.TextBoxes
+namespace ToolBox.TextInputs
 {
     [DesignerCategory( "Caixa de Texto" ), ToolboxItem( false )]
-    public class InputBase 
+    public class InputBase
         : TextBox, ITextInput, IControl, ICleanUp
     {
         #region Atributos
@@ -764,7 +764,7 @@ namespace ToolBox.TextBoxes
 
         public void CleanUp()
         {
-            base.Clear();
+            Clear();
             Text = _valorPadrao;
         }
     }

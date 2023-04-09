@@ -1,7 +1,7 @@
-﻿namespace ToolBox.TextBoxes
+﻿namespace ToolBox.TextInputs
 {
     [DesignerCategory( "Caixa de Texto" ), ToolboxItem( true )]
-    public class TextInput 
+    public class TextInput
         : InputBase
     {
         #region Propriedades
