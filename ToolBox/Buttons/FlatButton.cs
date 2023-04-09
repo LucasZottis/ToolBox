@@ -66,6 +66,7 @@ public class FlatButton
         appearance.MouseOverBackColor = Color.LimeGreen;
 
         base.Text = "Confirmar";
+        DialogResult = DialogResult.OK;
     }
 
     private void SetCancelStyle( FlatButtonAppearance appearance )
@@ -78,6 +79,7 @@ public class FlatButton
         appearance.MouseOverBackColor = Color.Red;
 
         base.Text = "Cancelar";
+        DialogResult = DialogResult.Cancel;
     }
 
     private void OnSetFlatButtonStyle()
