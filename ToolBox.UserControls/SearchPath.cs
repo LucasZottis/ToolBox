@@ -127,18 +127,32 @@ public partial class SearchPath
 
     private void OnClick( object sender, EventArgs e )
     {
-        if ( SearchFolder )
-            SearchFolderPath();
-        else
-            SearchFilePath();
+        try
+        {
+            if ( SearchFolder )
+                SearchFolderPath();
+            else
+                SearchFilePath();
 
-        if ( SelectedPath.TemConteudo() )
-            _onAfterSearch?.Invoke( SelectedPath );
+            if ( SelectedPath.TemConteudo() )
+                _onAfterSearch?.Invoke( SelectedPath );
+        }
+        catch ( Exception ex )
+        {
+            Mensagem.MostrarErro( ex );
+        }
     }
 
     public void CleanUp()
     {
-        txtPath.CleanUp();
+        try
+        {
+            txtPath.CleanUp();
+        }
+        catch ( Exception ex )
+        {
+            Mensagem.MostrarErro( ex );
+        }
     }
 
     public bool PathExists()
