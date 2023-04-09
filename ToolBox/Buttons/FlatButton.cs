@@ -1,93 +1,116 @@
-﻿namespace ToolBox.Buttons
+﻿namespace ToolBox.Buttons;
+
+[DesignerCategory( "Botão Flat" ), ToolboxItem( true )]
+public class FlatButton
+    : ButtonBase
 {
-    [DesignerCategory( "Botão Flat" ), ToolboxItem( true )]
-    public class FlatButton : ButtonBase
+    private Theme _theme = Theme.White;
+    private FlatButtonStyle _flatButtonStyle = FlatButtonStyle.Default;
+
+    [Browsable( false )]
+    public new FlatStyle FlatStyle
     {
-        #region Atributos
+        get { return base.FlatStyle; }
+        set { base.FlatStyle = value; }
+    }
 
-        private Theme _tema = Theme.White;
-
-        #endregion Atributos
-
-        #region Propriedades
-
-        #region Ocultadas
-
-        [Browsable( false )]
-        public new FlatStyle FlatStyle
+    [Browsable( true ), DisplayName( "Estilo" ), Description( "Define ou obtém o estilo do botão. Esse estilo sobrepõe o tema definido." ), Category( TextosPadroes.AparenciaCategoria ), DefaultValue( FlatButtonStyle.Default )]
+    public FlatButtonStyle FlatButtonStyle
+    {
+        get => _flatButtonStyle;
+        set
         {
-            get { return base.FlatStyle; }
-            set { base.FlatStyle = value; }
+            _flatButtonStyle = value;
+            OnSetFlatButtonStyle();
         }
+    }
 
-        #endregion Ocultadas
-
-        #region Aparência
-
-        //internal Tema Tema
-        //{
-        //    get
-        //    {
-        //        return _tema;
-        //    }
-
-        //    set
-        //    {
-        //        re
-        //    }
-        //}
-
-        #endregion Aparência
-
-        #endregion Propriedades
-
-        #region Construtores
-
-        public FlatButton( IContainer container ) : base( container )
+    public new string Text
+    {
+        get => base.Text;
+        set
         {
-            FlatStyle = FlatStyle.Flat;
+            if ( _flatButtonStyle != FlatButtonStyle.Default )
+                throw new InvalidOperationException( "Não é possível alterar o texto do botão pois tem um estilo para esse botão." );
+
+            base.Text = value;
         }
+    }
 
-        #endregion Construtores
+    //internal Tema Tema
+    //{
+    //    get
+    //    {
+    //        return _tema;
+    //    }
 
-        #region Métodos
+    //    set
+    //    {
+    //        re
+    //    }
+    //}
 
-        #region Privados
+    public FlatButton( IContainer container )
+        : base( container )
+    {
+        FlatStyle = FlatStyle.Flat;
+    }
 
-        #region Sobreescritos
+    private void SetConfirmStyle( FlatButtonAppearance appearance )
+    {
+        BackColor = Color.Green;
 
+        appearance.BorderColor = BackColor;
+        appearance.BorderSize = 2;
+        appearance.MouseDownBackColor = Color.DarkGreen;
+        appearance.MouseOverBackColor = Color.LimeGreen;
 
+        base.Text = "Confirmar";
+    }
 
-        #endregion Sobreescritos
+    private void SetCancelStyle( FlatButtonAppearance appearance )
+    {
+        BackColor = Color.Firebrick;
 
+        appearance.BorderColor = BackColor;
+        appearance.BorderSize = 2;
+        appearance.MouseDownBackColor = Color.DarkRed;
+        appearance.MouseOverBackColor = Color.Red;
 
+        base.Text = "Cancelar";
+    }
 
-        #endregion Privados
+    private void OnSetFlatButtonStyle()
+    {
+        try
+        {
+            var appearance = FlatAppearance;
 
-        #region Protegidos
+            switch ( _flatButtonStyle )
+            {
+                case FlatButtonStyle.Confirm:
+                    SetConfirmStyle( appearance );
+                    break;
+                case FlatButtonStyle.Cancel:
+                    SetCancelStyle( appearance );
+                    break;
+            }
+        }
+        catch ( Exception ex )
+        {
+            Mensagem.MostrarErro( ex );
+        }
+    }
 
-        #region Sobreescritos
-
-
-
-        #endregion Sobreescritos
-
-
-
-        #endregion Protegidos
-
-        #region Internos
-
-        #region Sobreescritos
-
-
-
-        #endregion Sobreescritos
-
-
-
-        #endregion Internos
-
-        #endregion Métodos
+    protected override void OnClick( EventArgs e )
+    {
+        try
+        {
+            base.OnClick( e );
+        }
+        catch ( Exception ex )
+        {
+            Mensagem.MostrarErro( ex );
+        }
     }
 }
