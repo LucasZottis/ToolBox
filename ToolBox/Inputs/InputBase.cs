@@ -1,6 +1,6 @@
 ﻿using Toolbox.Utils.Helpers;
 
-namespace ToolBox.TextInputs
+namespace ToolBox.Inputs
 {
     [DesignerCategory( "Caixa de Texto" ), ToolboxItem( false )]
     public class InputBase

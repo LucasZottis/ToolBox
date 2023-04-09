@@ -1,4 +1,4 @@
-﻿namespace ToolBox.TextInputs;
+﻿namespace ToolBox.Inputs;
 
 [DesignerCategory( "Caixa de Texto" ), ToolboxItem( true )]
 public class PasswordInput

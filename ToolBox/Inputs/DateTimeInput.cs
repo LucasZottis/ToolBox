@@ -1,6 +1,6 @@
 ﻿using ToolBox.Enums;
 
-namespace ToolBox.TextInputs;
+namespace ToolBox.Inputs;
 
 [ToolboxItem( true )]
 public class DateTimeInput

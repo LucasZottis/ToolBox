@@ -1,4 +1,6 @@
-﻿namespace ToolBox.UserControls
+﻿using ToolBox.Inputs;
+
+namespace ToolBox.UserControls
 {
     partial class SearchPath
     {
@@ -31,7 +33,7 @@
             components = new Container();
             cgpCaminho = new Containers.ContainerGroup( components );
             btfSearch = new Buttons.FlatButton( components );
-            txtPath = new TextBoxes.TextInput( components );
+            txtPath = new Inputs.TextInput( components );
             cgpCaminho.SuspendLayout();
             SuspendLayout();
             // 
@@ -89,6 +91,6 @@
 
         private Containers.ContainerGroup cgpCaminho;
         private Buttons.FlatButton btfSearch;
-        private TextBoxes.TextInput txtPath;
+        private Inputs.TextInput txtPath;
     }
 }

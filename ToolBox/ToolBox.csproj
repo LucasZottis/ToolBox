@@ -89,25 +89,25 @@
     <Compile Update="Tags\BaseTag.cs">
       <SubType>Rotulos</SubType>
     </Compile>
-    <Compile Update="TextInputs\TextInput.cs">
+    <Compile Update="Inputs\TextInput.cs">
       <SubType>Caixa de Texto</SubType>
     </Compile>
-    <Compile Update="TextInputs\InputBase.cs">
+    <Compile Update="Inputs\InputBase.cs">
       <SubType>Caixa de Texto</SubType>
     </Compile>
-    <Compile Update="TextInputs\MonetaryInput.cs">
+    <Compile Update="Inputs\MonetaryInput.cs">
       <SubType>Caixa de Texto</SubType>
     </Compile>
-    <Compile Update="TextInputs\MultiLineTextInput.cs">
+    <Compile Update="Inputs\MultiLineTextInput.cs">
       <SubType>Caixa de Texto</SubType>
     </Compile>
-    <Compile Update="TextInputs\NumericInput.cs">
+    <Compile Update="Inputs\NumericInput.cs">
       <SubType>Caixa de Texto</SubType>
     </Compile>
-    <Compile Update="TextInputs\PasswordInput.cs">
+    <Compile Update="Inputs\PasswordInput.cs">
       <SubType>Caixa de Texto</SubType>
     </Compile>
-    <Compile Update="TextInputs\DateTimeInput.cs" />
+    <Compile Update="Inputs\DateTimeInput.cs" />
   </ItemGroup>
 
 </Project>
