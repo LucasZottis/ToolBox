@@ -7,14 +7,7 @@ namespace ToolBox
     /// </summary>
     public static class Mensagem
     {
-        #region Atributos
-
         private static readonly string _novalinha = "\n";
-        private static string _titulo = ToolBoxConfig.AppName;
-
-        #endregion Atributos
-
-        #region Métodos Privados
 
         private static string MontarMensagemExcecao( Exception ex )
         {
@@ -36,61 +29,53 @@ namespace ToolBox
             return mensagem.ToString();
         }
 
-        #endregion Métodos Privados
-
-        #region Informar
-
+        /// <summary>
+        /// Método para mostrar um modal de informação ao usuário.
+        /// </summary>
+        /// <param name="mensagem">Mensagem que deseja apresentar.</param>
         public static void Informar( string mensagem )
-        {
-            MessageBox.Show( mensagem, _titulo, MessageBoxButtons.OK, MessageBoxIcon.Information );
-        }
+            => MessageBox.Show( mensagem, ToolBoxEnvironment.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information );
 
+        /// <summary>
+        /// Método para mostrar um modal de informação ao usuário.
+        /// </summary>
+        /// <param name="mensagem">Mensagem que deseja apresentar.</param>
         public static void Informar( StringBuilder mensagem )
-        {
-            MessageBox.Show( mensagem.ToString(), _titulo, MessageBoxButtons.OK, MessageBoxIcon.Information );
-        }
+            => MessageBox.Show( mensagem.ToString(), ToolBoxEnvironment.AppName, MessageBoxButtons.OK, MessageBoxIcon.Information );
 
-        #endregion Informar
-
-        #region Perguntar
-
+        /// <summary>
+        /// Método para mostrar um modal de pergunta ao usuário.
+        /// </summary>
+        /// <param name="mensagem">Mensagem que deseja apresentar.</param>
         public static DialogResult Perguntar( string mensagem )
-        {
-            return MessageBox.Show( mensagem, _titulo, MessageBoxButtons.YesNo, MessageBoxIcon.Question );
-        }
+            => MessageBox.Show( mensagem, ToolBoxEnvironment.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question );
 
+        /// <summary>
+        /// Método para mostrar um modal de pergunta ao usuário.
+        /// </summary>
+        /// <param name="mensagem">Mensagem que deseja apresentar.</param>
         public static DialogResult Perguntar( StringBuilder mensagem )
-        {
-            return MessageBox.Show( mensagem.ToString(), _titulo, MessageBoxButtons.YesNo, MessageBoxIcon.Question );
-        }
+            => MessageBox.Show( mensagem.ToString(), ToolBoxEnvironment.AppName, MessageBoxButtons.YesNo, MessageBoxIcon.Question );
 
-        #endregion Perguntar
-
-        #region Avisar
-
+        /// <summary>
+        /// Método para mostrar um modal de aviso ao usuário.
+        /// </summary>
+        /// <param name="mensagem">Mensagem que deseja apresentar.</param>
         public static void Avisar( string mensagem )
-        {
-            MessageBox.Show( mensagem, _titulo, MessageBoxButtons.OK, MessageBoxIcon.Warning );
-        }
+            => MessageBox.Show( mensagem, ToolBoxEnvironment.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning );
 
+        /// <summary>
+        /// Método para mostrar um modal de aviso ao usuário.
+        /// </summary>
+        /// <param name="mensagem">Mensagem que deseja apresentar.</param>
         public static void Avisar( StringBuilder mensagem )
-        {
-            MessageBox.Show( mensagem.ToString(), _titulo, MessageBoxButtons.OK, MessageBoxIcon.Warning );
-        }
-
-        #endregion Avisar
-
-        #region MostrarErro
+            => MessageBox.Show( mensagem.ToString(), ToolBoxEnvironment.AppName, MessageBoxButtons.OK, MessageBoxIcon.Warning );
 
         /// <summary>
         /// Método para mostrar mensagens originadas de exceção.
         /// </summary>
         /// <param name="ex">Exceção que deve ser mostrada.</param>
         public static void MostrarErro( Exception ex )
-        {
-            MessageBox.Show( MontarMensagemExcecao( ex ), _titulo, MessageBoxButtons.OK, MessageBoxIcon.Error );
-        }
-
-        #endregion MostrarErro
+            => MessageBox.Show( MontarMensagemExcecao( ex ), ToolBoxEnvironment.AppName, MessageBoxButtons.OK, MessageBoxIcon.Error );
     }
 }

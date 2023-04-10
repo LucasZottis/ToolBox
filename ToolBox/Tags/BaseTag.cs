@@ -1,48 +1,48 @@
 ﻿namespace ToolBox.Tags;
 
-[DesignerCategory( "Rotulos" ), ToolboxItem( false )]
-public class BaseTag : Label, IControl
+[DesignerCategory( "Tags" ), ToolboxItem( false )]
+public class BaseTag
+    : Label, IControl
 {
-    #region Propriedades
-
     [Browsable( true ), DisplayName( TextosPadroes.BloquearComponente ), Description( TextosPadroes.BloquearComponenteDescricao ), Category( TextosPadroes.ComportamentoCategoria ), DefaultValue( false )]
     public bool DisableControl { get; set; } = false;
 
     [Browsable( true ), DisplayName( TextosPadroes.Bloqueado ), Description( TextosPadroes.BloqueadoDescricao ), Category( TextosPadroes.ComportamentoCategoria ), DefaultValue( true )]
     public bool Disabled
     {
-        set
-        {
-            Enabled = !value;
-        }
+        set => Enabled = !value;
     }
 
-    #endregion Propriedades
+    [Browsable( false ), DisplayName( TextosPadroes.Fonte ), Category( TextosPadroes.AparenciaCategoria )]
+    public new Font Font
+    {
+        get => ToolBoxEnvironment.GeneralFont;
+        set => base.Font = ToolBoxEnvironment.GeneralFont;
+    }
+    [Browsable( true ), DisplayName( TextosPadroes.Bloqueado ), Description( TextosPadroes.BloqueadoDescricao ), Category( TextosPadroes.ComportamentoCategoria ), DefaultValue( true )]
+    /// <summary>
+    /// Determina se irá ajustar o tamanho do controle automaticamente.
+    /// </summary>
 
-    #region Construtores
+    public new bool AutoSize
+    {
+        get => base.AutoSize;
+        set => base.AutoSize = value;
+    }
 
+    /// <summary>
+    /// Construtor padrão que recebe um container.
+    /// </summary>
+    /// <param name="container">Container do formulário.</param>
     public BaseTag( IContainer container )
     {
-        if ( container != null )
-        {
-            container.Add( this );
-        }
-
-        AutoSize = true;
+        container?.Add( this );
     }
 
-    #endregion Construtores
-
-    #region Métodos
-
-    #region Públicos
-
+    /// <summary>
+    /// Obtém o ponto central do controle.
+    /// </summary>
+    /// <returns>Struct Point com o ponto centrar do controle.</returns>
     public Point GetCenterPoint()
-    {
-        throw new NotImplementedException();
-    }
-
-    #endregion Públicos
-
-    #endregion Métodos
+        => PointHelper.GetCenterPoint( Size );
 }

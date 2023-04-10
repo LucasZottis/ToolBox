@@ -6,6 +6,6 @@ public partial class NormalForm
     public NormalForm()
     {
         InitializeComponent();
-        AdicionarComponentes( components );
+        AddComponents( components );
     }
 }

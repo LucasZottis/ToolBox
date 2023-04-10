@@ -1,72 +1,61 @@
-﻿namespace ToolBox.Buttons
+﻿namespace ToolBox.Buttons;
+
+/// <summary>
+/// Botão base.
+/// </summary>
+[DesignerCategory( "Botão Base" ), ToolboxItem( false )]
+public class ButtonBase : Button, IControl
 {
-    [DesignerCategory( "Botão" ), ToolboxItem( false )]
-    public class ButtonBase : Button, IControl
+    /// <summary>
+    /// Determina o cursor que será mostrado ao colocar o mouse sobre.
+    /// </summary>
+    [Browsable( false )]
+    public new Cursor Cursor
     {
-        #region Atributos
-
-
-
-        #endregion Atributos
-
-        #region Propriedades
-
-        #region Ocultadas
-
-
-
-        #endregion Ocultadas
-
-        #region IComponente
-
-        [Browsable( true ), DisplayName( TextosPadroes.BloquearComponente ), Description( TextosPadroes.BloquearComponenteDescricao ), Category( TextosPadroes.ComportamentoCategoria ), DefaultValue( false )]
-        public bool DisableControl { get; set; } = false;
-
-        [Browsable( false )]
-        public bool Disabled { set => base.Enabled = !value; }
-
-        #endregion IComponente
-
-        #region Comportamento
-
-        [Browsable( true ), DisplayName( TextosPadroes.Habilitado )]
-        public new bool Enabled
-        {
-            get { return base.Enabled; }
-            set { base.Enabled = value; }
-        }
-
-        #endregion Comportamento
-
-        #endregion Propriedades
-
-        #region Construtores
-
-        public ButtonBase( IContainer container )
-        {
-            if ( container != null )
-            {
-                container.Add( this );
-            }
-        }
-
-        #endregion Construtores
-
-        #region Métodos
-
-        #region Públicos
-
-        #region IComponente
-
-        public Point GetCenterPoint()
-        {
-            return new Point( Size.Width / 2, Size.Height / 2 );
-        }
-
-        #endregion IComponente
-
-        #endregion
-
-        #endregion Métodos
+        get => Cursors.Hand;
+        set => base.Cursor = Cursors.Hand;
     }
+
+    /// <summary>
+    /// Determina se o controle está desabilitado.
+    /// </summary>
+    [Browsable( false )]
+    public bool Disabled
+    {
+        set => base.Enabled = !value;
+    }
+
+    /// <summary>
+    /// Determina se deve desabilitar o controle quando o formulário estiver em modo de navegação.
+    /// </summary>
+    [Browsable( true ), DisplayName( TextosPadroes.BloquearComponente ), Description( TextosPadroes.BloquearComponenteDescricao ), Category( TextosPadroes.ComportamentoCategoria ), DefaultValue( false )]
+    public bool DisableControl { get; set; } = false;
+
+    /// <summary>
+    /// Fonte de texto do controle.
+    /// </summary>
+    [Browsable( false ), DisplayName( TextosPadroes.Fonte ), Category( TextosPadroes.AparenciaCategoria ), DesignerSerializationVisibility( DesignerSerializationVisibility.Visible )]
+    public new Font Font
+    {
+        get => base.Font;
+        set => base.Font = value;
+    }
+
+    /// <summary>
+    /// Construtor padrão que recebe um container.
+    /// </summary>
+    /// <param name="container">Container do formulário.</param>
+    public ButtonBase( IContainer container )
+    {
+        container?.Add( this );
+
+        Cursor = Cursors.Hand;
+    }
+
+    /// <summary>
+    /// Obtém o ponto central do controle.
+    /// </summary>
+    /// <returns>Struct Point com o ponto centrar do controle.</returns>
+    public Point GetCenterPoint()
+        => PointHelper.GetCenterPoint( Size );
 }

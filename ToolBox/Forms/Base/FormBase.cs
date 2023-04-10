@@ -6,41 +6,94 @@ namespace ToolBox.Forms.Base;
 /// <summary>
 /// Classe de formulário que serve de base para criação de novos formulários.
 /// </summary>
-public partial class FormBase 
+public partial class FormBase
     : Form, IForm, INotificacao
 {
     private EventoAoAlterarModoJanela _aoAlterarModoJanela;
     private EventoFormulario _aoCarregarFormulario;
 
-    #region Atributos
+    private bool _closeView;
+    private string _formTitle = string.Empty;
 
-    private bool _fecharJanela;
-    private string _titulo;
-
-    private ModoJanela _modoJanela = ModoJanela.Navegacao;
+    private ModoJanela _formMode = ModoJanela.Navegacao;
 
     private Color _corFundoPadrao = Color.White;
 
+    private Font _font = ToolBoxEnvironment.GeneralFont;
     private List<IControl> _ListaIComponente = new List<IControl>();
     private List<ICleanUp> _listaILimpeza = new List<ICleanUp>();
 
-    #endregion Atributos
+    [Browsable( true ), DisplayName( TextosPadroes.EstiloBorda ), Category( TextosPadroes.AparenciaCategoria )]
+    public new FormBorderStyle FormBorderStyle
+    {
+        get => base.FormBorderStyle;
+        set => base.FormBorderStyle = value;
+    }
+
+    [Browsable( true ), DisplayName( TextosPadroes.CorFundo ), Category( TextosPadroes.AparenciaCategoria )]
+    public new Color BackColor
+    {
+        get => base.BackColor;
+        set
+        {
+            if ( value.IsEmpty )
+                value = _corFundoPadrao;
+
+            base.BackColor = value;
+        }
+    }
+
+    [Browsable( true ), DisplayName( TextosPadroes.CorFonte ), Category( TextosPadroes.AparenciaCategoria )]
+    public new Color ForeColor
+    {
+        get => base.ForeColor;
+        set => base.ForeColor = value;
+    }
+
+    /// <summary>
+    /// Fonte de texto do controle.
+    /// </summary>
+    [Browsable( false ), DisplayName( TextosPadroes.Fonte ), Category( TextosPadroes.AparenciaCategoria )]
+    public new Font Font
+    {
+        get => ToolBoxEnvironment.GeneralFont;
+        set => base.Font = ToolBoxEnvironment.GeneralFont;
+    }
+
+    /// <summary>
+    /// Título do formulário.
+    /// Ele será concatenado com o nome do projeto.
+    /// </summary>
+    [Browsable( true ), DisplayName( TextosPadroes.TituloJanela ), Description( TextosPadroes.TituloJanelaDescricao ), Category( TextosPadroes.AparenciaCategoria ), DefaultValue( "" )]
+    public string FormTitle
+    {
+        get => _formTitle;
+
+        set
+        {
+            if ( value.Igual( _formTitle ) )
+                return;
+
+            _formTitle = value;
+            OnTitleChange();
+        }
+    }
 
     #region Propriedades
 
     #region IFormulario
 
     [
-        Browsable( false ), 
-        DisplayName( TextosPadroes.ModoJanela ), 
-        Description( TextosPadroes.ModoJanelaDescricao ), 
-        Category( TextosPadroes.ComportamentoCategoria ), 
+        Browsable( false ),
+        DisplayName( TextosPadroes.ModoJanela ),
+        Description( TextosPadroes.ModoJanelaDescricao ),
+        Category( TextosPadroes.ComportamentoCategoria ),
         DefaultValue( ModoJanela.Navegacao )
     ]
     public ModoJanela FormMode
     {
-        get => _modoJanela;
-        set => AlterarModoJanela( value );
+        get => _formMode;
+        set => ChangeFormMode( value );
     }
 
     #endregion IFormulario
@@ -58,84 +111,6 @@ public partial class FormBase
 
     #region Aparência
 
-    [Browsable( true ), DisplayName( TextosPadroes.EstiloBorda ), Category( TextosPadroes.AparenciaCategoria )]
-    public new FormBorderStyle FormBorderStyle
-    {
-        get
-        {
-            return base.FormBorderStyle;
-        }
-
-        set
-        {
-            base.FormBorderStyle = value;
-        }
-    }
-
-    [Browsable( true ), DisplayName( TextosPadroes.CorFundo ), Category( TextosPadroes.AparenciaCategoria )]
-    public new Color BackColor
-    {
-        get
-        {
-            return base.BackColor;
-        }
-
-        set
-        {
-            if ( value.IsEmpty )
-            {
-                value = _corFundoPadrao;
-            }
-
-            base.BackColor = value;
-        }
-    }
-
-    [Browsable( true ), DisplayName( TextosPadroes.CorFonte ), Category( TextosPadroes.AparenciaCategoria )]
-    public new Color ForeColor
-    {
-        get
-        {
-            return base.ForeColor;
-        }
-
-        set
-        {
-            base.ForeColor = value;
-        }
-    }
-
-    [Browsable( true ), DisplayName( TextosPadroes.Fonte ), Category( TextosPadroes.AparenciaCategoria )]
-    public new Font Font
-    {
-        get
-        {
-            return base.Font;
-        }
-
-        set
-        {
-            base.Font = value;
-        }
-    }
-
-    [Browsable( true ), DisplayName( TextosPadroes.TituloJanela ), Description( TextosPadroes.TituloJanelaDescricao ), Category( TextosPadroes.AparenciaCategoria ), DefaultValue( "" )]
-    public string FormTitle
-    {
-        get
-        {
-            return _titulo;
-        }
-
-        set
-        {
-            if ( value.Diferente( _titulo ) )
-            {
-                _titulo = value;
-                AoAlterarTitulo();
-            }
-        }
-    }
 
     #endregion Aparência
 
@@ -146,12 +121,12 @@ public partial class FormBase
     {
         get
         {
-            return _fecharJanela;
+            return _closeView;
         }
 
         set
         {
-            _fecharJanela = value;
+            _closeView = value;
         }
     }
 
@@ -166,16 +141,11 @@ public partial class FormBase
 
     #endregion Propriedades
 
-    #region Construtores
-
     public FormBase()
     {
         InitializeComponent();
+        SetGlobalSettings();
     }
-
-    #endregion Construtores
-
-    #region Eventos
 
     /// <summary>
     /// Acionado ao alterar o modo de janela.
@@ -189,23 +159,17 @@ public partial class FormBase
     [Browsable( false )]
     public new event EventHandler Load { add { base.Load += value; } remove { base.Load -= value; } }
 
-    #endregion Eventos
-
     #region Métodos
 
-    #region Privados
-
-    private void AoAlterarTitulo()
+    private void OnTitleChange()
     {
-        Text = $"{ToolBoxConfig.AppName}";
+        Text = $"{ToolBoxEnvironment.AppName}";
 
-        if ( !DesignMode && _titulo.TemConteudo() )
-            Text += $" | ";
-
-        Text += _titulo;
+        if ( !DesignMode && _formTitle.TemConteudo() )
+            Text += $" | {_formTitle}";
     }
 
-    private void AoMudarModoJanela( object enviador, EventArgs argumento )
+    private void OnFormModeChange( object enviador, EventArgs argumento )
     {
         switch ( FormMode )
         {
@@ -217,14 +181,14 @@ public partial class FormBase
                 break;
             case ModoJanela.Navegacao:
             case ModoJanela.Exclusao:
-                BloquearComponentes();
+                DisableComponents();
                 break;
         }
 
         _aoAlterarModoJanela?.Invoke();
     }
 
-    private void ObterComponentes()
+    private void GetComponents()
     {
         if ( DesignMode )
             return;
@@ -238,41 +202,40 @@ public partial class FormBase
         }
     }
 
-    #endregion Privados
+    private void SetGlobalSettings()
+    {
+        Font = ToolBoxEnvironment.GeneralFont;
+    }
 
-    #region Protegidos
-
-    protected virtual void AdicionarComponentes( IContainer componentes )
+    protected virtual void AddComponents( IContainer componentes )
     {
         components = componentes;
     }
 
-    protected void AlterarModoJanela( ModoJanela valor )
+    protected void ChangeFormMode( ModoJanela valor )
     {
-        if ( _modoJanela == valor )
+        try
         {
-            return;
+            if ( _formMode == valor )
+                return;
+
+            _formMode = valor;
+            OnFormModeChange( this, EventArgs.Empty );
         }
-
-        _modoJanela = valor;
-
-        AoMudarModoJanela( this, EventArgs.Empty );
+        catch ( Exception ex )
+        {
+            Mensagem.MostrarErro( ex );
+        }
     }
 
-    protected virtual void BloquearComponentes()
+    protected virtual void DisableComponents()
     {
         if ( DesignMode )
-        {
             return;
-        }
 
         foreach ( IControl componente in _ListaIComponente )
-        {
             if ( componente.DisableControl )
-            {
                 componente.Disabled = true;
-            }
-        }
     }
 
     protected virtual void DesbloquearComponentes()
@@ -294,17 +257,20 @@ public partial class FormBase
 
     protected override void OnLoad( EventArgs e )
     {
-        //base.OnLoad( e );
+        try
+        {
+            GetComponents();
 
-        ObterComponentes();
+            if ( FormMode == ModoJanela.Navegacao )
+                DisableComponents();
 
-        if ( FormMode == ModoJanela.Navegacao )
-            BloquearComponentes();
-
-        _aoCarregarFormulario?.Invoke();
+            _aoCarregarFormulario?.Invoke();
+        }
+        catch ( Exception ex )
+        {
+            Mensagem.MostrarErro( ex );
+        }
     }
-
-    #endregion Protegidos
 
     #region Públicos
 

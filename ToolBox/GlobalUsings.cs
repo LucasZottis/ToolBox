@@ -4,6 +4,7 @@ global using BibliotecaPublica.Extensoes.Extensoes;
 global using BibliotecaPublica.Notificacoes.Enums;
 global using BibliotecaPublica.Notificacoes.Interfaces;
 global using System.ComponentModel;
+global using System.Globalization;
+global using Toolbox.Utils.Helpers;
 global using ToolBox.Enums;
 global using ToolBox.Interfaces;
-global using System.Globalization;

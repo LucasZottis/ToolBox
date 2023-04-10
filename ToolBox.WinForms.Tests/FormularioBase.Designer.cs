@@ -1,0 +1,68 @@
+﻿namespace ToolBox.WinForms.Tests
+{
+    partial class FormularioBase
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose( bool disposing )
+        {
+            if ( disposing && ( components != null ) )
+            {
+                components.Dispose();
+            }
+            base.Dispose( disposing );
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            components =  new System.ComponentModel.Container() ;
+            flatButton1 =  new Buttons.FlatButton( components ) ;
+            SuspendLayout();
+            // 
+            // flatButton1
+            // 
+            flatButton1.BackColor =  Color.LimeGreen ;
+            flatButton1.DialogResult =  DialogResult.OK ;
+            flatButton1.FlatAppearance.BorderColor =  Color.LimeGreen ;
+            flatButton1.FlatAppearance.BorderSize =  2 ;
+            flatButton1.FlatAppearance.MouseDownBackColor =  Color.ForestGreen ;
+            flatButton1.FlatAppearance.MouseOverBackColor =  Color.GreenYellow ;
+            flatButton1.FlatButtonStyle =  Enums.FlatButtonStyle.Confirm ;
+            flatButton1.FlatStyle =  FlatStyle.Flat ;
+            flatButton1.Font =  new Font( "Roboto", 12F, FontStyle.Bold, GraphicsUnit.Point ) ;
+            flatButton1.ForeColor =  Color.WhiteSmoke ;
+            flatButton1.Location =  new Point( 12, 12 ) ;
+            flatButton1.Name =  "flatButton1" ;
+            flatButton1.Size =  new Size( 96, 35 ) ;
+            flatButton1.TabIndex =  0 ;
+            flatButton1.Text =  "Confirmar" ;
+            flatButton1.UseVisualStyleBackColor =  false ;
+            // 
+            // FormularioBase
+            // 
+            AutoScaleDimensions =  new SizeF( 7F, 15F ) ;
+            AutoScaleMode =  AutoScaleMode.Font ;
+            ClientSize =  new Size( 800, 450 ) ;
+            Controls.Add( flatButton1 );
+            Name =  "FormularioBase" ;
+            ResumeLayout( false );
+        }
+
+        #endregion
+
+        private Buttons.FlatButton flatButton1;
+    }
+}

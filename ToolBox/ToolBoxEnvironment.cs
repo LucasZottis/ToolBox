@@ -4,7 +4,7 @@ using ToolBox.Datas.DataGrid.DataGridStyles.Alternatives;
 
 namespace ToolBox
 {
-    public static class ToolBoxConfig
+    public static class ToolBoxEnvironment
     {
         #region Temas
 
@@ -125,16 +125,24 @@ namespace ToolBox
 
         #endregion Temas
 
-        public static string AppName { get; set; } = string.Empty;
+        /// <summary>
+        /// Nome do aplicativo.
+        /// É usado para mostrar nos títulos das janelas.
+        /// O padrão é a informação é <see cref="Application.ProductName"/>
+        /// </summary>
+        public static string AppName { get; set; } = Application.ProductName;
 
         public static Theme Theme { get; set; } = Theme.White;
 
-        public static Font GeneralFont { get; set; }
+        /// <summary>
+        /// Fonte padrão utilizada para todos os componentes.
+        /// </summary>
+        public static Font GeneralFont { get; set; } = new Font( new FontFamily( "Roboto" ), 12F );
 
         public static Color BackgroundColor { get; set; }
 
-        public static Color CorFundoGradeDados
-            => ObterCorFundoGradeDados();
+        public static Color DataGridBackgroundColor
+            => GetDataGridBackgroundColor();
 
         //public static Color CorFundoDaGradeDaGradeDeDados
         //    => ObterCorDaGradeDeGradeDeDados();
@@ -145,7 +153,7 @@ namespace ToolBox
         public static DataGridStyleBase DataGridAlternativeStyle
             => ObterEstiloDeGradeDeDadosAlternativo();
 
-        private static Color ObterCorFundoGradeDados()
+        private static Color GetDataGridBackgroundColor()
         {
             switch ( Theme )
             {
