@@ -1,4 +1,6 @@
-﻿namespace ToolBox.UserControls;
+﻿using ToolBox.Helpers;
+
+namespace ToolBox.UserControls;
 
 public partial class UserControlBase
     : UserControl, IControl

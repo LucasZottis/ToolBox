@@ -8,4 +8,8 @@
     <PackageOutputPath>D:\MEGASync\Deploys\ToolBox\Utils\</PackageOutputPath>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Helpers\" />
+  </ItemGroup>
+
 </Project>

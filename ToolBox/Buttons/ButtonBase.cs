@@ -1,4 +1,6 @@
-﻿namespace ToolBox.Buttons;
+﻿using ToolBox.Helpers;
+
+namespace ToolBox.Buttons;
 
 /// <summary>
 /// Botão base.

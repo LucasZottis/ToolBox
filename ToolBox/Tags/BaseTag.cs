@@ -1,4 +1,6 @@
-﻿namespace ToolBox.Tags;
+﻿using ToolBox.Helpers;
+
+namespace ToolBox.Tags;
 
 [DesignerCategory( "Tags" ), ToolboxItem( false )]
 public class BaseTag

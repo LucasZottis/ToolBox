@@ -35,10 +35,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Toolbox.Utils\Toolbox.Utils.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Compile Update="Buttons\ButtonBase.cs">
       <SubType>Botão</SubType>
     </Compile>

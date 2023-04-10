@@ -1,4 +1,4 @@
-﻿using Toolbox.Utils.Helpers;
+﻿using ToolBox.Helpers;
 
 namespace ToolBox.Inputs
 {

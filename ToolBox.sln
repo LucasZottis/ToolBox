@@ -3,13 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Toolbox.Utils", "Toolbox.Utils\Toolbox.Utils.csproj", "{39581BFE-9A95-4A62-B3AF-09B30BA0C66D}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToolBox", "ToolBox\ToolBox.csproj", "{633FD912-F8E4-4C8B-82BC-8D78F6636570}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToolBox.UserControls", "ToolBox.UserControls\ToolBox.UserControls.csproj", "{FDAD0FF2-746D-440F-92F7-F6B38F6361CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolBox.WinForms.Tests", "ToolBox.WinForms.Tests\ToolBox.WinForms.Tests.csproj", "{96387964-2294-4CE6-8FD1-F7A1CC116A89}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToolBox.WinForms.Tests", "ToolBox.WinForms.Tests\ToolBox.WinForms.Tests.csproj", "{96387964-2294-4CE6-8FD1-F7A1CC116A89}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{39581BFE-9A95-4A62-B3AF-09B30BA0C66D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{39581BFE-9A95-4A62-B3AF-09B30BA0C66D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{39581BFE-9A95-4A62-B3AF-09B30BA0C66D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{39581BFE-9A95-4A62-B3AF-09B30BA0C66D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{633FD912-F8E4-4C8B-82BC-8D78F6636570}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{633FD912-F8E4-4C8B-82BC-8D78F6636570}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{633FD912-F8E4-4C8B-82BC-8D78F6636570}.Release|Any CPU.ActiveCfg = Release|Any CPU
