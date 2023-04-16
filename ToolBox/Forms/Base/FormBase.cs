@@ -16,6 +16,7 @@ public partial class FormBase
     private string _formTitle = string.Empty;
 
     private ModoJanela _formMode = ModoJanela.Navegacao;
+    private Theme _theme = Theme.White;
 
     private Color _corFundoPadrao = Color.White;
 
@@ -79,24 +80,23 @@ public partial class FormBase
         }
     }
 
-    #region Propriedades
-
-    #region IFormulario
-
-    [
-        Browsable( false ),
-        DisplayName( TextosPadroes.ModoJanela ),
-        Description( TextosPadroes.ModoJanelaDescricao ),
-        Category( TextosPadroes.ComportamentoCategoria ),
-        DefaultValue( ModoJanela.Navegacao )
-    ]
+    /// <summary>
+    /// Modo de formulário usado para CRUD.
+    /// </summary>
+    [Browsable( false ), DisplayName( TextosPadroes.ModoJanela ), Description( TextosPadroes.ModoJanelaDescricao ), Category( TextosPadroes.ComportamentoCategoria ), DefaultValue( ModoJanela.Navegacao )]
     public ModoJanela FormMode
     {
         get => _formMode;
         set => ChangeFormMode( value );
     }
 
-    #endregion IFormulario
+    public Theme Theme
+    {
+        get => _theme;
+        internal set => _theme = value;
+    }
+
+    #region Propriedades
 
     #region Ocultadas
 
@@ -108,11 +108,6 @@ public partial class FormBase
     }
 
     #endregion Ocultadas
-
-    #region Aparência
-
-
-    #endregion Aparência
 
     #region Comportamento
 

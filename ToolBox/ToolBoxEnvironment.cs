@@ -132,6 +132,9 @@ namespace ToolBox
         /// </summary>
         public static string AppName { get; set; } = Application.ProductName;
 
+        /// <summary>
+        /// Define o tema para a aplicação.
+        /// </summary>
         public static Theme Theme { get; set; } = Theme.White;
 
         /// <summary>

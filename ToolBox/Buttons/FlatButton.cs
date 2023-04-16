@@ -51,24 +51,21 @@ public class FlatButton
         set
         {
             if ( DesignMode && _flatButtonStyle != FlatButtonStyle.Default )
-                throw new InvalidOperationException( "Não é possível alterar o texto do botão pois tem um estilo para esse botão." );
+                throw new InvalidOperationException( "Não é possível alterar o texto do botão pois tem um estilo selecionado para esse botão." );
 
             base.Text = value;
         }
     }
 
-    //internal Tema Tema
-    //{
-    //    get
-    //    {
-    //        return _tema;
-    //    }
-
-    //    set
-    //    {
-    //        re
-    //    }
-    //}
+    [Browsable( false ), DesignerSerializationVisibility( DesignerSerializationVisibility.Visible )]
+    public Theme Theme
+    {
+        get => _theme;
+        internal set
+        {
+            _theme = value;
+        }
+    }
 
     /// <summary>
     /// Construtor padrão que recebe um container.
@@ -80,27 +77,49 @@ public class FlatButton
         FlatStyle = FlatStyle.Flat;
     }
 
-    private void SetConfirmStyle( FlatButtonAppearance appearance )
+    private void SetWhiteThemeStyle()
     {
+        ForeColor = Color.Black;
+        BackColor = Color.White;
+
+        FlatAppearance.BorderColor = Color.Black;
+        FlatAppearance.BorderSize = 2;
+        FlatAppearance.MouseDownBackColor = Color.GhostWhite;
+        FlatAppearance.MouseOverBackColor = Color.WhiteSmoke;
+    }
+
+    private void SetThemeStyle()
+    {
+        switch ( _theme )
+        {
+            case Theme.White:
+                SetWhiteThemeStyle();
+                break;
+        }
+    }
+
+    private void SetConfirmStyle()
+    {
+        ForeColor = Color.WhiteSmoke;
         BackColor = Color.LimeGreen;
 
-        appearance.BorderColor = BackColor;
-        appearance.BorderSize = 2;
-        appearance.MouseDownBackColor = Color.ForestGreen;
-        appearance.MouseOverBackColor = Color.LightGreen;
+        FlatAppearance.BorderColor = BackColor;
+        FlatAppearance.BorderSize = 2;
+        FlatAppearance.MouseDownBackColor = Color.ForestGreen;
+        FlatAppearance.MouseOverBackColor = Color.LightGreen;
 
         base.Text = "Confirmar";
         DialogResult = DialogResult.OK;
     }
 
-    private void SetCancelStyle( FlatButtonAppearance appearance )
+    private void SetCancelStyle()
     {
         BackColor = Color.Firebrick;
 
-        appearance.BorderColor = BackColor;
-        appearance.BorderSize = 2;
-        appearance.MouseDownBackColor = Color.DarkRed;
-        appearance.MouseOverBackColor = Color.Red;
+        FlatAppearance.BorderColor = BackColor;
+        FlatAppearance.BorderSize = 2;
+        FlatAppearance.MouseDownBackColor = Color.DarkRed;
+        FlatAppearance.MouseOverBackColor = Color.Red;
 
         base.Text = "Cancelar";
         DialogResult = DialogResult.Cancel;
@@ -109,17 +128,19 @@ public class FlatButton
     private void OnSetFlatButtonStyle()
     {
         try
-        {
-            ForeColor = Color.WhiteSmoke;
+        {            
             var appearance = FlatAppearance;
 
             switch ( _flatButtonStyle )
             {
                 case FlatButtonStyle.Confirm:
-                    SetConfirmStyle( appearance );
+                    SetConfirmStyle();
                     break;
                 case FlatButtonStyle.Cancel:
-                    SetCancelStyle( appearance );
+                    SetCancelStyle();
+                    break;
+                case FlatButtonStyle.Default:
+                    SetThemeStyle();
                     break;
             }
         }

@@ -34,16 +34,11 @@
             // 
             // flatButton1
             // 
-            flatButton1.BackColor =  Color.LimeGreen ;
+            flatButton1.BackColor =  Color.White ;
             flatButton1.DialogResult =  DialogResult.OK ;
-            flatButton1.FlatAppearance.BorderColor =  Color.LimeGreen ;
-            flatButton1.FlatAppearance.BorderSize =  2 ;
-            flatButton1.FlatAppearance.MouseDownBackColor =  Color.ForestGreen ;
-            flatButton1.FlatAppearance.MouseOverBackColor =  Color.GreenYellow ;
-            flatButton1.FlatButtonStyle =  Enums.FlatButtonStyle.Confirm ;
             flatButton1.FlatStyle =  FlatStyle.Flat ;
             flatButton1.Font =  new Font( "Roboto", 12F, FontStyle.Bold, GraphicsUnit.Point ) ;
-            flatButton1.ForeColor =  Color.WhiteSmoke ;
+            flatButton1.ForeColor =  Color.Black ;
             flatButton1.Location =  new Point( 12, 12 ) ;
             flatButton1.Name =  "flatButton1" ;
             flatButton1.Size =  new Size( 96, 35 ) ;

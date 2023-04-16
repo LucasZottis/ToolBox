@@ -10,6 +10,5 @@ public partial class FormularioBase
     {
         InitializeComponent();
         Mensagem.Avisar( "Teste!" );
-        //tag1.Text = Font.ToString();
     }
 }

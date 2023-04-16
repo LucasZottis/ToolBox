@@ -1,3 +1,5 @@
+using ToolBox.Enums;
+
 namespace ToolBox.WinForms.Tests;
 
 internal static class Program
@@ -13,6 +15,7 @@ internal static class Program
         ApplicationConfiguration.Initialize();
         ToolBoxEnvironment.AppName = "ToolBox Tests";
         ToolBoxEnvironment.GeneralFont = new Font( new FontFamily( "Roboto" ), 12F );
+        //ToolBoxEnvironment.Theme = Theme.White
 
         Application.Run( new FormularioBase() );
     }

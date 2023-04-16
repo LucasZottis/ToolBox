@@ -36,7 +36,7 @@ public enum Theme : byte
     Blue,
 
     /// <summary>
-    /// Tema branco.
+    /// Tema dark.
     /// </summary>
     [Description( "Dark" )]
     Dark,
