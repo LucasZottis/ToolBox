@@ -1,6 +1,8 @@
-using ToolBox.Enums;
+using MyGears.Components;
+using MyGears.Enums;
+using MyGears.WinForms.Tests;
 
-namespace ToolBox.WinForms.Tests;
+namespace MyGears.WinForms.Tests;
 
 internal static class Program
 {
@@ -13,7 +15,7 @@ internal static class Program
         // To customize application configuration such as set high DPI settings or default font,
         // see https://aka.ms/applicationconfiguration.
         ApplicationConfiguration.Initialize();
-        ToolBoxEnvironment.AppName = "ToolBox Tests";
+        ToolBoxEnvironment.AppName = "MyGears Tests";
         ToolBoxEnvironment.GeneralFont = new Font( new FontFamily( "Roboto" ), 12F );
         //ToolBoxEnvironment.Theme = Theme.White
 

@@ -1,4 +1,4 @@
-﻿namespace ToolBox.Enums;
+﻿namespace MyGears.Enums;
 
 /// <summary>
 /// Define o estilo do botão flat.

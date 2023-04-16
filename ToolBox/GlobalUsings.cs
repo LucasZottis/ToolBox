@@ -1,10 +1,3 @@
 ﻿global using BibliotecaPublica.Core.Enums;
-global using BibliotecaPublica.Core.Structs;
-global using BibliotecaPublica.Extensoes.Extensoes;
-global using BibliotecaPublica.Notificacoes.Enums;
-global using BibliotecaPublica.Notificacoes.Interfaces;
+global using MyGears.Enums;
 global using System.ComponentModel;
-global using System.Globalization;
-global using ToolBox.Helpers;
-global using ToolBox.Enums;
-global using ToolBox.Interfaces;

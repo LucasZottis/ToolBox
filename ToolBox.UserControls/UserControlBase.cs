@@ -1,6 +1,7 @@
-﻿using ToolBox.Helpers;
+﻿using MyGears.Helpers;
+using MyGears.Interfaces;
 
-namespace ToolBox.UserControls;
+namespace MyGears.UserControls;
 
 public partial class UserControlBase
     : UserControl, IControl

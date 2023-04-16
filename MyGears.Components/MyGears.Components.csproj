@@ -1,0 +1,102 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BibliotecaPublica.Notificacoes" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ToolBox\MyGears.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Buttons\ButtonBase.cs">
+      <SubType>Botão Base</SubType>
+    </Compile>
+    <Compile Update="Buttons\FlatButton.cs">
+      <SubType>Botão Flat</SubType>
+    </Compile>
+    <Compile Update="Containers\Base\ContainerBase.cs">
+      <SubType>Paineis</SubType>
+    </Compile>
+    <Compile Update="Containers\Base\ContainerGroupBase.cs">
+      <SubType>Paineis</SubType>
+    </Compile>
+    <Compile Update="Containers\Container.cs">
+      <SubType>Paineis</SubType>
+    </Compile>
+    <Compile Update="Containers\ContainerGroup.cs">
+      <SubType>Paineis</SubType>
+    </Compile>
+    <Compile Update="Datas\Base\DataGridBase.cs">
+      <SubType>Paineis</SubType>
+    </Compile>
+    <Compile Update="Datas\DataGrid\DataGrid.cs">
+      <SubType>Paineis</SubType>
+    </Compile>
+    <Compile Update="Datas\DataLink\DataLink.cs">
+      <SubType>Dados</SubType>
+    </Compile>
+    <Compile Update="Datas\DataLink\DataLinkBase.cs">
+      <SubType>Caixa de Texto</SubType>
+    </Compile>
+    <Compile Update="DropDownLists\DropDownList.cs">
+      <SubType>Caixa de seleção</SubType>
+    </Compile>
+    <Compile Update="DropDownLists\DropDownListBase.cs">
+      <SubType>Caixa de seleção</SubType>
+    </Compile>
+    <Compile Update="Forms\Base\FloatingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Base\FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Base\ModalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\Base\NormalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Inputs\DateTimeInput.cs">
+      <SubType>Caixa de Texto</SubType>
+    </Compile>
+    <Compile Update="Inputs\InputBase.cs">
+      <SubType>Caixa de Texto</SubType>
+    </Compile>
+    <Compile Update="Inputs\MonetaryInput.cs">
+      <SubType>Caixa de Texto</SubType>
+    </Compile>
+    <Compile Update="Inputs\MultiLineTextInput.cs">
+      <SubType>Caixa de Texto</SubType>
+    </Compile>
+    <Compile Update="Inputs\NumericInput.cs">
+      <SubType>Caixa de Texto</SubType>
+    </Compile>
+    <Compile Update="Inputs\PasswordInput.cs">
+      <SubType>Caixa de Texto</SubType>
+    </Compile>
+    <Compile Update="Inputs\TextInput.cs">
+      <SubType>Caixa de Texto</SubType>
+    </Compile>
+    <Compile Update="SelectionBoxes\SelectionBox.cs">
+      <SubType>Caixa marcação</SubType>
+    </Compile>
+    <Compile Update="SelectionBoxes\SelectionBoxBase.cs">
+      <SubType>Caixas marcação</SubType>
+    </Compile>
+    <Compile Update="Tags\BaseTag.cs">
+      <SubType>Tags</SubType>
+    </Compile>
+    <Compile Update="Tags\Tag.cs">
+      <SubType>Rotulos</SubType>
+    </Compile>
+  </ItemGroup>
+
+</Project>

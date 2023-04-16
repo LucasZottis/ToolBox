@@ -1,4 +1,4 @@
-﻿namespace ToolBox.Interfaces;
+﻿namespace MyGears.Interfaces;
 
 public interface ITextInput
 {

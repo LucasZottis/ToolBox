@@ -1,0 +1,15 @@
+﻿global using BibliotecaPublica.Core.Enums;
+global using BibliotecaPublica.Core.Extensions;
+global using BibliotecaPublica.Core.Structs;
+global using BibliotecaPublica.Notificacoes;
+global using BibliotecaPublica.Notificacoes.Enums;
+global using BibliotecaPublica.Notificacoes.Interfaces;
+global using FluentValidation.Results;
+global using MyGears.Components;
+global using MyGears.Components.Datas.Base;
+global using MyGears.Components.Datas.DataGrid.DataGridStyles;
+global using MyGears.Components.Datas.DataGrid.DataGridStyles.Alternatives;
+global using MyGears.Enums;
+global using MyGears.Interfaces;
+global using System.ComponentModel;
+global using System.Globalization;

@@ -1,4 +1,4 @@
-﻿namespace ToolBox.UserControls
+﻿namespace MyGears.UserControls
 {
     partial class UserControlBase
     {

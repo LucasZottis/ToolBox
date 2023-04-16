@@ -1,6 +1,8 @@
 ﻿using BibliotecaPublica.Extensoes.Extensoes;
+using MyGears.Components;
+using MyGears.Interfaces;
 
-namespace ToolBox.UserControls;
+namespace MyGears.UserControls;
 
 public delegate void AfterSearchPath( string caminho );
 

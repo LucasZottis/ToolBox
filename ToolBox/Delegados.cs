@@ -1,4 +1,4 @@
-﻿namespace ToolBox
+﻿namespace MyGears
 {
     public delegate void EventoCrudNavegador();
     public delegate void EventoExcluirItemNavegador( int codigoItem );

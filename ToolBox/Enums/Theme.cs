@@ -1,4 +1,4 @@
-﻿namespace ToolBox.Enums;
+﻿namespace MyGears.Enums;
 
 /// <summary>
 /// Con´tém lista de temas possiveis.

@@ -1,4 +1,6 @@
-﻿namespace ToolBox.WinForms.Tests
+﻿using MyGears.Components.Buttons;
+
+namespace MyGears.WinForms.Tests
 {
     partial class FormularioBase
     {
@@ -29,7 +31,7 @@
         private void InitializeComponent()
         {
             components =  new System.ComponentModel.Container() ;
-            flatButton1 =  new Buttons.FlatButton( components ) ;
+            flatButton1 =  new MyGears.Components.Buttons.FlatButton( components ) ;
             SuspendLayout();
             // 
             // flatButton1
@@ -58,6 +60,6 @@
 
         #endregion
 
-        private Buttons.FlatButton flatButton1;
+        private FlatButton flatButton1;
     }
 }

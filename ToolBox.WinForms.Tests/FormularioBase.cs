@@ -1,6 +1,7 @@
-﻿using ToolBox.Forms.Base;
+﻿using MyGears.Components;
+using MyGears.Forms.Base;
 
-namespace ToolBox.WinForms.Tests;
+namespace MyGears.WinForms.Tests;
 
 public partial class FormularioBase
     : FormBase

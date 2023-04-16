@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace ToolBox.Helpers;
+namespace MyGears.Helpers;
 
 /// <summary>
 /// Contém métodos de auxilio de calculo de posição de componentes.
